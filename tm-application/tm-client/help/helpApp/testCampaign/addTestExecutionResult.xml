@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="MyApp-MyTask">
+    <title>Copy Test Campaign Results</title>
+    <taskbody>
+        <context>
+            <p>Once testing for the sprint or test activity is complete the Test
+                Campaign should be locked.
+                This prevents further updates to the test case status in the campaign.
+            </p>
+        </context>
+        <prereq>
+            <ul>
+                <li>You must be logged in.</li>
+                <li>Find the test case you wish to lock</li>
+            </ul>
+        </prereq>
+        <steps>
+            <step id="1">
+                <cmd>Select "Lock" Test Campaign</cmd>
+                <image href="../../resources/testcampaigns/testcampaign_lock.png"/>
+            </step>
+            <step id="2">
+                <cmd>Confirm that you wish to lock the Test Campaign</cmd>
+                <image href="../../resources/testcampaigns/tmsUserLockTestCampaign.png"/>
+            </step>
+        </steps>
+        <result>
+            <p>You have now successfully locked the test case.</p>
+        </result>
+    </taskbody>
+</task>
+
+

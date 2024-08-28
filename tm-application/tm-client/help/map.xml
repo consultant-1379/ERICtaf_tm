@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map>
+    <topicref href="helpApp/about/whatsnew.xml" navtitle="What's New" type="concept"/>
+    <topicref href="helpApp/about/overview.xml" navtitle="Overview" type="concept">
+        <topicref href="helpApp/about/TestCaseTraceability.xml" navtitle="Test Case Traceability" type="concept"/>
+    </topicref>
+    <topicref href="helpApp/admin/admin.xml" navtitle="Administrator Permissions" type="concept">
+        <topicref href="helpApp/admin/addProductToTMSForFirstTime.xml" navtitle="Add a Product to TMS"
+                  type="task"/>
+    </topicref>
+    <topicref href="helpApp/testCase/testcase.xml" navtitle="Test Case" type="concept">
+        <topicref href="helpApp/testCase/selectTestCase.xml" navtitle="Select a Test Case" type="task"/>
+        <topicref href="helpApp/testCase/createTestCase.xml" navtitle="Create a Test Case" type="task"/>
+        <topicref href="helpApp/testCase/searchTestCases.xml" navtitle="Search for a Test Case" type="task"/>
+        <topicref href="helpApp/testCase/testCaseVersioning.xml" navtitle="Test Case Versioning" type="task"/>
+        <topicref href="helpApp/testCase/reimport.xml" navtitle="Import And Export of Test Cases" type="task"/>
+        <topicref href="helpApp/testCase/deleteTestCase.xml" navtitle="Delete a test Case" type="task"/>
+    </topicref>
+    <topicref href="helpApp/testCampaign/testCampaign.xml" navtitle="Test Campaign" type="concept">
+        <topicref href="helpApp/testCampaign/createTestCampaign.xml" navtitle="Create Test Campaign" type="concept"/>
+        <topicref href="helpApp/testCampaign/copyTestCampaigns.xml" navtitle="Copy Test Campaign" type="task"/>
+        <topicref href="helpApp/testCampaign/lockTestCampaign.xml" navtitle="Lock Test Campaign" type="task"/>
+        <topicref href="helpApp/testCampaign/executeTestCampaign.xml" navtitle="Test Campaign Execution" type="task"/>
+        <topicref href="helpApp/testCampaign/exportTestCampaignResults.xml" navtitle="Export Test Campaign Results"
+                  type="task"/>
+    </topicref>
+    <topicref href="helpApp/testCampaignGroup/testCampaignGroups.xml" navtitle="Test Campaign Groups" type="concept"/>
+    <topicref href="helpApp/createJiraBug.xml" navtitle="Creating JIRA Bug in TMS" type="concept"/>
+    <topicref href="helpApp/faq.xml" navtitle="Frequently Asked Questions" type="concept"/>
+</map>
+

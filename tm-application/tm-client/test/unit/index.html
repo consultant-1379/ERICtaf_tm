@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit tests</title>
+    <script src="../../_tools/index.js"></script>
+    <script src="../../.cdt/require.config.js"></script>
+    <script>
+        loadTestDependencies({
+            requireConfig: {
+                baseUrl: "../../src"
+            },
+            tests: [
+                'TM',
+                'TMView',
+
+                'ext/mvpModel',
+
+                'common/table/TableHelper',
+                'common/ObjectHelper',
+                'common/widgets/actionIcon/ActionIconView',
+                'common/widgets/progressBlock/ProgressBlockView',
+                'common/widgets/StackedProgressBar/StackedProgressBar',
+
+                'routing/LocationHelper',
+
+                'ui/testCases/details/TestCaseDetailsBarRegion/TestCaseDetailsBarRegionView',
+                'ui/testCases/details/TestCaseDetailsContentRegion/TestCaseDetailsContentRegionView',
+                'ui/testCases/details/TestCaseDetailsWidget/TestCaseDetailsWidgetView',
+                'ui/testCases/details/TestCaseStepsWidget/TestStepWidget/TestStepWidgetView',
+                'ui/testCases/details/TestCaseStepsWidget/TestStepWidget/VerifyWidget/VerifyWidgetView',
+                'ui/testCases/details/TestCaseStepsWidget/TestCaseStepsWidgetView',
+
+                'ui/testCases/edit/TestCaseCreateBarRegion/TestCaseCreateBarRegionView',
+                'ui/testCases/edit/TestCaseEditBarRegion/TestCaseEditBarRegionView',
+                'ui/testCases/edit/TestCaseEditContentRegion/TestCaseEditContentRegionView',
+                'ui/testCases/edit/TestCaseFormStepsWidget/TestStepEditWidget/TestStepEditWidget',
+                'ui/testCases/edit/TestCaseFormStepsWidget/TestStepEditWidget/TestStepEditWidgetView',
+                'ui/testCases/edit/TestCaseFormStepsWidget/TestStepEditWidget/VerifyEditWidget/VerifyEditWidgetView',
+                'ui/testCases/edit/TestCaseFormStepsWidget/TestCaseFormStepsWidget',
+                'ui/testCases/edit/TestCaseFormStepsWidget/TestCaseFormStepsWidgetView',
+                'ui/testCases/edit/TestCaseFormWidget/TestCaseFormWidgetView',
+                'ui/testCases/edit/TestCaseFormWidget/TestCaseFormWidget',
+
+                'ui/testCases/search/TestCaseSearchBarRegion/TestCaseSearchBarRegionView',
+                'ui/testCases/search/TestCaseSearchResultsWidget/TestCaseSearchResultsWidgetView',
+                'ui/testCases/search/ContextSearchMenu/ContextSearchMenuView',
+
+                'ui/testCases/import/TestCaseImportContentRegion/TestCaseImportContentRegionView',
+
+                'ui/testCases/models/testCases/TestCasesCollection',
+
+                'ui/requirements/models/TestCasesByRequirementCollection',
+
+                'ui/testCampaigns/models/TestCampaignsCollection',
+
+                'ui/testCampaigns/details/TestCampaignDetailsBarRegion/TestCampaignDetailsBarRegionView',
+                'ui/testCampaigns/details/TestCampaignDetailsWidget/TestCampaignDetailsWidgetView',
+                'ui/testCampaigns/details/TestCampaignDetailsContentRegion/TestCampaignDetailsContentRegionView',
+
+                'ui/testCampaigns/group/TestCampaignGroupContentRegion/TestCampaignGroupContentRegionView',
+                'ui/testCampaigns/group/TestCampaignGroupWidget/TestCampaignGroupWidget',
+
+                'ui/testCampaigns/search/SelectBoxFilterView',
+
+                'ui/testExecutions/create/TestExecutionResultWidget/TestExecutionResultWidget'
+            ]
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+    "component" : "component",
+    "contexts" : [ {"id": "REST", "title": "REST"}, {"id": "UI", "title": "UI"} ],
+    "description" : "Updated test case",
+    "groups" : [ {"id": "2", "title": "G2"} ],
+    "precondition" : "true == true",
+    "priority" : {"id": "HIGH", "title": "High"},
+    "requirementIds" : ["CIP-5038"],
+    "requirementInfos" : null,
+    "testSteps" : [
+        {
+            "name" : "Updated TestStep 1",
+            "verifies" : [
+                {
+                    "name" : "Updated VerificationStep 11"
+                },
+                {
+                    "name" : "New VerificationStep 12"
+                }
+            ]
+        },
+        {
+            "name" : "New TestStep 2",
+            "verifies" : [
+                {
+                    "name" : "New VerificationStep 21"
+                },
+                {
+                    "name" : "New VerificationStep 22"
+                }
+            ]
+        }
+    ],
+    "title" : "Updated title",
+    "type" : {"id": "FUNCTIONAL", "title": "Functional"}
+}

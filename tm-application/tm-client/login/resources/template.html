@@ -1,0 +1,32 @@
+<div class="eaLogin">
+    <div class="eaLogin-inner">
+        <div class="eaLogin-ericssonLogo"></div>
+        <div class="eaLogin-body eaLogin-licence" style="display: none">
+            <p class="eaLogin-licenceHeader">{{licenceHeader}}</p>
+            <p class="eaLogin-licenceContent">{{licenceContent}}</p>
+            <button type="button" class="ebBtn eaLogin-licenceButton">{{licenceButton}}</button>
+        </div>
+        <div class="eaLogin-body eaLogin-login" style="display: none">
+            <div class="eaLogin-title">{{title}}</div>
+            <form action="#" name="loginForm" class="eaLogin-form" method="POST" onsubmit="return false;">
+                <div class="eaLogin-inputWrap">
+                    <input type="text" autofocus="autofocus" value="" placeholder="{{username}}" class="ebInput eb_wMargin eaLogin-loginUsername">
+                    <div class="eaLogin-inputComposition">
+                        <input type="password" value="" placeholder="{{password}}" class="ebInput eb_wMargin eaLogin-loginPassword">
+                        <button type="submit" class="ebBtn eb_wMargin eaLogin-formButton">
+                            <i class="ebIcon ebIcon_rightArrow"></i>
+                        </button>
+                    </div>
+                    <div class="eaLogin-inputRememberMe-holder">
+                        <input class="eaLogin-inputRememberMe ebCheckbox" type="checkbox" value="1">
+                        <span class="eaLogin-checkboxLabel">{{rememberMe}}</span>
+                    </div>
+                    <div class="eaLogin-messagesBox"></div>
+
+                    <div class="eaLogin-passRemind"></div>
+                </div>
+            </form>
+        </div>
+        <p class="eaLogin-copy">{{copyright}}</p>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="TMS-CreateEditTestCase">
+    <title>File 1</title>
+    <conbody>
+        <section id="testCaseFormHeader">
+            <title>Test Case Details</title>
+            <p>Complete this form with the details of the test case to be created.</p>
+            <p>A test case is a set of input values, execution preconditions, expected results
+                and execution postconditions, developed for a particular objective or test condition,
+                such as to exercise a particular program path or to verify compliance with a specific requirement.</p>
+        </section>
+        <section id="requirement">
+            <title>Requirements</title>
+            <p>A condition or capability needed by a user to solve a problem or achieve an objective that must
+                be met or possessed by a system or system component to satisfy a contract, standard,
+                specification, or other formally imposed document. i.e. User Story/EPIC/MR or Improvement.</p>
+            <p>Note: Multiple Requirement Id's can be listed.</p>
+        </section>
+        <section id="testCaseId">
+            <title>Test Case ID</title>
+            <p>Unique ID assigned to your test case that should NEVER be changed.
+                Recommendation is to use a reference to parent requirement of feature. E.g  TORF-1234_AddNode_Func1 </p>
+        </section>
+        <section id="title">
+            <title>Title</title>
+            <p>Brief description of your test case.</p>
+        </section>
+        <section id="description">
+            <title>Description</title>
+            <p>Describe the goal of the test case.</p>
+        </section>
+        <section id="precondition">
+            <title>Precondition</title>
+            <p>Environmental and state conditions that must be fulfilled before the component or system can be
+                executed with a particular test or test procedure.</p>
+        </section>
+        <section id="product">
+            <title>Product</title>
+            <p>Please select the product to which the test case belongs.</p>
+        </section>
+        <section id="feature">
+            <title>Feature</title>
+            <p>Corresponds to the feature/feature area i.e. PM , FM, CM where test cases were written. A feature is a unit of work that fulfills a requirement.</p>
+        </section>
+        <section id="component">
+            <title>Component</title>
+            <p>The component is the underlying module of a feature.</p>
+        </section>
+        <section id="type">
+            <title>Type</title>
+            <p>A group of test activities aimed at testing a component or system focused on a specific test
+                objective, i.e. functional test, usability test, regression test etc. A test type may take place on one
+                or more test levels or test phases.</p>
+        </section>
+        <section id="priority">
+            <title>Priority</title>
+            <p>The level of business importance assigned to a test case.</p>
+        </section>
+        <section id="group">
+            <title>Group</title>
+            <p>The test phase the test case is applicable for. E.g. KGB, GAT.</p>
+        </section>
+        <section id="context">
+            <title>Context</title>
+            <p>The technology used to interface to the system under test(SUT).</p>
+        </section>
+        <section id="executionType">
+            <title>Execution Type</title>
+            <p>The type of test case execution: Manual or Automated.</p>
+        </section>
+        <section id="automationCandidate">
+            <title>Automation Candidate</title>
+            <p>Select whether this test case is a candidate for automation. Options available are 'Yes' and 'No'.</p>
+        </section>
+        <section id="status">
+            <title>Status</title>
+            <p>State of the design of the test case specification. </p>
+        </section>
+        <section id="testStepsFormHeader">
+            <title>Test Steps</title>
+            <p>Ordered list of actions against the SUT with validation of responses.</p>
+        </section>
+        <section id="testStepDetails">
+            <title>Test Step Details</title>
+            <p>'Test Step Description': Describe the goal of the test step.</p>
+            <p>'Test Step Data': Any additional data relating to this test step should be included in this field.</p>
+        </section>
+        <section id="verifiesList">
+            <title>Verify Step</title>
+            <p>Expected outcomes that should occur when the associated test step is carried out.</p>
+        </section>
+        <section id="icons">
+            <title>Icons Description</title>
+            <p>'Results': Navigates to test case results.</p>
+            <p>'Create': Adds the test case created below to the Database.</p>
+            <p>'Cancel': Cancels the creation of the current test case and returns to test case Results page.</p>
+        </section>
+        <section id="intrusive">
+            <title>Intrusive</title>
+            <p><b>Intrusive testing</b> can be considered a type of interrupt testing, which is used to test how well a system reacts to intrusions and interrupts to its normal workflow.</p>
+            <p><b>Non-Intrusive testing</b> that is transparent to the software under test, i.e., does not change its timing or processing characteristics.</p>
+            <p><b>Reason</b> input field used to explain the users choice for intrusive or non intrusive.</p>
+        </section>
+        <section id="team">
+            <title>Team</title>
+            <p>The name of the team that originally wrote the test case.</p>
+        </section>
+        <section id="suite">
+            <title>Suite</title>
+            <p>The name of the suite to which the test case has been added.</p>
+        </section>
+    </conbody>
+</concept>

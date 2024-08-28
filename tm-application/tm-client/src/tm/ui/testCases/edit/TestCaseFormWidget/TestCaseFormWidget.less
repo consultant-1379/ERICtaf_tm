@@ -1,0 +1,70 @@
+.eaTM-TestCaseForm {
+    &-blocks {
+        white-space: nowrap;
+        font-size: 0;
+    }
+
+    &-jiraBlock, &-testCaseBlock {
+        vertical-align: top;
+        display: inline-block;
+        font-size: 1.2rem;
+        width: 49%;
+    }
+    &-jiraBlock {
+        margin-right: 1%;
+    }
+    &-testCaseBlock {
+        margin-left: 1%;
+    }
+
+    &-label {
+        width: 100%;
+        margin-bottom: 1.8rem;
+        white-space: normal;
+
+        &Text {
+            width: auto;
+            line-height: 2rem;
+            font-weight: bold;
+            color: #333333;
+        }
+    }
+    &-input, &-textArea {
+        display: block;
+        width: 100%;
+    }
+    &-textArea {
+        resize: vertical;
+        min-height: 200px;
+    }
+    &-noteText {
+        margin-top: 0.6rem;
+        line-height: 2rem;
+    }
+
+    @media screen and (max-width: 1400px) {
+        &-jiraBlock, &-testCaseBlock {
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
+
+        &-jiraBlock {
+            border-bottom: 1px solid #D2D2D2;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &-automationCandidateBlock,
+    &-componentSelect {
+
+        &_hidden {
+            display: none;
+        }
+    }
+
+    &-switcher {
+        margin-bottom: 0.5rem;
+    }
+}

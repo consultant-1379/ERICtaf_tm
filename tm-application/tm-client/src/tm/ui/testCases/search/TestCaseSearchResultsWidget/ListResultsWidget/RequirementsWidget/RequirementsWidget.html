@@ -1,0 +1,13 @@
+<div class="eaTM-Requirements">
+    {{#if template.requirements}}
+    {{#each template.requirements}}
+    {{#if title}}
+    <span class="eaTM-Requirements-item" title="{{title}}">{{id}}</span>
+    {{else}}
+    <span class="eaTM-Requirements-item">{{id}} is not found!</span>
+    {{/if}}
+    {{/each}}
+    {{else}}
+    <span>{{noRequirementsMessage}}</span>
+    {{/if}}
+</div>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Add a Product to TMS">
+    <title>Add a Product to TMS</title>
+    <taskbody>
+        <context>
+            Admin can add a new product to TMS through the UI.
+        </context>
+        <steps>
+            <step>
+                <cmd>Create Product</cmd>
+            </step>
+            <step>
+                <cmd>Add Projects to Product</cmd>
+            </step>
+            <step>
+                <cmd>Add Test Types to Product</cmd>
+                <info>e.g. include functional,performance, acceptance</info>
+            </step>
+            <step>
+                <cmd>Add Groups to Product</cmd>
+                <info>Used to pool test cases together</info>
+            </step>
+            <step>
+                <cmd>Add Features to Product</cmd>
+            </step>
+            <step>
+                <cmd>Add Components to the Features of the Product</cmd>
+            </step>
+            <step>
+                <cmd>Add User Permissions to the Project in <b>JIRA.</b></cmd>
+                <info><p>Please contact TMS admin team to request the username needed to complete this step.</p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

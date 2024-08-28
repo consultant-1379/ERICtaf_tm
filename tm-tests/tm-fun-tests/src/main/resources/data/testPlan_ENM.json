@@ -1,0 +1,27 @@
+{
+    "name": "ENM Test Campaign",
+    "description": "ENM Test Campaign description",
+    "environment": "VApp",
+    "startDate": "2014-01-01T00:00:00.000Z",
+    "endDate": "2014-12-31T23:59:59.999Z",
+    "product": {
+        "id": 2,
+        "name": "ENM",
+        "externalId": "ENM",
+        "dropCapable": true
+    },
+    "drop": {
+        "id": 2,
+        "name": "1.1.ENM",
+        "productName": "ENM"
+    },
+    "features": [
+        {
+            "id": 16,
+            "name": "FM",
+            "productName": "ENM"
+        }
+    ],
+    "testCampaignItems": [
+    ]
+}

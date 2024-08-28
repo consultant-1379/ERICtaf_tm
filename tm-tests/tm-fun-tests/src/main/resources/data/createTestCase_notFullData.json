@@ -1,0 +1,34 @@
+{
+    "id" : null,
+    "component": "No component",
+    "contexts" : [ {"id": "1", "title": "REST"} ],
+    "description" : "Updated test case",
+    "precondition" : "true == true",
+    "priority" : {"id": "3", "title": "Minor"},
+    "requirementInfos" : null,
+    "feature": {
+        "id": 18,
+        "name": "PM",
+        "product": {
+            "id": 1,
+            "name": "ENM"
+        }
+    },
+    "testSteps" : [
+        {
+            "id": null,
+            "name": "newTestStep",
+            "verifies": [
+                {
+                    "id": null,
+                    "name": "newVerificationStep"
+                }
+            ]
+        }
+    ],
+    "type" : {"id": "FUNCTIONAL", "title": "Functional"},
+    "technicalComponents" : [{
+        "id" : "256",
+        "title": "PMIC: Statistical Subscription"
+    }]
+}

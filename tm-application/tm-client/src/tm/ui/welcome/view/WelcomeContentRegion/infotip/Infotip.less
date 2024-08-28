@@ -1,0 +1,43 @@
+.eaTM-Infotip {
+    &-content {
+        display: none;
+        z-index: 9999;
+        position: absolute;
+        vertical-align: middle;
+        width: 20rem;
+
+        &_show {
+            display: inline-block;
+        }
+    }
+
+    &-text {
+        display: inline-block;
+        width: 10.5rem;
+        position: absolute;
+        color: #FFFFFF;
+        background: #000000;
+        height: auto;
+        line-height: 1.2rem;
+        text-align: center;
+        visibility: visible;
+        border-radius: 0.3rem;
+        font-size: 1.0rem;
+        box-shadow: 0rem 0rem 0.2rem #800000;
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+    }
+
+    &-arrow {
+        display: inline-block;
+        white-space: nowrap;
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        width: 0;
+        height: 0;
+        border-right: 0.8rem solid #000000;
+        border-top: 0.8rem solid transparent;
+        border-bottom: 0.8rem solid transparent;
+    }
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Creating JIRA Bugs">
+    <title>Creating JIRA Bug in TMS and JIRA configuration</title>
+    <conbody>
+        <section>
+            <p>This page describes how TMS can write bugs in JIRA and how to configure JIRA fields.</p>
+            <p>
+                TMS dynamically reads JIRA information fields and uses this information to populate the
+                create bug widget in TMS. It reads the name of the field and then adds this as a field that the user can
+                use to enter data into in TMS. The fields are as follows:
+            </p>
+            <ul>
+                <li>Component/s</li>
+                <li>Fix Version/s</li>
+                <li>Team Name</li>
+                <li>Found In Release</li>
+                <li>Found in Sprint</li>
+                <li>Delivered in Sprint</li>
+            </ul>
+            <p>JIRA has pre-defined by default i.e. "Component/s" or "Fix Version/s". These will always exist</p>
+            <p>If the field does not exists then it will not be displayed and no data is retrieved.</p>
+            <p>If the JIRA field is created with the above field names then TMS  will read these fields and get its meta data.</p>
+            <p>If the field does not exist then it will not be displayed and no data is retrieved.</p>
+
+            <p><b>However in JIRA fields can be specified as required fields. TMS will automatically pick these up and
+                add them to the create bug feature.
+            This means that additional fields specific to that project will be displayed and if set will override
+                the optional values above and force the user to enter data.</b></p>
+
+            <p><b>When a project is changed in TMS</b> it will query JIRA for its metadata. TMS uses a user called <b>lciadm100</b> in JIRA
+                to access and view project data. In cases where the user in TMS receives a message saying it could not retrieve this data. This maybe an access issue with lciadm100</p>
+            <image href="../resources/jira/no_meta_data.png"/>
+            <p><b>It is required in JIRA to add lciadm100 user as a developer to the project in question and possibly administrator access to the project. This will allow TMS to read the meta data</b></p>
+
+
+            <p>To create a JIRA bug in TMS the user must be in the test execution screen of the their test plan. If TMS has a project selected then the "Create bug"
+            button will appear otherwise it will remain hidden. When the "Create bug" button is clicked then it will open the create bug widget.</p>
+            <image href="../resources/jira/created_bug_button.png"/>
+            <p>Once the user has filled in the required fields then by clicking the "Create" button it will create the bug in JIRA.</p>
+            <image href="../resources/jira/create_bug_widget.png"/>
+            <p>If the values are not entered or invalid the effected option will be highlighted</p>
+            <image href="../resources/jira/invalid_values.png"/>
+            <p>Finally it will then be populated in the defect box in order to save the execution</p>
+            <image href="../resources/jira/created_bug.png"/>
+
+            <title>Attachments</title>
+            <p>TMS allows the user to attach a file when creating a bug. Click on the attachments and choose a file.</p>
+            <image href="../resources/jira/attachments.png"/>
+
+        </section>
+    </conbody>
+</concept>

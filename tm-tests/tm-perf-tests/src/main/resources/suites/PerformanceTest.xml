@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PerformanceTest">
+    <parameter name="taf.vusers" value="30"/>
+    <parameter name="taf.repeat-count" value="10"/>
+    <parameter name="taf.think-time" value="1000"/>
+    <test name="AuthenticationTest">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.perf.testcases.AuthenticationTest"/>
+        </classes>
+    </test>
+    <test name="CreateEditTestCaseTest">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.perf.testcases.CreateEditTestCaseTest"/>
+        </classes>
+    </test>
+</suite>

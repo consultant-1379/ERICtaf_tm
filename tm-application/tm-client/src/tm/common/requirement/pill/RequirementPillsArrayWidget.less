@@ -1,0 +1,16 @@
+.eaTM-RequirementLinksArrayWidget-value {
+    white-space: normal;
+
+    .eaTM-RequirementLinkWidget-value {
+        display: inline-block;
+
+        .eaTM-RequirementLinkWidget-requirementId:after {
+            content: ',';
+            padding-right: 4px;
+        }
+        &:last-child .eaTM-RequirementLinkWidget-requirementId:after {
+            content: '';
+            padding-right: inherit;
+        }
+    }
+}

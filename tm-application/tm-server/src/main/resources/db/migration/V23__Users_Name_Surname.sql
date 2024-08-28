@@ -1,0 +1,6 @@
+ALTER TABLE `USERS` ADD external_name VARCHAR(60);
+ALTER TABLE `USERS_AUD` ADD external_name VARCHAR(60);
+
+ALTER TABLE `USERS` ADD external_surname VARCHAR(60);
+ALTER TABLE `USERS_AUD` ADD external_surname VARCHAR(60);
+

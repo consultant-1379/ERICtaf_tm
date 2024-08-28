@@ -1,0 +1,55 @@
+.eaTM-TestCampaignDetailsBody {
+    &-leftSideBlock {
+        float: left;
+        width: 50%;
+    }
+    &-rightSideBlock {
+        float: right;
+        width: 50%;
+    }
+    &-clearAll {
+        clear: both;
+        height: 0;
+        border-bottom: 1px solid #CCCCCC;
+    }
+
+    &-dropBlock {
+        &_hidden {
+            display: none;
+        }
+    }
+
+    &-label {
+        width: 100%;
+        margin-bottom: 1.8rem;
+
+        &Text {
+            width: auto;
+            line-height: 2rem;
+            font-weight: bold;
+            color: #333333;
+        }
+    }
+    &-value {
+        display: block;
+        line-height: 2rem;
+        white-space: normal;
+        overflow-wrap: break-word;
+        &:after {
+            height: 0;
+            display: block;
+            clear: left;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        &-leftSideBlock {
+            float: none;
+            width: 100%;
+        }
+        &-rightSideBlock {
+            float: none;
+            width: 100%;
+        }
+    }
+}

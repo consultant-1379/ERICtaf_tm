@@ -1,0 +1,151 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "tm",
+        "name": "TM",
+        "version": "1.0.0",
+        "deployDate": "Deploy date",
+        "skeleton": "2.1.0",
+        "skeletonType": "app",
+        "node": "node/node",
+        "npm": "node/npm",
+        "cssverify": "$(node) node_modules/@uisdk/cdt-build/node_modules/@uisdk/cssverify/index.js"
+    },
+    "phases": {
+        "dev-dependencies": {
+            "execute": {
+                "command": "$(npm)",
+                "attributes": [
+                    "install",
+                    "--no-bin-links",
+                    "--no-optional"
+                ]
+            }
+        },
+        "source-verify": {
+            "depends": [
+                "dev-dependencies"
+            ],
+            "execute": {
+                "command": "$(node) build-scripts/verifySources.js"
+            }
+        },
+        "code-style-verify": {
+            "depends": [
+                "dev-dependencies"
+            ],
+            "execute": {
+                "command": "$(node) node_modules/jscs/bin/jscs",
+                "attributes": [
+                    ".",
+                    "--config=.jscsrc",
+                    "--reporter=inline"
+                ]
+            }
+        },
+        "code-verify": {
+            "depends": [
+                "dev-dependencies"
+            ],
+            "execute": {
+                "command": "$(node) node_modules/jshint/bin/jshint",
+                "attributes": [
+                    ".",
+                    "--config=.jshintrc",
+                    "--exclude-path=.jshintignore"
+                ]
+            }
+        },
+        "css-verify": {
+            "execute": {
+                "command": "$(cssverify)",
+                "attributes": [
+                    "--name",
+                    "$(name)",
+                    "src/$(package)/common",
+                    "src/$(package)/ui",
+                    "src/$(package)/_tm.less"
+                ]
+            }
+        },
+        "analyze": {
+            "depends": [
+                "source-verify",
+                "code-style-verify",
+                "code-verify",
+                "css-verify"
+            ]
+        },
+        "after-test": {
+            "delete": {
+                "target": "$(buildDir)/src"
+            }
+        },
+        "script-transform-index": {
+            "execute": {
+                "command": "$(node) build-scripts/transformIndex.js"
+            }
+        },
+        "script-update-app-info": {
+            "execute": {
+                "command": "$(node) build-scripts/updateAppInfo.js",
+                "attributes": [
+                    "$(version)",
+                    "\"$(deployDate)\""
+                ]
+            }
+        },
+        "build-test": {
+            "depends": [
+                "clean",
+                "test",
+                "after-test"
+            ]
+        },
+        "package-skip-tests": {
+            "depends": [
+                "clean",
+                "analyze",
+                "script-update-app-info",
+                "compile",
+                "script-transform-index",
+                "copy-login"
+            ]
+        },
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "test",
+                "script-update-app-info",
+                "compile",
+                "script-transform-index",
+                "copy-login"
+            ]
+        },
+        "install": {
+            "depends": [
+                "package"
+            ]
+        },
+        "copy-login": {
+            "copy": {
+                "from": "login",
+                "to": "$(buildDir)/deployFolder/"
+            }
+        }
+    },
+    "dependencies": {
+        "assets": "1.8.7",
+        "container": "1.14.12",
+        "jscore": "1.7.17",
+        "widgets": "1.8.22",
+        "tablelib": "0.9.12",
+        "flyout": "0.1.8",
+        "chartlib": "1.6.28",
+        "helpsdk": "2.10.2",
+        "layouts": "1.8.7",
+        "i18n": "2.4.5"
+    }
+}

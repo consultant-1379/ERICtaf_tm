@@ -1,0 +1,74 @@
+.eaTM-ViewTestCaseRegion {
+    font-size: 0;
+    white-space: nowrap;
+
+    &-details, &-testSteps {
+        font-size: 1.2rem;
+        display: inline-block;
+        vertical-align: top;
+    }
+    &-details {
+        width: ~"calc(100% - 600px)";
+    }
+    &-testSteps {
+        margin-left: 30px;
+        width: 570px;
+    }
+    &-files {
+        float: left;
+        margin-top: 2rem;
+        display: inline-block;
+        width: ~"calc(33% - 1.2rem)";
+    }
+
+    &-compareCheckBoxLabel {
+        padding-right: 1rem;
+    }
+
+    &-differenceHolder {
+        height: 3rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
+    }
+
+    &-difference {
+        font-size: 1.2rem;
+        display: block;
+        float: right;
+    }
+
+    @media screen and (max-width: 1200px) {
+        &-details {
+            width: ~"calc(100% - 500px)";
+        }
+
+        &-testSteps {
+            margin-left: 30px;
+            width: 470px;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        &-details {
+            width: ~"calc(100% - 400px)";
+        }
+
+        &-testSteps {
+            margin-left: 30px;
+            width: 370px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &-details {
+            width: 100%;
+            display: block;
+        }
+
+        &-testSteps {
+            width: 100%;
+            margin-left: 0;
+            display: block;
+        }
+    }
+}

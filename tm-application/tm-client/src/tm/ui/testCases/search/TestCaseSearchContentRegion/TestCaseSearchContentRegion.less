@@ -1,0 +1,88 @@
+.applyTransition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.eaTM-ContentRegion {
+    &-slidingPanels {
+        position: relative;
+        min-height: 100%;
+    }
+
+    &-searchPanel {
+        width: 0;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+    }
+    &-resultsPanel {
+        width: 100%;
+        position: relative;
+    }
+
+    @media screen and (min-width: 581px) {
+        &-resultsPanel {
+            .applyTransition(~"0.6s width ease-in-out, 0.6s margin-left ease-in-out, 0.6s margin-right ease-in-out");
+        }
+
+        &-search {
+            &Panel {
+                .applyTransition(~"0.6s width ease-in-out");
+                &_position_fixed {
+                    position: fixed;
+                    top: 77px;
+                }
+            }
+
+            &Content {
+                margin-right: 3.6rem;
+                width: 400px;
+                margin-left: calc(~"-400px - 3.6rem");
+
+                .applyTransition(~"0.6s margin-left ease-in-out");
+            }
+        }
+
+        &-slidingPanels_show_search {
+            .eaTM-ContentRegion-resultsPanel {
+                width: calc(~"100% - 400px - 3.6rem");
+                margin-left: calc(~"400px + 3.6rem");
+            }
+
+            .eaTM-ContentRegion-search {
+                &Panel {
+                    width: calc(~"400px + 3.6rem");
+                }
+                &Content {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 580px) {
+        &-resultsPanel, &-searchPanel {
+            width: 100%;
+
+            .applyTransition(~"0.6s margin-left ease-in-out");
+        }
+
+        &-searchPanel {
+            margin-left: calc(~"-100% - 3.6rem");
+        }
+
+        &-slidingPanels_show_search {
+            .eaTM-ContentRegion-resultsPanel {
+                margin-left: calc(~"100% + 3.6rem");
+            }
+
+            .eaTM-ContentRegion-searchPanel {
+                margin-left: 0;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,37 @@
+{
+    "id" : null,
+    "testCaseId": "CIP-4182_Func1",
+    "component": "No component",
+    "contexts" : [ {"id": "1", "title": "REST"}, {"id": "2", "title": "UI"} ],
+    "description" : "Updated test case",
+    "groups" : [ {"id": "7", "title": "KGB"} ],
+    "executionType" : {"id": "1", "title": "Manual"},
+    "testCaseStatus" : {"id": "2", "title": "Preliminary"},
+    "precondition" : "true == true",
+    "priority" : {"id": "MINOR", "title": "Minor"},
+    "requirementIds" : ["CIP-4182"],
+    "requirementInfos" : null,
+    "feature": {
+        "id": 18,
+        "name": "PM",
+        "product": {
+            "id": 1,
+            "name": "ENM"
+        }
+    },
+    "testSteps" : [ { "id" : null,
+        "name" : "newTestStep",
+        "verifies" : [ { "id" : null,
+            "name" : "newVerificationStep"
+        } ],
+        "data" : "this is test Step Data"
+    } ],
+    "title" : "Title",
+    "type" : {"id": "FUNCTIONAL", "title": "Functional"},
+    "executionType" : {"id" : 1, "title": "Manual"},
+    "automationCandidate" : {"id" : 1, "title": "Yes"},
+    "technicalComponents" : [{
+        "id" : "256",
+        "title": "PMIC: Statistical Subscription"
+    }]
+}

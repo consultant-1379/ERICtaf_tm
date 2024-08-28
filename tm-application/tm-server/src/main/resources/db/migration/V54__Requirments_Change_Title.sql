@@ -1,0 +1,4 @@
+ ALTER TABLE `REQUIREMENTS` CHANGE `external_title`  `external_label` VARCHAR(255) NULL DEFAULT NULL;
+ ALTER TABLE `REQUIREMENTS_AUD` CHANGE `external_title` `external_label` VARCHAR(255) NULL DEFAULT NULL;
+
+

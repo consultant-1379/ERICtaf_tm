@@ -1,0 +1,39 @@
+{
+    "id" : null,
+    "testCaseId": "CIP-4209_Func_1",
+    "component": "No component",
+    "contexts" : [ {"id": "1", "title": "REST"}, {"id": "2", "title": "UI"} ],
+    "description" : "Updated test case",
+    "groups" : [],
+    "executionType" : {"id": "1", "title": "Manual"},
+    "testCaseStatus" : {"id": "1", "title": "Approved"},
+    "precondition" : "true == true",
+    "priority" : {"id": "3", "title": "Minor"},
+    "requirementIds" : ["TORF-4200, TORF-4177"],
+    "requirementInfos" : null,
+    "feature": {
+
+    },
+    "testSteps" : [
+        {
+            "id" : null,
+            "name" : "newTestStep",
+            "data" : "this is test Step Data",
+            "verifies" : [
+                {
+                    "id" : null,
+                    "name" : "newVerificationStep"
+                }
+            ]
+        }
+    ],
+    "title" : "Title",
+    "type" : {"id": "FUNCTIONAL", "title": "FUNCTIONAL"},
+    "executionType" : {"id" : 2, "title": "Automated"},
+    "technicalComponent" : {
+
+    },
+    "intrusive": true,
+    "intrusiveComment": "Because"
+
+}

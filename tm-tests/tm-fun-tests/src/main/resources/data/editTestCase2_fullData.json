@@ -1,0 +1,41 @@
+{
+    "testCaseId": "LT-348",
+    "product":{"id" : 3,
+        "externalId" : "3",
+        "name" : "OSS-RC",
+        "dropCapable" : true},
+    "component": "No component",
+    "contexts" : [ {"id": "1", "title": "REST"}, {"id": "2", "title": "UI"} ],
+    "description" : "Updated test case",
+    "groups" : [ {"id": "10", "title": "GAT"} ],
+    "executionType" : {"id": "2", "title": "Automated"},
+    "testCaseStatus" : {"id": "2", "title": "Preliminary"},
+    "precondition" : "true == true",
+    "priority" : {"id": "BLOCKER", "title": "Blocker"},
+    "requirementIds" : ["CIP-5525"],
+    "requirementInfos" : null,
+    "title" : "Updated title",
+    "type" : {"id": "FUNCTIONAL", "title": "Functional"},
+    "feature": {
+        "id": 9,
+        "name": "CoreNetwork",
+        "product": {
+            "id": 3,
+            "name": "OSS-RC"
+        }
+    },
+    "testSteps" : [
+        {
+            "id" : null,
+            "name" : "updatedTestStep",
+            "data" : "this is test Step Data updated",
+            "verifies" : [
+                {
+                    "id" : null,
+                    "name" : "newVerificationStepUpdated"
+                }
+            ]
+        }
+    ],
+    "technicalComponents" : [{"id": "17", "title": "CoreNetwork-CN_NSD-ERICcpsnsd"}]
+}

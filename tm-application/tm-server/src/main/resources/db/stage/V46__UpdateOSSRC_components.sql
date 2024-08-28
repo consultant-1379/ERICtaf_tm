@@ -1,0 +1,2 @@
+INSERT INTO `TECHNICAL_COMPONENTS` (`name`, `product_id`) VALUES
+('SMART', 3);

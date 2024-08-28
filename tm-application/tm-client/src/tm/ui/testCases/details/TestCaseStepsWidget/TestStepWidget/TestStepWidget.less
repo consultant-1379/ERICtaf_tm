@@ -1,0 +1,96 @@
+.eaTM-TestStep {
+    position: relative;
+    line-height: normal;
+    margin-bottom: 2rem;
+
+    &-titleHolder {
+        border-radius: 4px;
+        background-color: #EFEFEF;
+        padding: 0.4rem;
+    }
+    &-orderNr {
+        display: inline-block;
+        border-radius: 7px 0;
+        border: 1px solid #00625f;
+        text-align: center;
+        line-height: 1.6rem;
+        width: 2.4rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #666;
+        margin-right: 0.4rem;
+    }
+    &-title {
+        width: ~"calc(100% - 8rem)";
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1.6rem;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        font-weight: normal;
+    }
+
+    &-titleCompare {
+        color: #e32119;
+        width: ~"calc(100% - 8rem)";
+        vertical-align: top;
+        line-height: 1.6rem;
+        white-space: normal;
+        font-weight: normal;
+    }
+
+    &-result {
+        display: inline-block;
+    }
+
+    &-verifiesList {
+        padding-left: 20px;
+    }
+
+    &-dataField {
+        white-space: pre-line;
+        text-align: justify;
+        font-style: italic;
+        overflow: auto;
+        padding: 2px;
+
+        &_short {
+           max-height: 40px;
+        }
+        &_long {
+            max-height: 100%;
+        }
+    }
+
+    &-dataFieldCompare {
+        color: #e32119;
+        white-space: pre-line;
+        text-align: justify;
+        font-style: italic;
+        overflow: auto;
+        padding: 2px;
+
+        &_short {
+            max-height: 40px;
+        }
+        &_long {
+            max-height: 100%;
+        }
+    }
+
+    &-dataFieldHolder {
+        margin-top: 3px;
+        border-top: #CCCCCC dashed 1px;
+
+        &_hide {
+            display: none;
+        }
+    }
+
+    &-dataFieldHeader {
+        font-weight: bold;
+        margin-top: 2px;
+        font-size: 1.1rem;
+        color: #ADADAD;
+    }
+}

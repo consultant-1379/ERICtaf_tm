@@ -1,0 +1,5 @@
+-- add necessary rights for tm application
+
+GRANT SELECT, INSERT, UPDATE, CREATE, DROP, INDEX, DELETE, ALTER ON tafdb.* TO 'tmuser'@'%' IDENTIFIED BY 'PASSWORD GOES HERE';
+
+FLUSH PRIVILEGES;

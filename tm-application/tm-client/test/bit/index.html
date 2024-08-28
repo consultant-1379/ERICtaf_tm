@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BIT tests</title>
+    <script src="../../_tools/index.js"></script>
+    <script src="../../.cdt/require.config.js"></script>
+    <script>
+        loadTestDependencies({
+            requireConfig: {
+                baseUrl: "../../src"
+            },
+            tests: [
+                'common/notifications/NotificationRegionTest',
+                'common/widgets/actionLink/ActionLink',
+                'common/table/TableHelper',
+                'ui/testCases/edit/TestCaseEditContentRegion/TestCaseEditContentRegion',
+                'ui/testExecutions/create/CreateTestExecutionContentRegion/CreateTestExecutionContentRegion',
+                'ui/testExecutions/view/testExecutionMultiSelectWidget/TestExecutionMultiSelectWidget',
+                'ui/testExecutions/view/TestCampaignExecutionContentRegion/TestCampaignExecutionContentRegion',
+                'ui/testCases/import/TestCaseImportContentRegion/TestCaseImportContentRegion',
+                'ui/testCases/search/TestCaseSearchResultsWidget/TestCaseSearchResultsWidget',
+                'ui/testCampaigns/edit/TestCampaignEditContentRegion/TestCampaignEditContentRegion'
+            ]
+        });
+    </script>
+    <style>
+        #app {
+            display: none;
+        }
+
+        .ebDialog {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+</html>

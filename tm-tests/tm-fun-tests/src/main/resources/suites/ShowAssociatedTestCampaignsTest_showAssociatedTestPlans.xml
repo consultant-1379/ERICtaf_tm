@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ShowAssociatedTestPlansTest_showAssociatedTestPlans">
+    <test name="ShowAssociatedTestPlansTest_showAssociatedTestPlans">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.tms.ShowAssociatedTestCampaignsTest">
+                <methods>
+                    <include name="showAssociatedTestPlans"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.tms.ShowAssociatedTestCampaignsTest">
+                <methods>
+                    <include name="showAssociatedTestPlans"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

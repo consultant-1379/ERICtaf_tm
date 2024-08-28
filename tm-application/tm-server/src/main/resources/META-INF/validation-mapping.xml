@@ -1,0 +1,134 @@
+<constraint-mappings
+        xmlns="http://jboss.org/xml/ns/javax/validation/mapping"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://jboss.org/xml/ns/javax/validation/mapping validation-mapping-1.1.xsd"
+        version="1.1">
+
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.AnyNotEmptyField">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.AnyNotEmptyFieldValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.Defects">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.DefectsValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.ExistingProject">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.ExistingProjectValidator</value>
+            <value>com.ericsson.cifwk.tm.presentation.validation.ExistingProjectIdValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.ExistingUser">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.ExistingUserValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.HasId">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.HasIdValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.RangeFields">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.RangeFieldsValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.RequirementId">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.RequirementIdValidator</value>
+            <value>com.ericsson.cifwk.tm.presentation.validation.RequirementIdSetValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.TestCampaignItem">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.TestCampaignItemValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.UniqueTestCaseId">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.UniqueTestCaseIdValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.FileSize10MB">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.FileSize10MBValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.FileType">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.FileTypeValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.XLSXFileType">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.XLSXFileTypeValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.ValidFeatureAndComponents">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.DropFeatureAndComponentsValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.ValidCopyTestCampaignsRequest">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.CopyTestCampaignsRequestValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.CorrectlyFormattedTestCaseId">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.TestCaseIdFormatValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.ValidTestCaseComponent">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.TestCaseValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.Authorized">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.UserAuthorityValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.HasIsoIfRequired">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.TestExecutionIsoValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.HaveIsosIfRequired">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.MultipleTestExecutionIsoValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.TestCampaignNotAlreadyInDrop">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.TestCampaignNotAlreadyInDropValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.ContextsMatch">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.TestCampaignTestCasesContextValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.Editable">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.TestCaseIsEditable</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.HasDefectWhenFailed">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.TestExecutionFailValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.HasDefectWhenFailedMultiple">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.MultipleTestExecutionFailValidator</value>
+        </validated-by>
+    </constraint-definition>
+    <constraint-definition annotation="com.ericsson.cifwk.tm.presentation.validation.FileName">
+        <validated-by include-existing-validators="false">
+            <value>com.ericsson.cifwk.tm.presentation.validation.FileNameValidator</value>
+        </validated-by>
+    </constraint-definition>
+</constraint-mappings>

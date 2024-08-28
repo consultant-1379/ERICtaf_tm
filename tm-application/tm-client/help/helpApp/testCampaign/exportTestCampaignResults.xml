@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Export Test Campaign Results">
+    <title>Export Test Campaign Results</title>
+    <taskbody>
+        <context>
+            <p>The test case execution status can be exported from the test
+                campaign in Excel format.</p>
+            <p>Users can navigate to a test campaign execution where they will have the
+                following options:
+            </p>
+            <ol>
+                <li>
+                    <b>Export View:</b>
+                </li>
+                exports the test case details that are visible in the table
+                <li>
+                    <b>Export All:</b>
+                </li>
+                exports all test case details even those not shown in the current view
+            </ol>
+        </context>
+        <prereq>
+            <ul>
+                <li>You must be logged in.</li>
+                <li>Navigate to 'Test Campaign Execution'</li>
+            </ul>
+        </prereq>
+        <steps>
+            <step id="1">
+                <cmd>Decide whether you wish to Export View or Export All</cmd>
+                <info>If you decide to Export view please move to step two otherwise select 'Export All'</info>
+
+            </step>
+            <step>
+                <cmd>Export View</cmd>
+                <info><p>Exports test cases shown in results table.
+                    <image href="../../resources/testcampaigns/testcampaign_export_test_results1.png" />
+                    <image href="../../resources/testcampaigns/testcampaign_export_test_results.png" />
+                </p>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>Data is exported to csv and automatically downloaded.</p>
+        </result>
+    </taskbody>
+</task>
+
+

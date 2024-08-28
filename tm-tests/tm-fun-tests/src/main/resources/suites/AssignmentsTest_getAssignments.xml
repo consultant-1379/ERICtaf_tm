@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AssignmentsTest_getAssignments">
+    <test name="AssignmentsTest_getAssignments">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.userinbox.AssignmentsTest">
+                <methods>
+                    <include name="getAssignments"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.userinbox.AssignmentsTest">
+                <methods>
+                    <include name="getAssignments"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

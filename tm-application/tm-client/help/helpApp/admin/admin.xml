@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Administrator Permissions">
+    <title>Administrator Permissions</title>
+    <conbody>
+        <section>
+            <section>
+                <title>
+                    <b>Introduction</b>
+                </title>
+                <p>Test Management System (TMS) currently caters to two types of users:
+                    <ul>
+                        <li>TM Users</li>
+                        <li>Admin users</li>
+                    </ul>
+                    The majority of admin specific functionality can be accessed via the administrator page.
+                    <p>To access this page, login and select the 'Admin' option from the user menu.</p>
+                </p>
+                <p>
+                    <image href="../../resources/admin/adminOption.png"/>
+                </p>
+            </section>
+            <section>
+                <title>
+                    <b>User Access</b>
+                </title>
+                <p>User Access allows the current administrator to assign a non admin user administrator permissions.
+                </p>
+                <ul>
+                    <li>Add button underneath the name field will add the user</li>
+                    <li>Delete button on the table will remove the user</li>
+                </ul>
+                <p>
+                    <image href="../../resources/admin/adminPageUserAccess.png"/>
+                </p>
+            </section>
+
+            <section>
+                <title>
+                    <b>Product</b>
+                </title>
+                <p>Admin have the ability to add/edit a Product in TMS. Both the Name and External Id are mandatory
+                    fields.
+                </p>
+                <ul>
+                    <li>Add button underneath the name field will add the product</li>
+                    <li>To Edit click on the product you wish to edit, then fill in the fields and click the edit button</li>
+                    <li>Refresh button on the table will refresh the list of products</li>
+                    <li>Delete button on the table will remove the product</li>
+                </ul>
+                <p>
+                    <image href="../../resources/admin/adminPageProduct.png"/>
+                </p>
+            </section>
+
+            <section>
+                <title>
+                    <b>Features</b>
+                </title>
+                <p>Admin have the ability to add/edit a Feature in TMS. Both the Product and Feature Name must be
+                    specified.
+                </p>
+                <ul>
+                    <li>Add button underneath the name field will add the feature</li>
+                    <li>To Edit click on the feature you wish to edit, then fill in the fields and click the edit button</li>
+                    <li>Delete button on the table will remove the feature</li>
+                </ul>
+                <p>
+                    <image href="../../resources/admin/adminPageFeatures.png"/>
+                </p>
+            </section>
+
+            <section>
+                <title>
+                    <b>Components</b>
+                </title>
+                <p>Admin can add/edit a component in TMS by specifying the Product, Feature and Component names.</p>
+                <ul>
+                    <li>Add button underneath the name field will add the Component</li>
+                    <li>To Edit click on the component you wish to edit, then fill in the  name field and click the edit button</li>
+                    <li>Delete button on the table will remove the Component.</li>
+                </ul>
+                <p>
+                    <image href="../../resources/admin/adminPageComponents.png"/>
+                </p>
+            </section>
+
+            <section>
+                <title>
+                    <b>Test Types</b>
+                </title>
+                <p>Admin have the ability to add/edit a Test Type in TMS. Both the Product and Test Type must be
+                    specified.
+                </p>
+                <ul>
+                    <li>Add button underneath the name field will add the Test Type</li>
+                    <li>To Edit click on the Test Type you wish to edit, then fill in the name field and click the edit button</li>
+                    <li>Delete button on the table will remove the Test Type.</li>
+                </ul>
+                <p>
+                    <image href="../../resources/admin/adminPageTestTypes.png"/>
+                </p>
+            </section>
+            <section>
+                <title>
+                    <b>Groups</b>
+                </title>
+                <p>Admin have the ability to add/edit a Group in TMS. This group is used to pool test cases together.Both the
+                    Product and Group Name must be
+                    specified.
+                </p>
+                <ul>
+                    <li>Add button underneath the name field will add the Group</li>
+                    <li>To Edit click on the Group you wish to edit, then fill in the name field and click the edit button</li>
+                    <li>Delete button on the table will remove the Group.</li>
+                </ul>
+                <p>
+                    <image href="../../resources/admin/adminPageGroups.png"/>
+                </p>
+            </section>
+            <section>
+                <title>
+                    <b>Review Group</b>
+                </title>
+                <p>Admin have the ability to add/edit a Review Group in TMS. This group contains a collection of users who
+                    can carry out a review on any test case to which the group are assigned.
+                    Both the name of the user you wish to add and the group to which you want to add the user must be
+                    specified.
+                </p>
+                <ul>
+                    <li>Add button underneath the name field will add the Review Group</li>
+                    <li>Delete button on the review group table will remove the Review Group.</li>
+                    <li>Delete button on the user table will remove the user from the selected Review Group.</li>
+                    <li>Edit option is given when you select a group form the review group table and you can add more
+                        members to it or change the group name.
+                    </li>
+                </ul>
+                <p>
+                    <image href="../../resources/admin/adminPageReviewGroup.png"/>
+                </p>
+            </section>
+            <section>
+                <title>
+                    <b>Projects</b>
+                </title>
+                <p>Admin have the ability to add/edit a Project to TMS. The Product, Project Name and External Id must be
+                    specified.
+                </p>
+                <ul>
+                    <li>Add button underneath the name field will add the Project</li>
+                    <li>To Edit click on the Project you wish to edit, then fill in the fields and click the edit button</li>
+                    <li>Delete button on the table will remove the Project.</li>
+                </ul>
+                <image href="../../resources/admin/adminPageProject.png"/>
+            </section>
+            <section>
+                <title>
+                    <b>Teams</b>
+                </title>
+                <p>Admin have the ability to add/edit a Team in TMS.The Product, Feature and Team Name must be
+                    specified.
+                </p>
+                <ul>
+                    <li>Add button underneath the name field will add the Team</li>
+                    <li>To Edit click on the Team you wish to edit, then fill in the team name field and click the edit button</li>
+                    <li>Delete button on the table will remove the Team.</li>
+                </ul>
+                <image href="../../resources/admin/adminPageTeam.png"/>
+            </section>
+            <section>
+                <title>
+                    <b>
+                        Suites
+                    </b>
+                </title>
+                <p>Admin have the ability to add/edit a Test Suite to TMS.The Product, Feature and Suite Name must be
+                    specified.
+                </p>
+                <b>What is the difference between test suite and group ?</b>
+                <ul>
+                    <li>Add button underneath the name field will add the Team</li>
+                    <li>To Edit click on the Suite you wish to edit, then fill in the suite name field and click the edit button</li>
+                    <li>Delete button on the table will remove the Team.</li>
+                </ul>
+                <image href="../../resources/admin/adminPageSuites.png"/>
+            </section>
+            <section>
+                <title>
+                    <b>Test Campaign Group</b>
+                </title>
+                <p>Admin have the ability to add/edit a Test Campaign Group to TMS. The Product and Test Campaign Name must be
+                    specified.
+                </p>
+                <ul>
+                    <li>Add button underneath the name field will add the Test Campaign Gtoup</li>
+                    <li>Delete button on the table will remove the Test Campaign Group.</li>
+                    <li>To Edit click on the Test Campaign Group you wish to edit, then fill in the name field and click the edit button</li>
+                </ul>
+                <image href="../../resources/admin/adminPageTestCampaignGroup.png"/>
+            </section>
+            <section>
+                <title>
+                    <b>Product Drop</b>
+                </title>
+                <p>Admin have the ability to add a Drop to a Product in TMS. The Product and Drop must be
+                    specified.
+                </p>
+                <ul>
+                    <li>Add button underneath the name field will add the Drop</li>
+                </ul>
+                <image href="../../resources/admin/adminPageDrop.png"/>
+            </section>
+        </section>
+        <section>
+            <title>
+                <b>Ability to delete a test Case</b>
+            </title>
+            <p>Admin can remove a test case in TMS by following the steps outlined below</p>
+            <ul>
+                <li>Login</li>
+                <li>Navigate to 'Select a test Case' and open the test case you wish to delete</li>
+                <li>Click on delete to remove the test case and click 'Remove' on the prompt to confirm the deletion
+                </li>
+            </ul>
+            <p>
+                <image href="../../resources/admin/adminDeleteTestCase.png"/>
+            </p>
+        </section>
+    </conbody>
+</concept>

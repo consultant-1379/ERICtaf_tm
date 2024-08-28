@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Delete Test Case">
+    <title>Delete a test Case</title>
+    <taskbody>
+        <prereq>
+            <ul>
+                <li>Login to the TMS system using your corporate userId</li>
+            </ul>
+        </prereq>
+        <steps id="1">
+            <step>
+                <info>
+                    <p>Select the test case that you want to delete.
+                    </p>
+                </info>
+            </step>
+            <step>
+                 <info>
+            <p>Click on the delete icon to delete the selected test case.
+            </p>
+            <p>
+                <image href="../../resources/traceability/delete_testcase.png"/>
+            </p>
+            <p><b>Note:</b> Option to delete a test case is only available to the users with admin privilages. Incase delete option is not visible contact the person with admin rights to delete the selected testcase.
+            </p>
+            </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

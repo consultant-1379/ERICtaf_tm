@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="TMS-Admin">
+    <conbody>
+        <section id="User_Access">
+            <title>User Access</title>
+            <p>This table displays a list of users with administrator access.
+                Users can add/delete an administrating user, including the current user.</p>
+        </section>
+        <section id="generic">
+            <title>Generic</title>
+            <p>This section allows the administrating user to create/edit and delete the current selected option.</p>
+        </section>
+    </conbody>
+</concept>

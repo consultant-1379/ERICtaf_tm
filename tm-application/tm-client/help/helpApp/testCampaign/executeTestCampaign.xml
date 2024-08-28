@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Test Campaign Execution">
+    <title>Test Campaign Execution- Add Test Case Results</title>
+    <taskbody>
+        <context>
+            <p>It is important to record the results of executed test cases.</p>
+            <p>This can be done via test campaign execution.</p>
+            <p>One can use the filter options to find the test campaign for which you wish to record results.</p>
+        </context>
+        <prereq>
+            <ul>
+                <li>User must be logged in</li>
+                <li>Select "Select a test Campaign" from Quick Links</li>
+            </ul>
+        </prereq>
+        <steps>
+            <step id="1">
+                <cmd>Enter Test Campaign Execution by using the Play button</cmd>
+                <info>
+                    <image href="../../resources/testcampaigns/testcampaign_find.png"/>
+                </info>
+            </step>
+
+            <step id="2">
+            <cmd>Add Test Case Execution Result</cmd>
+            <info>
+                <p>Use the Add Result button to add the test case results. Fill in the following fields:</p>
+                <sl>
+                    <sli>
+                        <b>The Result:</b>
+                        Pass, Fail etc.
+                    </sli>
+                    <sli>
+                        <b>Comment:</b>
+                        Any relevant comments you wish to include
+                    </sli>
+                    <sli>
+                        <b>Execution Time:</b>
+                        The time it took to execute the test case
+                    </sli>
+                    <sli>
+                        <b>Improvement Story:</b>
+                        If the case execution drives an improvement
+                        specify the improvement jira here
+                    </sli>
+                    <sli>
+                        <b>Defect Id:</b>
+                        One or many jira bugs if the test case has failed
+                    </sli>
+                    <sli>
+                        <b>Create Bug:</b>
+                        Allows users to create jira bug based on test case
+                        execution results directly from TMS
+                    </sli>
+                </sl>
+                <image href="../../resources/testcampaigns/testcampaign_execute_add_result.png"/>
+            </info>
+            </step>
+            <step id="3">
+                <cmd>Click "Save"</cmd>
+                <info>Make sure to save your results using the Save button!
+                    <image href="../../resources/testcampaigns/testcampaign_execute_add_result_detail.png" />
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>Test case results have now been updated.</p>
+        </result>
+    </taskbody>
+</task>

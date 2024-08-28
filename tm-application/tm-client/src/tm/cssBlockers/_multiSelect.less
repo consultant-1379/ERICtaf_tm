@@ -1,0 +1,237 @@
+.applyBoxSizing(@params) {
+    -webkit-box-sizing: @params;
+    -moz-box-sizing: @params;
+    -ms-box-sizing: @params;
+    box-sizing: @params;
+}
+.applyBorderRadius(@params) {
+    -webkit-border-radius: @params;
+    -moz-border-radius: @params;
+    -ms-border-radius: @params;
+    border-radius: @params;
+}
+.applyAppearance(@params) {
+    -webkit-appearance: @params;
+    -moz-appearance: @params;
+    -ms-appearance: @params;
+    appearance: @params;
+}
+.applyDisabledFormAction() {
+    -ms-touch-action: none !important;
+    cursor: not-allowed !important;
+    touch-action: none !important;
+}
+.applyVerticalGradient(@topColor, @bottomColor, @ieTopColor: '', @ieBottomColor: '') {
+    background-image: -moz-linear-gradient(top, @topColor 0%, @bottomColor 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @topColor), color-stop(100%, @bottomColor)); /* Chrome, Safari4+ */
+    background-image: -webkit-linear-gradient(top, @topColor 0%, @bottomColor 100%); /* Chrome10+, Safari5.1+ */
+//    background-image: -o-linear-gradient(top, @topColor 0%, @bottomColor 100%); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top, @topColor 0%, @bottomColor 100%); /* IE10+ */
+    background-image: linear-gradient(top bottom, @topColor 0%, @bottomColor 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@ieTopColor, endColorstr=@ieBottomColor, GradientType=0); /* IE6-9 */
+}
+.applyButtonDefaultVGradient() {
+    .applyVerticalGradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), '#00000000', '#16000000');
+}
+.applyButtonHoverVGradient() {
+    .applyVerticalGradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), '#00000000', '#26000000');
+}
+
+.applyButtonActiveVGradient() {
+    .applyVerticalGradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0), '#16000000', '#00000000');
+}
+
+.ebComponentList {
+    &-notFound {
+        font-style: italic;
+        color: #333333;
+        margin: 0.6rem;
+        text-align: center;
+
+        &:hover {
+            background-color: #FFFFFF;
+        }
+        &:active {
+            background-color: #FFFFFF;
+        }
+    }
+}
+
+.ebMultiSelect {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    overflow: visible;
+    width: 140px;
+
+    .applyBoxSizing(~"border-box");
+
+    &-textarea {
+        padding-right: 2.8rem;
+        vertical-align: top;
+        width: 100%;
+    }
+
+    &-body {
+        position: absolute;
+        margin-top: 6px;
+        display: none;
+        width: 100%;
+
+        &_rightAlign {
+            right: 0;
+        }
+    }
+
+    &_highlight {
+        border: solid 2px #e32119;
+    }
+
+    &-helper {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        bottom: 1px;
+        outline: none;
+
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 2.8rem;
+        height: ~"calc(100% - 2px)";
+
+        cursor: pointer;
+        border: 1px solid #999999;
+        border-width: 0 0 0 1px;
+        background-color: #FFFFFF;
+
+        .applyBoxSizing(~"border-box");
+        .applyBorderRadius(~"0 3px 3px 0");
+        .applyAppearance(none);
+
+        .applyButtonDefaultVGradient();
+
+        &:hover {
+            .applyButtonHoverVGradient();
+        }
+        &:active {
+            .applyButtonActiveVGradient();
+        }
+
+        &:disabled {
+            background: rgba(0, 0, 0, 0.1);
+            border-color: #b2b2b2; // 30%
+            color: #B2B2B2;
+
+            &:hover, &:active {
+                background: rgba(0, 0, 0, 0.1);
+                color: #B2B2B2;
+                cursor: not-allowed;
+            }
+        }
+
+        .ebMultiSelect-iconHolder {
+            display: inline-block;
+            opacity: 0.7;
+            cursor: pointer;
+            line-height: 2.2rem;
+        }
+
+        &:hover > .ebMultiSelect-iconHolder {
+            opacity: 1;
+        }
+        &:active > .ebMultiSelect-iconHolder {
+            opacity: 0.4;
+        }
+
+        &:disabled, &:disabled > .ebMultiSelect-iconHolder {
+            .applyDisabledFormAction();
+
+            > .ebMultiSelect-iconHolder {
+                .applyDisabledFormAction();
+
+                &, &:hover, &:active {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+
+    &-listHolder {
+        position: absolute;
+        top: 2px;
+        left: 0.6rem;
+        right: 3.4rem;
+        pointer-events: none;
+    }
+
+    &List {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+
+        &-item {
+            position: relative;
+            vertical-align: top;
+            display: inline-block;
+            height: 1.8rem;
+            line-height: 1.8rem;
+            margin: 0.2rem 6px 0.2rem 0;
+            max-width: 100%;
+            pointer-events: auto;
+
+            cursor: pointer;
+            background-color: #DCDCDC;
+
+            .applyBoxSizing(~"border-box");
+            .applyBorderRadius(~"3px");
+
+            &_active {
+                background-color: #99c2e1;
+            }
+
+            &Title {
+                display: inline-block;
+                padding: 0 20px 0 4px;
+                font-size: 1.2rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
+
+                .applyBoxSizing(~"border-box");
+            }
+
+            &Action {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 16px;
+            }
+        }
+    }
+
+    &_width {
+        &_mini {
+            width: 40px;
+        }
+        &_small {
+            width: 80px;
+        }
+        &_long {
+            width: 180px;
+        }
+        &_xLong {
+            width: 220px;
+        }
+        &_fullBlock {
+            width: 100%;
+        }
+    }
+
+    &_disabled {
+        .applyDisabledFormAction();
+    }
+}

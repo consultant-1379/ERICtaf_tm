@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="TMS-SearchTestCases">
+    <title>File 2</title>
+    <conbody>
+        <section id="testCaseFormHeader">
+            <title>Test Case Results</title>
+            <p>Lists all the test cases associated with the selected product. Results can be filtered using the 'Quick Search' or 'Advanced Search' features.</p>
+            <p>Selected test cases can be added to a test campaign or exported to a text file using the links provided</p>
+        </section>
+        <section id="advancedSearchHeader">
+            <title>Advanced Search</title>
+            <p>Multiple criteria can be added to further refine the search.</p>
+        </section>
+        <section id="moreButton">
+            <title>More Button</title>
+            <p>Displays the menu for test case 'Advanced Search' feature.</p>
+        </section>
+        <section id="criteria">
+            <title>Advanced Search Criteria</title>
+            <p>Add multiple criteria to search test cases by.</p>
+        </section>
+        <section id="projectsDropdown">
+            <title>Select Project</title>
+            <p>Filter test cases by specific project or select 'All Projects'.</p>
+        </section>
+        <section id="resultsLinks">
+            <title>Links</title>
+            <p>'Saved Search' : Allows users to save the search that they have used.</p>
+            <p>'Search Menu' : Select the previously saved search url to use that search again.</p>
+            <p>'Add to Test Campaign' : Select checkboxes of test cases to add to a test campaign. Test campaign can be selected in the next step.</p>
+            <p>'Generate Report' : Exports all test cases from the results table to a text document.</p>
+        </section>
+        <section id="icons">
+            <title>Icons Description</title>
+            <p>'Create Test Case': Click to create a new test case.</p>
+            <p>'Test Plans': Navigate to view all test plans.</p>
+            <p>'Requirements': Navigate to view the requirements for the selected project. If 'All Projects'
+                is selected, no requirements will be shown..</p>
+        </section>
+        <section id="resultsHeader">
+            <title>Results</title>
+            <p>This table lists all the test cases returned from the advanced search. Click the check box beside each test case to be added to the test campaign.
+                Use the 'Add Selected' button to add all the selected test cases to the test campaign.</p>
+        </section>
+        <section id="results">
+            <title>Results</title>
+            <p>Use the advanced search widget to search for test cases. Multiple test cases can be selected and added
+                to the test campaign using the 'Add Selected' button.</p>
+        </section>
+    </conbody>
+</concept>

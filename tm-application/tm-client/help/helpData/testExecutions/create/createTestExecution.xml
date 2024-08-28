@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept>
+    <conbody>
+        <section id="testStep">
+            <title>Test Steps</title>
+            <p>Ordered list of Actions against the SUT with Validation of responses.</p>
+            <p>Each Test Step can have a number of Verify Steps, displaying the expected outcomes for that Test Step.</p>
+        </section>
+        <section id="testExecutionHeader">
+            <title>Test Case Details</title>
+            <p>Displays the details of the currently selected Test Case.</p>
+        </section>
+        <section id="resultHeader">
+            <title>Test Case Result</title>
+            <p>Assign a result to this Test Case Execution.</p>
+            <p>'Result': Select a result from the dropdown list. This field cannot be null.</p>
+            <p>'Comment': Add a comment for additional information if needed.</p>
+            <p>'Execution Time': Add the duration of the test case (HH:MM:SS) [Optional].</p>
+            <p>'KPI Measurement': Open field used to add measurement information for the test execution. [Optional].</p>
+            <p>'Improvement Story ID(s)': Add User Stories or Improvements that have been planned to improve this test case result.
+                This field is not available where 'Result' is 'Pass'.</p>
+            <p>'Defect ID(s)': Add the Defect Id(s) that caused the Test Execution not to Pass.
+                This field is not available where 'Result' is 'Pass'.</p>
+        </section>
+        <section id="passFail">
+            <title>Pass/Fail Icons</title>
+            <p>An overall result for each Test Step can be assigned by clicking the Pass or Fail icon.</p>
+        </section>
+        <section id="actualResult">
+            <title>Actual Result</title>
+            <p>Add the result that occurred for each verify step if required. This can be compared against
+                the expected result from the corresponding 'Verify Step'.</p>
+        </section>
+    </conbody>
+</concept>

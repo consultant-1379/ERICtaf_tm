@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ericsson.cifwk</groupId>
+        <artifactId>tm-tests</artifactId>
+        <version>2.15.30-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>tm-operators</artifactId>
+    <packaging>jar</packaging>
+    <name>TM Operators</name>
+    <description>TAF Test Management System (TMS) operators</description>
+
+    <developers>
+        <developer>
+            <id>evicovc</id>
+            <name>Victor Ovchinnikov</name>
+            <email>victor.ovchinnikov@ericcson.com</email>
+            <organization>Ericsson</organization>
+        </developer>
+        <developer>
+            <id>edimsol</id>
+            <name>Dimitry Solovyov</name>
+            <email>dimitry.solovyov@ericsson.com</email>
+            <organization>Ericsson</organization>
+        </developer>
+        <developer>
+            <id>edmnovi</id>
+            <name>Dmitry Novikov</name>
+            <email>dmitry.novikov@ericsson.com</email>
+            <organization>Ericsson</organization>
+        </developer>
+        <developer>
+            <id>edmnovi</id>
+            <name>Dmitry Novikov</name>
+            <email>dmitry.novikov@ericsson.com</email>
+            <organization>Ericsson</organization>
+        </developer>
+        <developer>
+            <id>egergle</id>
+            <name>Gerald Glennon</name>
+            <email>gerald.glennon@ericsson.com</email>
+            <organization>Ericsson</organization>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>Jira Issues</system>
+        <url>http://eteamproject.internal.ericsson.com/browse/EEDS</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://jenkins.lmera.ericsson.se/taf_main/view/TMS/</url>
+    </ciManagement>
+
+    <scm>
+        <url>https://gerrit.ericsson.se/#/admin/projects/OSS/com.ericsson.cifwk/ERICtaf_tm</url>
+        <connection>ssh://gerrit.ericsson.se:29418/OSS/com.ericsson.cifwk/ERICtaf_tm</connection>
+        <developerConnection>ssh://gerrit.ericsson.se:29418/OSS/com.ericsson.cifwk/ERICtaf_tm</developerConnection>
+      <tag>HEAD</tag>
+  </scm>
+
+    <mailingLists>
+        <mailingList>
+            <name>taf-users</name>
+            <subscribe>http://mailman.lmera.ericsson.se/mailman/listinfo/taf-users</subscribe>
+            <post>taf-users@mailman.lmera.ericsson.se</post>
+            <archive>http://mailman.lmera.ericsson.se/pipermail/taf-users/</archive>
+        </mailingList>
+    </mailingLists>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>taf-bom</artifactId>
+                <version>${taf.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>tm-server-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>all-taf-sdk</artifactId>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>http-tool</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.cds</groupId>
+            <artifactId>uisdk-composite-components</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.docx4j</groupId>
+            <artifactId>docx4j</artifactId>
+            <version>3.1.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-lang</groupId>
+                    <artifactId>commons-lang</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>commons-codec</groupId>
+                    <artifactId>commons-codec</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>taf-scanner-maven-plugin</artifactId>
+                <version>1.0.14</version>
+                <configuration>
+                    <failBuild>false</failBuild>
+                    <publishTestware>true</publishTestware>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>scan</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

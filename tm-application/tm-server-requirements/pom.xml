@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>tm-application</artifactId>
+        <groupId>com.ericsson.cifwk</groupId>
+        <version>2.15.30-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>tm-server-requirements</artifactId>
+    <packaging>jar</packaging>
+    <name>TM Server Requirements Management</name>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>tm-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.inject.extensions</groupId>
+            <artifactId>guice-multibindings</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.netflix.governator</groupId>
+            <artifactId>governator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-multipart</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.ext</groupId>
+            <artifactId>jersey-proxy-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>tm-server-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-metrics-event-stream</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.reactivex</groupId>
+            <artifactId>rxjava</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-javanica</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.gic.tms</groupId>
+            <artifactId>tvs-server-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.gic.tms</groupId>
+            <artifactId>tce-server-api</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+</project>

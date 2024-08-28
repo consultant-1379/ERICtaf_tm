@@ -1,0 +1,19 @@
+{
+    "id" : null,
+    "component" : "component",
+    "contexts" : [ {"id": "REST", "title": "REST"} ],
+    "description" : "Performance test case",
+    "groups" : [ {"id": "1", "title": "G1"} ],
+    "precondition" : "true == true",
+    "priority" : {"id": "LOW", "title": "Low"},
+    "requirementIds" : ["CIP-5038"],
+    "requirementInfos" : null,
+    "testSteps" : [ { "id" : null,
+        "name" : "newTestStep",
+        "verifies" : [ { "id" : null,
+            "name" : "newVerificationStep"
+        } ]
+    } ],
+    "title" : "Title",
+    "type" : {"id": "FUNCTIONAL", "title": "Functional"}
+}

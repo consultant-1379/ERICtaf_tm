@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Create Test Campaign">
+    <title>Create Test Campaign</title>
+    <taskbody>
+        <prereq>
+            <li>User should be logged in</li>
+            <li>User should Select "Create Test Campaign" option from Quick Links</li>
+        </prereq>
+        <steps>
+            <step id="1">
+                <cmd>Enter Test Campaign Details</cmd>
+                <info>
+                         <p>Test Campaign Parameters that should be specified include:</p>
+                        <sl>
+                        <sli>
+                            <b>Test Campaign name</b>
+                        </sli>
+                        <sli>
+                            <b>Description of test campaign:</b> the purpose and scope of test
+                            campaign
+                        </sli>
+                        <sli>
+                            <b>Feature:</b> (Optional) the features that all test cases in campaign should fall under.
+                            Can be left blank if unsure and it wont limit what test cases can be added
+                        </sli>
+                        <sli>
+                            <b>Component:</b> (Optional) the components that all test cases in campaign should fall under.
+                            Can be left blank if unsure and it wont limit what test cases can be added
+                        </sli>
+                        <sli>
+                            <b>Drop:</b> the test campaign is applicable for. This
+                            field is automatically populated from information in jira.
+                        </sli>
+                        <sli>
+                            <b>Environment:</b> the specific environment the tests are planned
+                            for
+                        </sli>
+                        <sli>
+                            <b>Start and End dates:</b> for tracking purposes
+                        </sli>
+                        <sli>
+                            <b>PS-From and PS-To:</b> (Optional) Depending upon the drop which is selected,required ISO's should be given here.
+                        </sli>
+                        <sli>
+                            <b>Guide Revision:</b> (Optional) Required Guide Revision should be given here
+                        </sli>
+                        <sli>
+                            <b>SED Revision:</b> (Optional) Required SED Revision should be given here
+                        </sli>
+                        <sli>
+                            <b>Other Dependent SW:</b> (Optional) Required Other Dependent SW should be given here
+                        </sli>
+                        <sli>
+                            <b>Node Type and Version:</b> (Optional) Required Node Type and Version should be given here
+                        </sli>
+                        <sli>
+                            <b>SoV Status:</b> (Optional) Required Sov status should be given here. (Recommended values are Compliant, Non Compliant, Partially Compliant)
+                        </sli>
+                        <sli>
+                            <b>Comment:</b> (Optional) Comment should be given here
+                        </sli>
+                        </sl>
+
+
+                    <p>
+                        <image href="../../resources/testcampaigns/testcampaign_create_page.png"/>
+                        <image href="../../resources/testcampaigns/testcampaign_create_page1.png"/>
+                        <image href="../../resources/testcampaigns/testcampaign_create_page1-1.png"/>
+                    </p>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Assign test cases to test campaign</cmd>
+                <info><p>Test cases need to be assigned to the given test campaign.
+                    Use the “Add Multiple” option to find the test cases and add them to the
+                    campaign.
+                    </p>
+                    <image href="../../resources/testcampaigns/testcampaign_create_page2.png"/>
+                </info>
+            </step>
+            <step id="3">
+                <cmd>Find &amp; Select test cases to add to test campaign</cmd>
+                <info><p>This provides the user with the search criteria to find your test
+                    cases. Multiple search criteria can be applied here to find your
+                    test cases.
+                    </p>
+                </info>
+                <image href="../../resources/testcampaigns/testcampaign_create_add_criteria.png"/>
+                <info>
+                    <p>In this example a search finds all test cases where the Component
+                        field contains the word "Deployment".</p>
+                    <image href="../../resources/testcampaigns/testcampaign_create_select.png"/>
+                    <ol>
+                        <li>Select the Test Cases you want to Add</li>
+                        <li>Click "Add Selected" to add them to your test plan</li>
+                        <li>Click the Highlighted arrow to return to Test Plan Create Page</li>
+                    </ol>
+                </info>
+            </step>
+            <step id="4">
+                <cmd>Assign Test Cases to a User</cmd>
+                <info>
+                    <p>This can be done using the
+                        “Assign to User Option”. Select the test cases in the test campaign
+                        create/edit page and assign them to users. Corporate user id’s can
+                        be used and they will be matched against the corporate ldap server.
+                        The users will receive an e-mail with a link to the test campaign.
+                        <b>NB.</b> When assigning test cases via Edit Test Campaign,
+                        always ensure to save the test campaign, otherwise the emails will
+                        not be sent.
+                    </p>
+                </info>
+                <image href="../../resources/testcampaigns/testcampaign_assign_testcase.png"/>
+            </step>
+            <step id="5">
+                <cmd>Complete Test Campaign Creation-Click "Create"</cmd>
+                <info>When you are happy with the content of your test campaign use the
+                    "Create" button to complete the creation of the test campaign.
+                </info>
+            </step>
+        </steps>
+        <result>
+            <b>TMS Inbox</b>
+            <p>When the Test Campaign has been created, test cases assigned to
+                users are visible in their Inbox.
+            </p>
+            <image href="../../resources/testcampaigns/testcampaign_inbox.png"/>
+        </result>
+    </taskbody>
+</task>
+

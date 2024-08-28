@@ -1,0 +1,15 @@
+{
+    "title": "Test Management System",
+    "username": "Username",
+    "password": "Password",
+    "copyright": "© Ericsson Enterprise AB, {{year}}. All rights reserved.",
+    "licenceHeader": "IMPORTANT LEGAL NOTICE",
+    "licenceContent": "If you are not an authorized user, please leave.",
+    "licenceButton": "OK",
+    "missingUsername": "Please enter a username.",
+    "missingPassword": "Please enter a password.",
+    "missingUsernamePassword": "Please enter a username and password.",
+    "invalidUsernamePassword": "Invalid username/password. Please try again.",
+    "serverAppearsDown": "Server appears to not be responding.",
+    "rememberMe": "Remember me"
+}

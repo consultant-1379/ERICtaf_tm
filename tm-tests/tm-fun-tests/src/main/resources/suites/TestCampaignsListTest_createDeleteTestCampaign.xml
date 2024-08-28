@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestCampaignsListTest_createDeleteTestCampaign">
+    <test name="TestCampaignsListTest_createDeleteTestCampaign">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.testcampaigns.TestCampaignsListTest">
+                <methods>
+                    <include name="createDeleteTestCampaign"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.testcampaigns.TestCampaignsListTest">
+                <methods>
+                    <include name="createDeleteTestCampaign"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,81 @@
+.eaTM-TestCaseFormRegion {
+    font-size: 0;
+    white-space: nowrap;
+
+    &-messages {
+        margin: 1.2rem 0;
+        display: none;
+
+        &_show {
+            display: block;
+        }
+    }
+
+    &-details, &-testSteps {
+        font-size: 1.2rem;
+        display: inline-block;
+        vertical-align: top;
+    }
+    &-details{
+        width: ~"calc(100% - 600px)";
+    }
+
+    &-filesHolder {
+        width: 60rem;
+    }
+    &-testSteps {
+        margin-left: 30px;
+        margin-bottom: 40px;
+        width: 570px;
+    }
+    &-files {
+        float: left;
+        margin-top: 2rem;
+        display: inline-block;
+        width: ~"calc(33% - 1.2rem)";
+    }
+
+    @media screen and (max-width: 1200px) {
+        &-details {
+            width: ~"calc(100% - 500px)";
+        }
+        &-testSteps {
+            margin-left: 30px;
+            width: 470px;
+        }
+        &-filesHolder {
+            width: 470px;
+        }
+
+    }
+
+    @media screen and (max-width: 1000px) {
+        &-details {
+            width: ~"calc(100% - 400px)";
+        }
+        &-testSteps {
+            margin-left: 30px;
+            width: 370px;
+        }
+        &-filesHolder {
+            width: 370px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &-details {
+            width: 100%;
+            display: block;
+        }
+        &-testSteps {
+            width: 100%;
+            margin-left: 0;
+            display: block;
+        }
+        &-filesHolder {
+            margin-left: 0;
+            display: block;
+            width: 100%;
+        }
+    }
+}

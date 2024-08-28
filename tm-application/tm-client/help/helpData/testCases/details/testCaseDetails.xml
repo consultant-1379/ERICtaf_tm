@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept>
+    <conbody>
+        <section id="iconBlock">
+            <title>Icons Description</title>
+            <p>'Version': Select the version of the test case that you would like to view from the dropdown list.
+                Versions can be incremented by passing a review. The system will create a new version when the user clicks edit.</p>
+            <p>'Edit': Edit this Test Case.</p>
+            <p>'Remove': Delete this Test Case.</p>
+            <p>'Copy': Copy this Test Case.</p>
+            <p>'Send For Review': Send test case for review.</p>
+            <p>'Approve': Approve a test case.</p>
+        </section>
+        <section id="additionalIcons">
+            <title>Comments, Test Campaign and Copy Link Icons</title>
+            <p>'Copy Link (Latest Version)': Copies a link to the latest version of this Test Case to the clipboard.</p>
+            <p>'Show Test Campaigns': Shows all Test Campaigns associated with this Test Case.</p>
+            <p>'Show Comments': Shows all comments associated with this Test Case. Additional Test Case comments can also be
+                added here.</p>
+        </section>
+        <section id="viewTestCaseHeader">
+            <title>Test Case Details</title>
+            <p>This form shows the detailed information for the currently selected Test Case.</p>
+        </section>
+        <section id="testStepsHeader">
+            <title>Test Steps</title>
+            <p>Ordered list of Actions against the SUT with Validation of responses.</p>
+        </section>
+    </conbody>
+</concept>

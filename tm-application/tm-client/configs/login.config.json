@@ -1,0 +1,7 @@
+{
+    "restServer": "/tm-server/api/",
+    "gotoBasePath": "../#",
+    "defaultGoto": "tm",
+    "title": "Test Management System",
+    "loginUrl": "login"
+}

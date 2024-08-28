@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="TMS-CreateEditTestCase">
+    <conbody>
+        <section id="testPlanDetails">
+            <title>Test Campaign Details</title>
+            <p>This form displays the details for the currently selected test campaign.</p>
+        </section>
+        <section id="testCasesHeader">
+            <title>Test Cases</title>
+            <p>This table lists all the test cases associated with the current test campaign.</p>
+            <p>To execute a test case, click the 'Add Result' button in the 'Actions' column of this table.</p>
+            <p>Table results can be filtered by entering a search term in the filter box at the top of each column. Filter options are:
+                '=': equal to, '!=': not equal to, and '~': contains</p>
+        </section>
+        <section id="exportLink">
+            <title>Export</title>
+            <p>Export All: Exports all the information pertaining to all test cases</p>
+            <p>Export View : Exports filtered test cases.</p>
+        </section>
+        <section id="advancedSearch">
+            <title>Advanced Search</title>
+            <p>Displays the test case 'Advanced Search' widget.</p>
+        </section>
+        <section id="passRate">
+            <title>Pass Rate</title>
+            <p>Displays a stacked progress bar of test execution results. By hovering over each result bar a tooltip will display more information</p>
+        </section>
+    </conbody>
+</concept>

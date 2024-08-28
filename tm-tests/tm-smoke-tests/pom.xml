@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ericsson.cifwk</groupId>
+        <artifactId>tm-tests</artifactId>
+        <version>2.15.30-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>tm-smoke-tests</artifactId>
+    <packaging>jar</packaging>
+    <name>TM Smoke Tests</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>all-taf-sdk</artifactId>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>tm-operators</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>http-tool</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>tm-server-api</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

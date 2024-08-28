@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="HideShowTestCaseButtons_changeTestCaseVersion">
+    <test name="HideShowTestCaseButtons_changeTestCaseVersion">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.tms.HideShowTestCaseButtonsTest">
+                <methods>
+                    <include name="changeTestCaseVersion"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

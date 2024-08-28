@@ -1,0 +1,33 @@
+<div data-bypassfocuslock class="ebComponentList eb_scrollbar eaTM-ComponentList ebComponentList_focus_forced">
+    {{#if selectDeselectAll}}
+    <div class="eaTM-MultiSelectBox-selectDeselectAllWrap">
+        <div class="ebMultiSelectBox-selectDeselectAll">
+            <span class='eaTM-MultiSelectBox-selectAll ebMultiSelectBox-spanLink'>Select All</span><span class='eaTM-MultiSelectBox-deselectAll ebMultiSelectBox-spanLink'>Deselect All</span>
+        </div>
+        <div class="ebComponentList-separator"></div>
+    </div>
+    {{/if}}
+
+    <div>
+        {{#each items}}
+            {{#if header}}
+            <div class="ebComponentList-group">
+                <div class="ebComponentList-group-header">{{header}}</div>
+                <div class="ebComponentList-inner">
+                    {{#each items}}
+                        {{> item}}
+                    {{/each}}
+                </div>
+            </div>
+            {{else}}
+                {{>item }}
+            {{/if}}
+        {{/each}}
+        <div class="ebComponentList-info"></div>
+        <div class="ebComponentList-loader">
+            <div class="ebLoader">
+                <div class="ebLoader-Holder"><span class="ebLoader-Dots"></span></div>
+            </div>
+        </div>
+    </div>
+</div>

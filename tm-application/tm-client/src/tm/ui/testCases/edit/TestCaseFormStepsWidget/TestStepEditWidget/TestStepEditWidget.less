@@ -1,0 +1,99 @@
+.eaTM-TestStepEdit {
+    position: relative;
+    line-height: normal;
+    margin-bottom: 1.2rem;
+    cursor: move;
+
+    /* Prevent the text contents of draggable elements from being selectable. */
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+
+    &_highlight {
+        border: 2px solid #89ba17;
+        border-radius: 0.5rem;
+    }
+
+    &_dragStarted {
+        opacity: 0.4;
+    }
+    &-draggableArea {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        &_active {
+            display: block;
+            border: 2px dashed #858585;
+            border-radius: 3px;
+        }
+    }
+
+    &-titleHolder {
+        border-radius: 4px;
+        background-color: #EFEFEF;
+        padding: 0.4rem;
+    }
+    &-orderNr {
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 7px 0;
+        border: 1px solid #00625f;
+        text-align: center;
+        line-height: 1.6rem;
+        width: 2.4rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #666;
+        margin-top: 0.1rem;
+        margin-right: 0.4rem;
+    }
+    &-title {
+        width: ~"calc(100% - 78px)";
+        line-height: 1.6rem;
+        overflow: hidden;
+    }
+    &-dataField {
+        padding: 4px;
+        margin-top: 4px;
+        line-height: 1.6rem;
+        width: 100%;
+    }
+
+
+    &-dataFieldHolder {
+        margin-top: 3px;
+        border-top: #CCCCCC dashed 1px;
+        padding: 0.4rem;
+
+    }
+
+    &-dataFieldHeader {
+        color:  #ADADAD;
+        font-weight: bold;
+        vertical-align: top;
+        font-size: 1.1rem;
+    }
+
+    &-iconsBlock {
+        position: absolute;
+        right: 0;
+        top: 0.8rem;
+    }
+    &-verifiesList {
+        padding-left: 30px;
+    }
+    &-addLink {
+        margin: 0.4rem 0 0 8rem;
+        display: inline-block;
+    }
+}

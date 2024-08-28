@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Faq">
+    <title>Frequently Asked Questions</title>
+    <conbody>
+        <section>
+            <title id="1">How do I report bugs or give feedback to TMS</title>
+            <p>
+                Please use our feedback feature at the bottom right of the application screen. This will link to our Jira board
+                and you can write bugs and feedback to TMS team. The icon is only located from the main TMS pages and not from this area.
+            </p>
+            <image href="../resources/feedback/feedback_button.png"/>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept>
+    <title>File 1</title>
+    <conbody>
+        <section id="testPlanDetailsHeader">
+            <title>Test Campaigns</title>
+            <p>This table lists all the test campaigns associated with the currently selected product.</p>
+            <p>To navigate to a test campaign, click on the link in the 'Name' column.</p>
+            <p>Use the 'Play' icon to execute a test campaign.</p>
+            <p>To delete an individual test campaign, click the 'Delete' icon.</p>
+            <p>Table results can be filtered by entering a search term in the filter box at the top of each column. Filter options are:
+                '=': equal to, '!=': not equal to, and '~': contains.</p>
+        </section>
+        <section id="filterControls">
+            <title>Filter Test Campaigns</title>
+            <p>
+                Test Campaigns may be filtered by product, drop, feature and components. Note: drops and components are only
+                available for certain products.
+            </p>
+            <p>
+                Test campaigns may span multiple components and when filtering by component it should be noted that the the filter mechanism
+                is a logical OR filter.
+            </p>
+            <p>
+                That is: <i>show the test campaigns that have at least 1 component matching at least 1 value selected
+                in the component dropdown.</i>
+            </p>
+        </section>
+        <section id="copyTestCampaigns">
+            <title>Copy Test Campaigns</title>
+            <p>
+                Test campaigns can be copied between drops.
+            </p>
+            <p>
+                Test campaigns that match the selected filters will be copied to the selected drop.
+            </p>
+        </section>
+    </conbody>
+</concept>

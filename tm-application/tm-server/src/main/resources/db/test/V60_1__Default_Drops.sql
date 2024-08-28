@@ -1,0 +1,1 @@
+UPDATE `DROPS` SET `default_drop` = TRUE WHERE `name` = 'Other';

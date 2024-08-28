@@ -1,0 +1,36 @@
+show allResults
+
+{package} = com.ericsson.cifwk.tm
+
+{domain} = ${package}.domain
+{integration} = ${package}.integration
+{application} = ${package}.application
+{presentation} = ${package}.presentation
+
+# Fix layering:
+[listeners] = ${domain}.listeners.*
+[helper] = ${domain}.helper.*
+[dto] = ${presentation}.dto.*
+[responses] = ${presentation}.responses.*
+[requests] = ${application}.requests.*
+
+[infrastructure] = ${package}.infrastructure.*
+
+[domain] = ${domain}.* excluding [listeners] [helper]
+[integration] = ${integration}.*
+[application] = ${application}.* excluding [requests]
+
+[presentation] = ${presentation}.* excluding [dto] [responses]
+
+layer domain = [domain]
+layer integration = [integration]
+layer application = [application]
+layer presentation = [presentation]
+
+check layeringOf domain integration application presentation
+
+[services] = ${application}.services.*
+[resources] = ${presentation}.resources.*
+
+check [presentation] directlyIndependentOf [integration]
+check [resources] directlyIndependentOf [services]

@@ -1,0 +1,20 @@
+{
+    "name": "Test Plan with Release",
+    "description": "Test Plan with Release description",
+    "environment": "environment",
+    "release": {
+        "id": 9,
+        "title": "1.0.1"
+    },
+    "startDate": "2015-01-01T00:00:00.000Z",
+    "endDate": "2015-12-31T23:59:59.999Z",
+    "testPlanItems": [
+        {
+            "testCase": {
+                "id": 11,
+                "testCaseId": "CIP-2638_Func_2",
+                "version" : 1.1
+            }
+        }
+    ]
+}

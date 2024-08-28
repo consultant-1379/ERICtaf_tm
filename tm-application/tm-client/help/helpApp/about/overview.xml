@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Overview">
+    <title>Overview</title>
+    <conbody>
+        <section>
+            <p> Test Management System (TMS) has the purpose of managing test cases, ensuring all product
+                requirements
+                are being covered by traceable test cases.
+            </p>
+            <p>It facilitates:
+                <ul>
+                <li>test case definition</li>
+                <li>metadata association</li>
+                <li>test case
+                    grouping
+                </li>
+                <li>filtering.</li>
+                </ul>
+            </p>
+
+            <b>TMS main characteristics:</b>
+            <ul>
+                <li>Web based (modern design - HTML5 + CSS2/3), using UI-SDK</li>
+                <li>Ericsson branded</li>
+                <li>High Availability Application Server / Database, hosted in Linkoping HUB</li>
+                <li>Automatic Backups</li>
+                <li>Scalable Solution</li>
+            </ul>
+
+            <p> TM ensures test case traceability, assigning a global unique ID to each test case on its creation.
+                Test case ID is linked to parent requirement in the Requirement Management Tool (e.g.
+                <xref format="html" scope="external" href="https://www.atlassian.com/software/jira">JIRA</xref>).
+            </p>
+
+            <p> TM has been designed in a modular approach and can be integrated into different Requirement
+                Management Tools and IDEs, via plug-ins. At the moment, TAF TM is integrated with
+                <xref format="html" scope="external" href="http://eteamproject.internal.ericsson.com">PDU OSS JIRA</xref>
+                enabling the linking of
+                TAF TM test cases to JIRA requirements.
+            </p>
+
+            <p>
+                <b>Why use TMS</b>
+            </p>
+            <p> TMS helps to ensure that all test cases and testware are identified and designed with great care.
+                Without test case identification and proper description, over time, the traceability of why and by whom
+                the test cases were created would be lost.
+            </p>
+        </section>
+    </conbody>
+</concept>

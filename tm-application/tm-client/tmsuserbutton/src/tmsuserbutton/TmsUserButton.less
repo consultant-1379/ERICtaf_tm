@@ -1,0 +1,91 @@
+.eaTmsUserButton {
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+
+    &-list {
+        position: fixed;
+        z-index: 10;
+        display: none;
+        padding: 4px 0;
+        margin: 0;
+        list-style: none;
+        background-color: white;
+        border: #bfbfbf solid 1px;
+        -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        min-width: 116px;
+        width: 100%;
+
+        &_visible {
+          display: inline-block;
+        }
+    }
+
+    &-listItem {
+        padding: 0px 0.8rem;
+        line-height: 24px;
+        font-size: 1.2rem;
+        background-color: white;
+        cursor: pointer;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &:hover {
+            background-color: #e6f0f7;
+        }
+
+        &:active {
+            background-color: #cce0f0;
+        }
+    }
+
+    &-listSeparator {
+        height: 1px;
+        margin: 0.4rem;
+        background-color: #E6E6E6;
+    }
+
+    &-button {
+        color: #0066B3;
+        margin-right: 4px;
+        font-size: 1.2rem;
+        padding: 0 10px 0 20px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: 18px center;
+        border-left: solid 1px #D2D2D2;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+
+      &:hover {
+          text-decoration: underline;
+      }
+
+      @media screen and (max-width: 640px) {
+          font-size: 0;
+      }
+    }
+
+    &:hover {
+        background: #e8e8e8;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2f2f2), color-stop(1, #e8e8e8));
+        background: -ms-linear-gradient(top, #f2f2f2, #e8e8e8);
+        background: -o-linear-gradient(center top, #f2f2f2 0%, #e8e8e8 100%);
+        background: -webkit-linear-gradient(center top, #f2f2f2 0%, #e8e8e8 100%);
+        background: -moz-linear-gradient(center top, #f2f2f2 0%, #e8e8e8 100%);
+        background: linear-gradient(center top, #f2f2f2 0%, #e8e8e8 100%);
+    }
+}

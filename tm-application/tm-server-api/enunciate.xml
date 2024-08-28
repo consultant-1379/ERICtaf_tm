@@ -1,0 +1,12 @@
+<enunciate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="http://enunciate.webcohesion.com/schemas/enunciate-2.3.0.xsd">
+
+    <modules>
+        <docs docsDir="docs"/>
+        <jaxrs>
+            <application path="/tm-server/api/"/>
+        </jaxrs>
+        <swagger basePath="/tm-server/api"></swagger>
+    </modules>
+
+</enunciate>

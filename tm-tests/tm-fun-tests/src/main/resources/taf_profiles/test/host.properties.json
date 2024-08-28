@@ -1,0 +1,14 @@
+[
+    {
+        "hostname": "tm",
+        "ip": "atclvm791.athtem.eei.ericsson.se",
+        "type": "UNKNOWN",
+        "users": [
+            {"username": "root", "password": "shroot", "type": "admin"},
+            {"username": "taf", "password": "taf", "type": "web"},
+            {"username": "taf2", "password": "taf2", "type": "web"},
+            {"username": "unknown", "password": "unknown", "type": "web"}
+        ],
+        "ports": {"http": 80, "ssh": 22}
+    }
+]

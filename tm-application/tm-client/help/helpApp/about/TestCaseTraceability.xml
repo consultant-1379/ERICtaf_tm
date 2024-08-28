@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Overview">
+    <title>Test Case Trace-ability</title>
+    <conbody>
+        <section>
+            <title>
+                <b>Introduction</b>
+            </title>
+            <p>The following is an overview of how TAF supports test
+                trace-ability. This is intended to cover trace-ability for
+                Acceptance
+                Tests for User Stories.
+            </p>
+            <title>
+                <b>What is Test Coverage ?</b>
+            </title>
+            <p>
+                From the perspective of testing a user story, <b> Test Coverage</b> has three criteria:
+                <ol>
+                    <li>
+                        Does a User Story have test cases created to satisfy the
+                        acceptance criteria
+                    </li>
+                    <li>
+                        Have the executed test cases verified the user story
+                        acceptance criteria
+                    </li>
+                    <li>
+                        What system features/components are being covered with a
+                        User Story
+                    </li>
+                </ol>
+            </p>
+
+            <p>When the above criteria are met and the test case has passed,
+                it is
+                possible to generate a Statement of Verification (SOV) report for
+                that
+                User Story.
+            </p>
+
+            <p>A SOV is a mandatory activity that needs to be completed for a
+                feature before it can be said to be complete.
+            </p>
+
+            <p>In previous products like Mars, linking test cases to
+                requirements and setting the results of requirements
+                verification
+                was a time consuming exercise. Indeed, it was so Agile
+                unfriendly
+                that it was promptly dropped by Agile teams.
+            </p>
+
+            <p>
+                <b>So what does TMS Offer</b>
+                A test management system that
+                supports full test case life-cycle management that is completely
+                automated experience.
+            </p>
+        </section>
+        <section>
+            <title>
+                <b>Steps to Full Traceability</b>
+            </title>
+            <p>
+                <b>Step 1: Create Test Cases</b>
+            </p>
+
+            <p>TAF test management system is a custom build test case management
+                system
+                that provides support for the following:
+            </p>
+
+            <ul>
+                <li>
+                    <div>Designing your test cases</div>
+                </li>
+                <li>
+                    <div>Linking test cases to requirements</div>
+                </li>
+                <li>
+                    <div>Viewing requirements coverage</div>
+                </li>
+                <li>
+                    <div>Creating manual test plans</div>
+                </li>
+                <li>
+                    <div>Executing manual test cases</div>
+                </li>
+                <li>
+                    <div>Viewing requirements coverage</div>
+                </li>
+                <li>
+                    <div>Exporting test case descriptions</div>
+                </li>
+            </ul>
+
+            <p>It is a completely open product developed with UI-SDK technology.
+                Unlike licensed vendor provided tools, all TMS operations are
+                exposed via a documented Rest API, which is linked on the UI. This
+                allows us
+                to interface directly to Jira for Epics, User Stories and
+                Bugs.
+            </p>
+            <p>Thanks to the TMS Jira interface we have created a link in
+                TMS between the test case and the Jira Id. So the trace-ability link
+                has been created within the TMS database.
+            </p>
+
+            <p>
+                <b>Step 2: View Coverage</b>
+            </p>
+
+            <p>So now the test case has been created. It has the necessary steps
+                to validate the acceptance test criteria of the user story.
+            </p>
+
+            <p>So how do I know what else is covered in the User Story, or even
+                more importantly, the user stories in the Epic have no test cases?
+            </p>
+
+            <p>This can be seen from the
+                <xref format="html" scope="external" href="https://taftm.seli.wh.rnd.internal.ericsson.com/#tm/requirements">
+                    Requirements
+                </xref>
+                view in TMS:
+
+            </p>
+            <p>The Requirements view lists test cases created per Epic/MR/Improvement and User
+                Story. So I can see the Statement of Test Coverage (SOTC) for each
+                User Story/Epic/MR/Improvement.
+            </p>
+
+            <p>Currently it is a visual check to ensure you have coverage. So in
+                the “Create Test Case” <xref format="html" scope="internal"
+                                             href="../testCase/createTestCase.xml">example
+                </xref> a test case was created for User
+                Story CIP-1018.
+                Then from the Search Box in the requirements page I
+                can search for it:
+            </p>
+            <image href="../../resources/traceability/testcase_search.png"/>
+
+            <p>Now we can view the Epic CIP-939, and the User Stories for that
+                Epic with test cases. So in creating your test case your
+                requirements coverage has been done automatically.
+            </p>
+
+            <p>
+                <b>Step 3: How to Ensure Test Coverage</b>
+            </p>
+
+            <p>Now we have test cases created and linked to requirements,so I am
+                happy that someone has reviewed the User Story and decided on the
+                appropriate test conditions and documented them in the form of a
+                test case.
+            </p>
+
+            <p>So how do I ensure my automated test case results link back to the
+                requirements?
+            </p>
+            <p>The corresponding TAF test case needs to be annotated with the
+                same Test Case Id that was set on test case creation in time. For
+                example:
+            </p>
+
+            <image href="../../resources/traceability/testid_annotation.png"/>
+
+            <p>The Test Case ID’s
+                <b>MUST</b>
+                remain consistent between your automated
+                test case and TMS. Otherwise trace-ability is impossible.
+            </p>
+
+            <p>In the case of Data Driven Tests, you can set the testId
+                dynamically from the csv data file.
+            </p>
+
+            <image href="../../resources/traceability/testid_annotation_datadriven.png"/>
+
+            <p>
+                <b>Step 4: Reporting of Test Coverage</b>
+            </p>
+
+            <p>The final step is to view the coverage of the test cases in the
+                TAF reporting solution.
+            </p>
+            <p>TAF Allure reporting solution enables test reporting that links
+                test case results to requirements.
+                It can go one step further
+                and link User Stories to Features, so
+                you can get an instant view of
+                the test status for that feature.
+            </p>
+
+            <p>The solution is based on an Open Source product called Allure,
+                which has been customized by TAF for PDU NAM specific reporting
+                requirements.
+            </p>
+            <p>The reporting solution uses the mapping between test case and
+                requirement in the TMS database, accessible via the TMS REST
+                interface, to enrich the test report with trace-ability.
+            </p>
+
+            <p>There are two ways of getting these reports:</p>
+
+            <ol>
+                <li>
+                    They can be manually added to an Jenkins job or via your IDE
+                    running TAF test suites using the following instructions:
+                    <xref format="html" scope="external"
+                          href="http://confluence-oss.lmera.ericsson.se/display/TAF/How+to+update+your+testware+to+use+the+new+Allure+reporting+function">
+                        Allure Reporting
+                    </xref>
+                </li>
+                <li>
+                    TAF test cases executed in a CI loop. In this case the
+                    TAF
+                    Executor setup includes the reporting setup, so the Test
+                    Report is
+                    available at the end of the job.
+                </li>
+            </ol>
+
+
+            <p>So what does the report look like?</p>
+
+            <p>If you setup the Jenkins plug-in according to option 1 above, you
+                can launch it directly from Jenkins.
+                On opening the report, select
+                Behaviors. This gives you a breakdown
+                of test results from Feature to
+                User Story to Test Case.
+            </p>
+        </section>
+        <section>
+            <title>
+                <b>Feature View</b>
+            </title>
+            <p>This is a high level feature view of the test results. It can tell
+                you what Features have failing test cases.
+            </p>
+            <p>The Feature in this case maps back to the value for “Component”
+                that you set in TMS when creating the test case.
+            </p>
+            <p>As can be seen the Aggregate test results for all test cases is
+                visible on the Feature level.
+            </p>
+
+            <p>
+                <image href="../../resources/traceability/test_report_feature.png"/>
+            </p>
+
+
+            <title>
+                <b>User Story View</b>
+            </title>
+            <p>Drilling in to the Feature displays the status of the User
+                Stories. It includes aggregate results for the test cases executed
+                to verify the story.
+            </p>
+
+            <p>
+                <image href="../../resources/traceability/test_report_userstory.png"/>
+            </p>
+
+            <title>
+                <b>Test Case View</b>
+            </title>
+            <p>Drilling in to the User Story displays the test case results for
+                the User Story.
+            </p>
+            <p>This displays the test case title and time to execute the test
+                case.
+            </p>
+
+            <p>
+                <image href="../../resources/traceability/test_report_testcase.png"/>
+            </p>
+
+            <title>
+                <b>Detailed Test Step View</b>
+            </title>
+            <p>Drilling further in to the test case you can see the test steps
+                that were executed.
+            </p>
+            <p>This contains details on all the steps logged during the test case
+                execution.
+                It also attaches the Jenkins console log for the test case
+                while it
+                was being executed.
+            </p>
+
+            <p>
+                <image href="../../resources/traceability/test_report_teststep.png"/>
+            </p>
+
+            <title>
+                <b>Un-mapped Test Cases</b>
+            </title>
+            <p>If for some reason test cases have not been mapped as outlined in
+                this paper, they will be visible from the test report.
+                In this case
+                you will see the following:
+            </p>
+            <p>
+                <image href="../../resources/traceability/test_report_unmapped.png"/>
+            </p>
+            <p>Test cases are now linked to unknown features and unknown stories. </p>
+            <p>This poses the question, what is the purpose of the test cases?</p>
+            <p>From a release perspective these are unknown test cases.</p>
+            <p>Why were they run if they are not validating user stories?</p>
+
+        </section>
+    </conbody>
+</concept>

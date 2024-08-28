@@ -1,0 +1,246 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <!--
+        Development environment (embedded H2 server with MySQL mode)
+    -->
+    <persistence-unit name="dev">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+        <properties>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.generate_statistics" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.connection.isolation" value="TRANSACTION_READ_COMMITTED"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <property name="hibernate.connection.provider_class" value="com.zaxxer.hikari.hibernate.HikariConnectionProvider" />
+            <property name="hibernate.hikari.dataSourceClassName" value="org.h2.jdbcx.JdbcDataSource" />
+            <property name="hibernate.hikari.dataSource.url"
+                      value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;MVCC=TRUE;MODE=MySQL;INIT=RUNSCRIPT FROM 'classpath:db/dev/init.sql'" />
+            <property name="hibernate.hikari.dataSource.user" value="sa" />
+            <property name="hibernate.hikari.dataSource.password" value="" />
+            <property name="hibernate.hikari.maximumPoolSize" value="50" />
+
+            <property name="hibernate.cache.region.factory_class" value="org.hibernate.testing.cache.CachingRegionFactory"/>
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="hibernate.cache.use_query_cache" value="true"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="dev_flyway">
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;MVCC=TRUE;MODE=MySQL;INIT=RUNSCRIPT FROM 'classpath:db/dev/init.sql'"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+        </properties>
+    </persistence-unit>
+
+    <!--
+        Development environment (local MySQL)
+    -->
+    <persistence-unit name="dev-mysql">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.generate_statistics" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.connection.isolation" value="TRANSACTION_READ_COMMITTED"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <property name="hibernate.connection.provider_class" value="com.zaxxer.hikari.hibernate.HikariConnectionProvider" />
+            <property name="hibernate.hikari.dataSourceClassName" value="com.mysql.cj.jdbc.MysqlDataSource" />
+            <property name="hibernate.hikari.dataSource.url" value="jdbc:mysql://localhost:3306/tms_local?autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
+            <property name="hibernate.hikari.dataSource.user" value="tmuser" />
+            <property name="hibernate.hikari.dataSource.password" value="tmuser" />
+            <property name="hibernate.hikari.dataSource.cachePrepStmts" value="true" />
+            <property name="hibernate.hikari.dataSource.prepStmtCacheSize" value="250" />
+            <property name="hibernate.hikari.dataSource.prepStmtCacheSqlLimit" value="2048"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="50" />
+
+            <property name="hibernate.cache.region.factory_class" value="org.hibernate.testing.cache.CachingRegionFactory"/>
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="hibernate.cache.use_query_cache" value="true"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="dev-mysql_flyway">
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tms_local?autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="tmuser"/>
+            <property name="javax.persistence.jdbc.password" value="tmuser"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+        </properties>
+    </persistence-unit>
+
+    <!--
+        Test environment (Run Integration tests with MySQL)
+    -->
+    <persistence-unit name="itest">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+        <properties>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.generate_statistics" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.connection.isolation" value="TRANSACTION_READ_COMMITTED"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <property name="hibernate.connection.provider_class" value="com.zaxxer.hikari.hibernate.HikariConnectionProvider" />
+            <property name="hibernate.hikari.dataSourceClassName" value="com.mysql.cj.jdbc.MysqlDataSource" />
+            <property name="hibernate.hikari.dataSource.url"
+                      value="jdbc:mysql://taftmitests-mysql-838-mysql-1389.seli.gic.ericsson.se:6446/taftmitest?autoReconnect=true&amp;createDatabaseIfNotExist=true &amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
+            <property name="hibernate.hikari.dataSource.user" value="taftmitest" />
+            <property name="hibernate.hikari.dataSource.password" value="D5tfHa19Ce0N6dF" />
+            <property name="hibernate.hikari.dataSource.cachePrepStmts" value="true" />
+            <property name="hibernate.hikari.dataSource.prepStmtCacheSize" value="250" />
+            <property name="hibernate.hikari.dataSource.prepStmtCacheSqlLimit" value="2048"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="50" />
+
+            <property name="hibernate.cache.region.factory_class" value="org.hibernate.testing.cache.CachingRegionFactory"/>
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="hibernate.cache.use_query_cache" value="true"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="itest_flyway">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:mysql://taftmitests-mysql-838-mysql-1389.seli.gic.ericsson.se:6446/taftmitest?autoReconnect=true&amp;createDatabaseIfNotExist=true &amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="taftmitest"/>
+            <property name="javax.persistence.jdbc.password" value="D5tfHa19Ce0N6dF"/>
+
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+        </properties>
+    </persistence-unit>
+
+    <!--
+        Test environment (Functional Test)
+    -->
+    <persistence-unit name="test">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.generate_statistics" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.connection.isolation" value="TRANSACTION_READ_COMMITTED"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <property name="hibernate.connection.provider_class" value="com.zaxxer.hikari.hibernate.HikariConnectionProvider" />
+            <property name="hibernate.hikari.dataSourceClassName" value="com.mysql.cj.jdbc.MysqlDataSource" />
+            <property name="hibernate.hikari.dataSource.url" value="jdbc:mysql://localhost:3306/tafdb?autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
+            <property name="hibernate.hikari.dataSource.user" value="tmuser" />
+            <property name="hibernate.hikari.dataSource.password" value="SyCk737jCrDh9eL" />
+            <property name="hibernate.hikari.dataSource.cachePrepStmts" value="true" />
+            <property name="hibernate.hikari.dataSource.prepStmtCacheSize" value="250" />
+            <property name="hibernate.hikari.dataSource.prepStmtCacheSqlLimit" value="2048"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="50" />
+
+            <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="hibernate.cache.use_query_cache" value="true"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="test_flyway">
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tafdb?autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="tmuser"/>
+            <property name="javax.persistence.jdbc.password" value="SyCk737jCrDh9eL"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+        </properties>
+    </persistence-unit>
+
+    <!--
+        Staging environment (Pre-Production)
+    -->
+    <persistence-unit name="stage">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.connection.isolation" value="TRANSACTION_READ_COMMITTED"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <property name="hibernate.connection.provider_class" value="com.zaxxer.hikari.hibernate.HikariConnectionProvider" />
+            <property name="hibernate.hikari.dataSourceClassName" value="com.mysql.cj.jdbc.MysqlDataSource" />
+            <property name="hibernate.hikari.dataSource.url"
+                      value="jdbc:mysql://taftestmanagementstage-mysql-1441.seli.gic.ericsson.se:6446/taftestmanagementstage-mysql-544?autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
+            <property name="hibernate.hikari.dataSource.user" value="taftest" />
+            <property name="hibernate.hikari.dataSource.password" value="SQ6lD8z5riU32qL" />
+            <property name="hibernate.hikari.dataSource.cachePrepStmts" value="true" />
+            <property name="hibernate.hikari.dataSource.prepStmtCacheSize" value="250" />
+            <property name="hibernate.hikari.dataSource.prepStmtCacheSqlLimit" value="2048"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="50" />
+
+            <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="hibernate.cache.use_query_cache" value="true"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="stage_flyway">
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:mysql://taftestmanagementstage-mysql-1441.seli.gic.ericsson.se:6446/taftestmanagementstage-mysql-544?autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="taftest"/>
+            <property name="javax.persistence.jdbc.password" value="SQ6lD8z5riU32qL"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+        </properties>
+    </persistence-unit>
+
+    <!--
+        Production environment
+    -->
+    <persistence-unit name="prod">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.connection.isolation" value="TRANSACTION_READ_COMMITTED"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <property name="hibernate.connection.provider_class" value="com.zaxxer.hikari.hibernate.HikariConnectionProvider" />
+            <property name="hibernate.hikari.dataSourceClassName" value="com.mysql.cj.jdbc.MysqlDataSource" />
+            <property name="hibernate.hikari.dataSource.url"
+                      value="jdbc:mysql://tms_prod-mysql-1442.seli.gic.ericsson.se:6446/tms_prod?autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
+            <property name="hibernate.hikari.dataSource.user" value="taf_user" />
+            <property name="hibernate.hikari.dataSource.password" value="9iBe10y4EtNzH6K" />
+            <property name="hibernate.hikari.dataSource.cachePrepStmts" value="true" />
+            <property name="hibernate.hikari.dataSource.prepStmtCacheSize" value="250" />
+            <property name="hibernate.hikari.dataSource.prepStmtCacheSqlLimit" value="2048"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="50" />
+
+            <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="hibernate.cache.use_query_cache" value="true"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="prod_flyway">
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:mysql://tms_prod-mysql-1442.seli.gic.ericsson.se:6446/tms_prod?autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="taf_user"/>
+            <property name="javax.persistence.jdbc.password" value="9iBe10y4EtNzH6K"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>

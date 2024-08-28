@@ -1,0 +1,19 @@
+<div class="ebComponentList-{{#if _separator}}separator{{else}}item{{/if}} {{#if disabled}}ebComponentList-item_disabled{{/if}}" {{#if title}} title="{{title}}"{{/if}}>
+    {{#if _checkbox}}
+        <label>
+            <input class="ebCheckbox" type="checkbox" value="{{value}}"{{#if checked}} checked{{/if}} {{#if disabled}}disabled{{/if}}>
+            <span class="ebCheckbox-inputStatus"></span>
+            <span class="ebCheckbox-label">{{name}}</span>
+        </label>
+    {{else}}
+        {{#if showIcon}}<div class="eaTM-ComponentList-item-icon-holder">{{#if icon}}<i class="ebIcon eaTM-ComponentList-item-icon ebIcon_{{icon}} {{#if disabled}}ebIcon_disabled{{/if}}"></i>{{/if}}</div>{{/if}}
+        {{#if disabled}} 
+            {{name}}
+        {{else}}
+            {{#if _action}} {{name}} {{/if}}
+            {{#if link}}
+                <a class="ebComponentList-link" href="{{link}}">{{name}}</a>
+            {{/if}}
+        {{/if}}
+    {{/if}}
+</div>

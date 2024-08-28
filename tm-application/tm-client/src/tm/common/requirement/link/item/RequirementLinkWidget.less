@@ -1,0 +1,36 @@
+.eaTM-RequirementLinkWidget {
+    white-space: normal;
+    word-break: normal;
+
+    &-requirementId, &-iconHolder {
+        display: inline-block;
+    }
+
+    &-label {
+        width: 100%;
+        display: inline;
+
+        &Text {
+            width: auto;
+            line-height: 2rem;
+            font-weight: bold;
+            color: #333333;
+        }
+    }
+
+    &-deliveredIn {
+        height: auto;
+        width: auto;
+        padding: 1px;
+        border-radius: 3px 3px 3px;
+        -moz-border-radius: 3px 3px 3px;
+        -webkit-border-radius: 3px 3px 3px;
+        font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+        color: white;
+        vertical-align: top;
+
+        &_hide {
+           display: none;
+        }
+    }
+}

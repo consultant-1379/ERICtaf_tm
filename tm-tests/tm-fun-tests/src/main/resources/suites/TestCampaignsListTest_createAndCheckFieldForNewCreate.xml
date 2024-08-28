@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestCampaignsListTest_createAndCheckFieldForNewCreate">
+    <test name="TestCampaignsListTest_createAndCheckFieldForNewCreate">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.testcampaigns.TestCampaignsListTest">
+                <methods>
+                    <include name="createAndCheckFieldForNewCreate"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

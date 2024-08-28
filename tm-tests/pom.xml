@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ericsson.cifwk</groupId>
+        <artifactId>tm-parent</artifactId>
+        <version>2.15.30-SNAPSHOT</version>
+        <relativePath>../tm-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>tm-tests</artifactId>
+    <packaging>pom</packaging>
+    <name>TM Test Cases</name>
+
+    <modules>
+        <module>tm-operators</module>
+        <module>tm-fun-tests</module>
+        <module>tm-fun-runner</module>
+        <module>tm-perf-tests</module>
+        <module>tm-perf-runner</module>
+        <module>tm-smoke-tests</module>
+        <module>tm-smoke-runner</module>
+    </modules>
+
+    <properties>
+        <taf.version>2.70.1</taf.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>taf-bom</artifactId>
+                <version>${taf.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>all-taf-sdk</artifactId>
+                <version>${taf.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>tm-server-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.cds</groupId>
+                <artifactId>uisdk-composite-components</artifactId>
+                <version>1.0.20</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.ericsson.cifwk.taf</groupId>
+                    <artifactId>taf-maven-plugin</artifactId>
+                    <version>${taf.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>com.ericsson.cifwk.taf</groupId>
+                <artifactId>taf-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>fun</id>
+            <modules>
+                <module>tm-operators</module>
+                <module>tm-fun-tests</module>
+                <module>tm-fun-runner</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>perf</id>
+            <modules>
+                <module>tm-operators</module>
+                <module>tm-perf-tests</module>
+                <module>tm-perf-runner</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>smoke</id>
+            <modules>
+                <module>tm-operators</module>
+                <module>tm-smoke-tests</module>
+                <module>tm-smoke-runner</module>
+            </modules>
+        </profile>
+    </profiles>
+
+</project>

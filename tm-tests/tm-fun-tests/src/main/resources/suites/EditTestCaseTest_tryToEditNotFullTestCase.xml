@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="EditTestCaseTest_tryToEditNotFullTestCase">
+    <test name="EditTestCaseTest_tryToEditNotFullTestCase">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.tms.EditTestCaseTest">
+                <methods>
+                    <include name="tryToEditNotFullTestCase"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.tms.EditTestCaseTest">
+                <methods>
+                    <include name="tryToEditNotFullTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,76 @@
+.eaTM-VerifyEdit {
+    position: relative;
+    padding: 0;
+    cursor: move;
+    line-height: normal;
+
+    &-holder {
+        padding: 0.4rem;
+        border: 1px dashed transparent;
+
+        /* Prevent the text contents of draggable elements from being selectable. */
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        /* Required to make elements draggable in old WebKit */
+        -khtml-user-drag: element;
+        -webkit-user-drag: element;
+
+        &_drag {
+            &Started {
+                opacity: 0.4;
+            }
+            &Over {
+                border-color: #858585;
+                border-radius: 3px;
+            }
+        }
+    }
+
+    &-draggableArea {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &-orderNrHolder {
+        display: inline-block;
+        vertical-align: top;
+        width: 3.6rem;
+        margin-right: 0.4rem;
+    }
+    &-orderNr {
+        display: inline-block;
+        border-radius: 7px 0;
+        border: 1px solid #89ba17;
+        text-align: center;
+        line-height: 1.6rem;
+        min-width: 2.4rem;
+        max-width: 3.6rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #666;
+        padding: 0 0.2rem;
+    }
+    &-title {
+        width: ~"calc(100% - 63px)";
+        line-height: 1.6rem;
+        overflow: hidden;
+    }
+    &-iconsBlock {
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        top: 0.8rem;
+    }
+
+}

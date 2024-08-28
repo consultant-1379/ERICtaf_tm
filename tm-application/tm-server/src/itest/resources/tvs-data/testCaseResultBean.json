@@ -1,0 +1,11 @@
+{
+  "id": "6dfd44b8-42ae-11e6-beb8-9e71128cae77",
+  "name": "A TEST",
+  "time": {"startDate": 1466781257469, "stopDate": 1466781258469, "duration": null},
+  "resultCode": "PASSED",
+  "importStatus": "PENDING",
+  "modifiedDate": null,
+  "createdDate": null,
+  "DROP_NAME": "1.1",
+  "ISO_VERSION": "1.23.1"
+}

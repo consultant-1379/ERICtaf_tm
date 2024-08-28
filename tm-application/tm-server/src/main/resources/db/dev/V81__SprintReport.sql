@@ -1,0 +1,21 @@
+ALTER TABLE `TEST_PLANS_AUD`
+ADD COLUMN `ps_from` VARCHAR(255),
+ADD COLUMN `ps_to` VARCHAR(255),
+ADD COLUMN `guide_revision` VARCHAR(255),
+ADD COLUMN `sed_revision` VARCHAR(255),
+ADD COLUMN `other_dependent_sw` VARCHAR(255),
+ADD COLUMN `node_type_version` VARCHAR(255),
+ADD COLUMN `sov_status` VARCHAR(255),
+ADD COLUMN `comment` VARCHAR(255);
+
+
+
+ALTER TABLE `TEST_PLANS`
+ADD COLUMN `ps_from` VARCHAR(255),
+ADD COLUMN `ps_to` VARCHAR(255),
+ADD COLUMN `guide_revision` VARCHAR(255),
+ADD COLUMN `sed_revision` VARCHAR(255),
+ADD COLUMN `other_dependent_sw` VARCHAR(255),
+ADD COLUMN `node_type_version` VARCHAR(255),
+ADD COLUMN `sov_status` VARCHAR(255),
+ADD COLUMN `comment` VARCHAR(255);

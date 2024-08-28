@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestCasesListViewTest_showTestCases">
+    <test name="TestCasesListViewTest_showTestCases">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.smoke.tms.TestCasesListViewTest">
+                <methods>
+                    <include name="showTestCases"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,39 @@
+.eaTM-TestCampaignEditContentRegion {
+    font-size: 0;
+
+    &-messages {
+        margin: 1.2rem 0;
+        display: none;
+        font-size: 1.2rem;
+
+        &_show {
+            display: block;
+        }
+    }
+    &-details {
+        display: inline-block;
+        width: ~"calc(30% - 15px)";
+        vertical-align: top;
+        font-size: 1.2rem;
+    }
+    &-testCases {
+        display: inline-block;
+        width: ~"calc(70% - 15px)";
+        vertical-align: top;
+        margin-left: 30px;
+        font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: 700px) {
+        &-details {
+            display: block;
+            width: 100%;
+        }
+
+        &-testCases {
+            display: block;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}

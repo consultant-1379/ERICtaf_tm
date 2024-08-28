@@ -1,0 +1,186 @@
+{
+    "expand": "projects",
+    "projects": [
+        {
+            "self": "http://eteamproject.internal.ericsson.com/rest/api/2/project/13442",
+            "id": "13442",
+            "key": "BWXST",
+            "name": "13B WRAN/CORE X86 System Test",
+            "avatarUrls": {
+                "48x48": "http://eteamproject.internal.ericsson.com/secure/projectavatar?pid=13442&avatarId=13259",
+                "24x24": "http://eteamproject.internal.ericsson.com/secure/projectavatar?size=small&pid=13442&avatarId=13259",
+                "16x16": "http://eteamproject.internal.ericsson.com/secure/projectavatar?size=xsmall&pid=13442&avatarId=13259",
+                "32x32": "http://eteamproject.internal.ericsson.com/secure/projectavatar?size=medium&pid=13442&avatarId=13259"
+            },
+            "issuetypes": [
+                {
+                    "self": "http://eteamproject.internal.ericsson.com/rest/api/2/issuetype/1",
+                    "id": "1",
+                    "description": "A problem which impairs or prevents the functions of the product.",
+                    "iconUrl": "http://eteamproject.internal.ericsson.com/images/icons/issuetypes/bug.png",
+                    "name": "Bug",
+                    "subtask": false,
+                    "expand": "fields",
+                    "fields": {
+                        "issuetype": {
+                            "required": false,
+                            "name": "Issue Type",
+                            "schema": {
+                                "type": "issuetype"
+                            },
+                            "allowedValues": [
+                                {
+                                    "id":"1",
+                                    "name":"test",
+                                    "value":"test"
+                                }
+                            ]
+                        },
+                        "components": {
+                            "required": true,
+                            "name": "Component/s",
+                            "schema": {
+                                "type": "array"
+                            },
+                            "allowedValues": [
+                                {
+                                    "id":"1",
+                                    "name":"TMS - Infrastructure",
+                                    "value":"TMS - Infrastructure"
+                                },
+                                {
+                                    "id":"2",
+                                    "name":"TMS - TestCaseEdit",
+                                    "value":"TMS - TestCaseEdit"
+                                },
+                                {
+                                    "id":"3",
+                                    "name":"TMS - RequirementsTree",
+                                    "value":"TMS - RequirementsTree"
+                                }
+                            ]
+                        },
+                        "fixVersions": {
+                            "required": true,
+                            "name": "Fix Version/s",
+                            "schema": {
+                                "type": "array"
+                            },
+                            "allowedValues": [
+                                {
+                                    "id":"1",
+                                    "name":"TMS - 1.0.45",
+                                    "value":"TMS - 1.0.45"
+                                },
+                                {
+                                    "id":"2",
+                                    "name":"TMS - 1.0.46",
+                                    "value":"TMS - 1.0.46"
+                                },
+                                {
+                                    "id":"3",
+                                    "name":"TMS - 1.0.47",
+                                    "value":"TMS - 1.0.47"
+                                }
+                            ]
+                        },
+                        "customfield_14309": {
+                            "required": false,
+                            "name": "Team Name",
+                            "schema": {
+                                "type": "array"
+                            },
+                            "allowedValues": [
+                                {
+                                    "id":"1",
+                                    "name":"Super Sonic",
+                                    "value":"Super Sonic"
+                                },
+                                {
+                                    "id":"2",
+                                    "name":"Ultra TMS",
+                                    "value":"Ultra TMS"
+                                },
+                                {
+                                    "id":"3",
+                                    "name":"Super Mario",
+                                    "value":"Super Mario"
+                                }
+                            ]
+                        },
+                        "customfield_14900": {
+                            "required": false,
+                            "name": "Found In Release",
+                            "schema": {
+                                "type": "array"
+                            },
+                            "allowedValues": [
+                                {
+                                    "id":"1",
+                                    "name":"15A",
+                                    "value":"15A"
+                                },
+                                {
+                                    "id":"2",
+                                    "name":"15B",
+                                    "value":"15B"
+                                },
+                                {
+                                    "id":"3",
+                                    "name":"16A",
+                                    "value":"16A"
+                                }
+                            ]
+                        },
+                        "customfield_14905": {
+                            "required": false,
+                            "name": "Found in Sprint",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "allowedValues": [
+                                {
+                                    "id":"1",
+                                    "name":"Sprint 1",
+                                    "value":"Sprint 1"
+                                },
+                                {
+                                    "id":"2",
+                                    "name":"Sprint 2",
+                                    "value":"Sprint 2"
+                                }
+                            ]
+                        },
+                        "priority": {
+                            "required": false,
+                            "name": "Priority",
+                            "schema": {
+                                "type": "priority"
+                            },
+                            "allowedValues": []
+                        },
+                        "customfield_12202": {
+                            "required": false,
+                            "name": "Delivered in Sprint",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "allowedValues": [
+                                {
+                                    "id":"1",
+                                    "name":"Sprint 1",
+                                    "value":"Sprint 1"
+                                },
+                                {
+                                    "id":"2",
+                                    "name":"Sprint 2",
+                                    "value":"Sprint 2"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

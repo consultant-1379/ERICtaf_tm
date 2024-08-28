@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept>
+    <title>File 1</title>
+    <conbody>
+        <section id="details-header">
+            <title>Test Campaign Details</title>
+            <p>This form shows the details for the currently selected test campaign</p>
+        </section>
+        <section id="testCases-header">
+            <title>Test Cases</title>
+            <p>This table lists all the test cases associated with the currently selected test campaign. Click on
+                a 'Test Case ID' link to view that test case.</p>
+            <p>Table results can be filtered by entering a search term in the filter box at the top of each column. Filter options are:
+                '=': equal to, '!=': not equal to, and '~': contains</p>
+        </section>
+        <section id="icons">
+            <title>Icons Description</title>
+            <p>'Edit': Enables editing of the current test campaign.</p>
+            <p>'Remove': Deletes the current test campaign.</p>
+            <p>'Lock': Locks the contents and test case versions in the current test campaign.</p>
+            <p>'Copy': Makes a copy of the current test campaign.</p>
+            <p>'Test Campaign Executions': Navigates to test campaign executions for the current test campaign.</p>
+        </section>
+        <section id="passRate">
+            <title>Pass Rate</title>
+            <p>Displays a stacked progress bar of test execution results. By hovering over each result bar a tooltip will display more information</p>
+        </section>
+    </conbody>
+</concept>

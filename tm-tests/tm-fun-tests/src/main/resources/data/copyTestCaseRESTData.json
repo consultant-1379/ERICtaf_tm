@@ -1,0 +1,52 @@
+{
+  "id" : null,
+  "testCaseId": "Copy of - ddc198c3-d228-49e0-83b8-3278a23ba246",
+  "component": "No component",
+  "contexts" : [ {"id": "REST", "title": "REST"} ],
+  "description" : "",
+  "groups" : [ {"id": "7", "title": "KGB"} ],
+  "executionType" : {"id": "1", "title": "Manual"},
+  "testCaseStatus" : {"id": "2", "title": "Preliminary"},
+  "precondition" : "Precondition",
+  "priority" : {"id": "BLOCKER", "title": "Blocker"},
+  "requirementIds" : ["CIP-4182"],
+  "requirementInfos" : null,
+  "feature": {
+    "id": 1,
+    "name": "Other",
+    "product": {
+      "id": 2,
+      "name": "ENM"
+    }
+  },
+  "technicalComponents" : [{
+    "id" : "223",
+    "title": "Other"
+  }],
+  "testSteps" : [
+    {
+      "id" : null,
+      "name" : "Log in",
+      "verifies" : [
+        {
+          "id" : null,
+          "name" : "When the ManagedObject has been created it will be displayed back to the user along with all attributes."
+        }
+      ],
+    "data" : "this is test Step Data"
+    },
+    {
+      "id" : null,
+      "name" : "qwew",
+      "verifies" : [
+        {
+          "id" : null,
+          "name" : "TOR Launcher successfully deploys."
+        }
+      ],
+      "data" : "this is test Step Data"
+    }],
+  "title" : "TORRV TEST: Add a node using CM CLI",
+  "type" : {"id": "WORKFLOW", "title": "Workflow"},
+  "automationCandidate" : {}
+}

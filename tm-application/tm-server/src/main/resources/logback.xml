@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration>
+
+    <appender name="RollingFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <if condition='property("env").equals("stage")'>
+            <then>
+                <File>${WEBLOGDIR}/tm.log</File>
+            </then>
+            <else>
+                <File>/var/log/ITTE-apache-tomcat/default/logs/tm.log</File>
+            </else>
+        </if>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>/var/log/ITTE-apache-tomcat/default/logs/tm.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{"yyyy-MM-dd'T'HH:mm:ss,SSSXXX"} %-4level %-7X{username} %-15logger{15} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.ericsson" level="info"/>
+    <logger name="com.zaxxer.hikari" level="info"/>
+    <logger name="org.flywaydb" level="info"/>
+    <logger name="org.glassfish.jersey.server.ServerRuntime$Responder" level="error"/>
+
+    <root level="warn">
+        <appender-ref ref="RollingFILE"/>
+    </root>
+
+</configuration>

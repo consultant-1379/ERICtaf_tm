@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestExecutionTest_createTestExecution_case_2">
+    <test name="TestExecutionTest_createTestExecution_case_2">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.testexecution.TestExecutionTest">
+                <methods>
+                    <include name="createTestExecution_WhenDefectNotExists_ShouldRestrictExecutionCreate"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.testexecution.TestExecutionTest">
+                <methods>
+                    <include name="createTestExecution_WhenDefectNotExists_ShouldRestrictExecutionCreate"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

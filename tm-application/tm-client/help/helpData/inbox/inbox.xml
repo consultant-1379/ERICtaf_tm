@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="TMS-Inbox">
+    <conbody>
+        <section id="assignments">
+            <title>Assignments</title>
+            <p>This table displays a list of test cases and associated test campaigns,
+                that are assigned to the current user.</p>
+        </section>
+    </conbody>
+</concept>

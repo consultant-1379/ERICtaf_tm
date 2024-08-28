@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RequirementsTreeViewTest_showTestCasesByRequirement">
+    <test name="RequirementsTreeViewTest_showTestCasesByRequirement">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.requirements.RequirementsTreeViewTest">
+                <methods>
+                    <include name="showTestCasesByRequirement"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.requirements.RequirementsTreeViewTest">
+                <methods>
+                    <include name="showTestCasesByRequirement"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

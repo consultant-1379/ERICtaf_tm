@@ -1,0 +1,125 @@
+{
+  "executionId": "test-session-1",
+  "time": {
+    "startDate": 1466781257437,
+    "stopDate": 1466781258469,
+    "duration": null
+  },
+  "uri": null,
+  "testSuites": [{
+    "name": "test-suite-1",
+    "time": {
+      "startDate": 1466781257437,
+      "stopDate": 1466781258469,
+      "duration": null
+    },
+    "statistics": {
+      "total": 6,
+      "passed": 4,
+      "pending": 0,
+      "cancelled": 0,
+      "failed": 2,
+      "broken": 0
+    },
+    "testCaseResults": [{
+      "id": "Test Case 1",
+      "name": "Test Case 1",
+      "time": {
+        "startDate": 1466781257437,
+        "stopDate": 1466781258437,
+        "duration": null
+      },
+      "resultCode": "PASSED",
+      "importStatus": "PENDING",
+      "modifiedDate": null,
+      "createdDate": null,
+      "DROP_NAME": "1.1",
+      "ISO_VERSION": "1.23.1"
+    }, {
+      "id": "Test Case 2",
+      "name": "Test Case 2",
+      "time": {
+        "startDate": 1466781257469,
+        "stopDate": 1466781258469,
+        "duration": null
+      },
+      "resultCode": "PASSED",
+      "importStatus": "PENDING",
+      "modifiedDate": null,
+      "createdDate": null,
+      "DROP_NAME": "1.1",
+      "ISO_VERSION": "1.23.1"
+    }, {
+      "id": "Test Case 3",
+      "name": "Test Case 3",
+      "time": {
+        "startDate": 1466781257469,
+        "stopDate": 1466781258469,
+        "duration": null
+      },
+      "resultCode": "PASSED",
+      "importStatus": "PENDING",
+      "modifiedDate": null,
+      "createdDate": null,
+      "DROP_NAME": "1.1",
+      "ISO_VERSION": "1.23.1"
+    }, {
+      "id": "Test Case 4",
+      "name": "Test Case 4",
+      "time": {
+        "startDate": 1466781257469,
+        "stopDate": 1466781258469,
+        "duration": null
+      },
+      "resultCode": "PASSED",
+      "importStatus": "PENDING",
+      "modifiedDate": null,
+      "createdDate": null,
+      "DROP_NAME": "1.1",
+      "ISO_VERSION": "1.23.1"
+    }, {
+      "id": "Test Case 5",
+      "name": "Test Case 5",
+      "time": {
+        "startDate": 1466781257469,
+        "stopDate": 1466781258469,
+        "duration": null
+      },
+      "resultCode": "PASSED",
+      "importStatus": "PENDING",
+      "modifiedDate": null,
+      "createdDate": null,
+      "DROP_NAME": "1.1",
+      "ISO_VERSION": "1.23.1"
+    }, {
+      "id": "Test Case 6",
+      "name": "Test Case 6",
+      "time": {
+        "startDate": 1466781257469,
+        "stopDate": 1466781258469,
+        "duration": null
+      },
+      "resultCode": "PASSED",
+      "importStatus": "PENDING",
+      "modifiedDate": null,
+      "createdDate": null,
+      "DROP_NAME": "1.1",
+      "ISO_VERSION": "1.23.1"
+    }],
+    "modifiedDate": null,
+    "createdDate": null,
+    "passRate": null,
+    "id": "Test Suite 1"
+  }],
+  "modifiedDate": null,
+  "createdDate": null,
+  "logReferences": null,
+  "resultCode": null,
+  "testCaseCount": 6,
+  "lastExecutionDate": null,
+  "testSuiteCount": 1,
+  "passRate": 0,
+  "id": "test-session-1",
+  "DROP_NAME": "1.1",
+  "ISO_VERSION": "1.22.17"
+}

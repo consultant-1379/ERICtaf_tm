@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+    <title>TMS</title>
+    <homeTitle>Home</homeTitle>
+    <home>
+        <blocks>
+            <block color="purple" icon="page" href="helpApp/about/whatsnew.xml">
+                <title>What's New?</title>
+                <desc>Learn about the new features in TMS.</desc>
+            </block>
+            <block color="green" icon="screen" href="helpApp/about/overview.xml">
+                <title>Overview</title>
+                <desc>Learn what TMS is all about</desc>
+            </block>
+            <block color="blue" icon="book" href="helpApp/testCase/testCase.xml">
+                <title>Test Case</title>
+                <desc>Learn about working with test cases in TMS</desc>
+            </block>
+            <block color="blue" icon="book" href="helpApp/testCampaign/testCampaign.xml">
+                <title>Test Campaigns</title>
+                <desc>Learn about working with test campaigns in TMS</desc>
+            </block>
+            <block color="blue" icon="book" href="helpApp/testCampaignGroup/testCampaignGroups.xml">
+                <title>Test Campaign Group</title>
+                <desc>Learn about working with test campaign groups in TMS</desc>
+            </block>
+        </blocks>
+        <import type="list-titles" limit="3" conref="helpApp/faq.xml" viewAll="View All"/>
+    </home>
+</site>

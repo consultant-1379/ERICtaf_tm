@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Create Test Case">
+    <title>Create a test Case</title>
+    <taskbody>
+        <prereq>
+            <ul>
+                <li>Login to the TMS system using your corporate userId</li>
+            </ul>
+        </prereq>
+        <context>
+            <p>One important point to note is that both Automated and Manual test
+                cases need to be created in TMS.
+            </p>
+            <p>A fundamental point in the ISTQB syllabus is that an automated test should be documented in the
+                exact same manner as a manual test case.
+            </p>
+        </context>
+        <steps>
+            <step id="1">
+                <cmd>From the Quick Links section select “Create a Test Case”</cmd>
+                <info>
+                    <p>Click on the "Create a Test Case" in order to go to the test case form.</p>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Fill in the mandatory fields</cmd>
+                <p>There are a number of mandatory parameters:</p>
+                <ol>
+                    <li>
+                        <b>Title:</b>
+                        Test Case title
+                    </li>
+                    <li>
+                        <b>Type:</b>
+                        Type of test case. Functional, Robustness etc.
+                    </li>
+                    <li>
+                        <b>Product:</b>
+                        Product the test case is verifying
+                    </li>
+                    <li>
+                        <b>Feature:</b>
+                        Feature the test case is verifying
+                    </li>
+                    <li>
+                        <b>Component:</b>
+                        Component the test case is verifying
+                    </li>
+                    <li>
+                        <b>Requirement Id:</b>
+                        either a valid Jira Epic or User
+                        Story Id. If
+                        the requirement does not exist then the test case
+                        can’t be created
+                    </li>
+                    <li>
+                        <b>A Unique Test Case Id:</b>
+                        This is an Id that will
+                        follow the test
+                        case through test execution and reporting. The Id
+                        should reflect
+                        the epic, user story or feature you are testing. It
+                        is a key
+                        enabler for automatic trace-ability.
+                    </li>
+                </ol>
+
+            </step>
+            <step id="3">
+                <cmd>Fill out the remaining fields as appropriate</cmd>
+
+                <p>Optional fields include:</p>
+                <sl>
+                    <sli>
+                        <b>Description:</b>
+                    </sli>
+                    <sli>
+                        <b>Pre-Conditions:</b>
+                    </sli>
+                    <sli>
+                        <b>Priority:</b>
+                    </sli>
+                    <sli>
+                        <b>Group:</b>
+                        KGB, CDB, RFA, GAT etc.
+                    </sli>
+                    <sli>
+                        <b>Context:</b>
+                        UI, CLI, REST or API test case
+                    </sli>
+                    <sli>
+                        <b>Execution Type:</b>
+                        Manual or Automated test case
+                    </sli>
+                    <sli>
+                        <b>Status:</b>
+                        Preliminary, In Review or Approved state
+                    </sli>
+                    <sli>
+                        <b>Test Steps:</b>
+                        Action and Verify tests
+                    </sli>
+                    <sli>
+                        <b>Test Data:</b>
+                        Data relevant to test step
+                    </sli>
+                    <sli>
+                        <b>Files: </b> This is a utility to store files for a test case. The supported file types are "txt", "csv", "py", "sh", "bash", "pyw", "pyo", "pyc", "pyd", "log", "zip", "gzip", "png", "jpg", "gz".
+                    </sli>
+                </sl>
+            </step>
+
+            <step id="4">
+                <cmd>When all fields are complete, select “Save”</cmd>
+                <p>Now the test case has
+                    been created. See Results below.
+                </p>
+            </step>
+
+        </steps>
+        <result>
+            <p>Your test case had been added to TMS</p>
+            <p>
+                <image href="../../resources/traceability/testcase_details.png"/>
+            </p>
+        </result>
+    </taskbody>
+</task>

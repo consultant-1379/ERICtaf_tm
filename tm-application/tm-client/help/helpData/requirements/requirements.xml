@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept>
+    <conbody>
+        <section id="projectsDropdown">
+            <title>Select Project</title>
+            <p>Filter requirements by specific project or select 'All Projects'.</p>
+        </section>
+        <section id="requirementsTree">
+            <title>Requirements Tree</title>
+            <p>Lists all the requirements and sub-requirements associated with the selected project.</p>
+            <p>A requirement is a condition or capability needed by a user to solve a problem or achieve an objective that must
+                be met or possessed by a system or system component to satisfy a contract, standard,
+                specification, or other formally imposed document. i.e. User Story/EPIC/MR/Improvement.</p>
+            <p>Requirements can be filtered by entering a requirement ID in the filtered text box.</p>
+        </section>
+        <section id="testCasesByRequirement">
+            <title>Test Cases By Requirement</title>
+            <p>Lists all test cases linked to the requirement selected from the requirements tree.</p>
+        </section>
+    </conbody>
+</concept>

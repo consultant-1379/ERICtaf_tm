@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RequirementsTreeViewTest_tryToSelectNotListedRequirement">
+    <test name="RequirementsTreeViewTest_tryToSelectNotListedRequirement">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.requirements.RequirementsTreeViewTest">
+                <methods>
+                    <include name="tryToSelectNotListedRequirement"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.requirements.RequirementsTreeViewTest">
+                <methods>
+                    <include name="tryToSelectNotListedRequirement"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

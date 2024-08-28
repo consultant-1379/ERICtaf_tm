@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CommentsTestCaseTest_createComment">
+    <test name="CommentsTestCaseTest_createComment">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.tms.CommentsTestCaseTest">
+                <methods>
+                    <include name="createComment"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.tms.CommentsTestCaseTest">
+                <methods>
+                    <include name="createComment"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

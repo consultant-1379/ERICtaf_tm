@@ -1,0 +1,1 @@
+UPDATE `PRODUCTS` SET `trs_recordable` = TRUE WHERE `name` = 'ENM';

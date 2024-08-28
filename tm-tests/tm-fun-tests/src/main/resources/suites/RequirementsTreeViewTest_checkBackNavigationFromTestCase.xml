@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RequirementsTreeViewTest_checkBackNavigationFromTestCase">
+    <test name="RequirementsTreeViewTest_checkBackNavigationFromTestCase">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.requirements.RequirementsTreeViewTest">
+                <methods>
+                    <include name="checkBackNavigationFromTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AdvancedSearchTest_executeAdvancedSearch">
+    <test name="AdvancedSearchTest_executeAdvancedSearch">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.tms.AdvancedSearchTest">
+                <methods>
+                    <include name="executeAdvancedSearch"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.tms.AdvancedSearchTest">
+                <methods>
+                    <include name="executeAdvancedSearch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

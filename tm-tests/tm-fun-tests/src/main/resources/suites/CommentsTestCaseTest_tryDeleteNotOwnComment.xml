@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CommentsTestCaseTest_tryDeleteNotOwnComment">
+<test name="CommentsTestCaseTest_tryDeleteNotOwnComment">
+    <classes>
+        <class name="com.ericsson.cifwk.tm.fun.ui.tms.CommentsTestCaseTest">
+            <methods>
+                <include name="tryDeleteNotOwnComment"/>
+            </methods>
+        </class>
+        <class name="com.ericsson.cifwk.tm.fun.rest.tms.CommentsTestCaseTest">
+            <methods>
+                <include name="tryDeleteNotOwnComment"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+</suite>

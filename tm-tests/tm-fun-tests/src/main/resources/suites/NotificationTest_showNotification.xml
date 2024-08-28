@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NotificationsTest_showNotification">
+    <test name="NotificationsTest_showNotification">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.notifcations.NotificationsTest">
+                <methods>
+                    <include name="showNotification"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

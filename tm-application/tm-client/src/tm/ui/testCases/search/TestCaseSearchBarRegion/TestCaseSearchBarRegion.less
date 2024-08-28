@@ -1,0 +1,64 @@
+.eaTM-DefaultBar {
+  position: relative;
+  padding-left: 0.4rem;
+
+  &-contextSearchHolder {
+    float: right;
+  }
+  &-actions {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &-selectProject {
+    display: inline-block;
+    width: 180px;
+  }
+  &Project-selectBox {
+    position: relative;
+  }
+
+  &-quickSearch {
+    display: inline-block;
+  }
+  &-searchInput {
+    margin-right: 0.6rem;
+  }
+  &-searchClearIcon {
+    position: absolute;
+    left: 21rem;
+    top: 9px;
+  }
+  &-searchButton {
+    margin: 0.4rem 0.6rem;
+  }
+
+  &-moreButton {
+    margin: 0.4rem 0.6rem;
+  }
+  &-hideSearchButton {
+    display: none;
+    margin-right: 0.6rem;
+  }
+
+  &-createTestCaseLinkHolder,
+  &-testPlansLinkHolder,
+  &-importLinkHolder,
+  &-contextSearchMenuHolder,
+  &-requirementsLinkHolder {
+    display: inline-block;
+  }
+
+  &-contextMenuHolder {
+    display: inline-block;
+    padding: 0.5rem;
+  }
+
+  @media screen and (max-width: 1500px) {
+    &-searchClearIcon {
+      position: absolute;
+      left: 21rem;
+      top: 6px;
+    }
+  }
+}

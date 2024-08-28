@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Overview">
+    <title>Test Case Information</title>
+    <conbody>
+        <section>
+           <title>What is a test Case ?</title>
+                <p>TAF TM allows a user to map out their test cases. Please see below for a description of each attribute that may be assigned to a test case.
+                </p>
+                <ul>
+                    <li>
+                        <p><b>Requirement ID(s)</b>: The unique ID of one or more user Epics or stories. (e.g. In case
+                            of OSS, it is the JIRA ID of the story).
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Test Case ID</b>: Unique ID assigned to your test case that should NEVER be changed.
+                            Recommendation is to use a reference to parent requirement of feature. E.g
+                            TORF-1234_AddNode_Func1
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Title</b>: Title of the test case.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Description</b>: A general description of the purpose of the test case.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Pre-Condition</b>: Environmental and state conditions that must be fulfilled before the
+                            component or system can be
+                            executed with a particular test or test procedure.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Feature</b>: Corresponds to the feature/feature area i.e. PM , FM, CM  where test cases were written.
+                            A feature is a unit of work that fulfills a requirement.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Components</b>: The component is the underlying module of a feature.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Type</b>: A group of test activities aimed at testing a component or system focused on a
+                            specific test
+                            objective, i.e. functional test, usability test, regression test etc. A test type may take
+                            place on one
+                            or more test levels or test phases. (e.g. Functional, Performance, Workflow, etc).
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Priority</b>: The level of (business) importance assigned to a test case.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Group</b>: This can be the test phase the test case is applicable for or . E.g. KGB, GAT.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Context</b>: The technology used to interface to the System Under Test.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Execution Type</b>: Manual or Automated Test Case.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Automation Candidate</b>: Select whether this Test Case is a candidate for automation.
+                            Options available are 'Yes' and 'No'.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Status</b>: State of the design of the test case specification.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Reviewer</b>: Name of person/group assigned to review this test case.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Intrusive</b>: Intrusive testing: can be considered a type of interrupt testing, which is
+                            used to test how well a system reacts to intrusions and interrupts to its normal workflow.
+                        </p>
+                        <p>Non-Intrusive testing: that is transparent to the software under test, i.e., does not change
+                            its timing or processing characteristics.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Reason</b>: The reason for test case.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Team</b>: The name of the team name who originally wrote the test case.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Suite</b>: The name of the suite to which the test case has been added.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Test Step / Verify Step</b>: Each test case will have one to many test step/verify step
+                            pairs.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Files</b>: This is a utility to store files for a test case. The supported file types are "txt", "csv", "py", "sh", "bash", "pyw", "pyo", "pyc", "pyd",
+                            "log", "zip", "gzip", "png", "jpg", "gz".
+                        </p>
+                    </li>
+                </ul>
+        </section>
+        <section>
+            <title>
+                <b>How to track changes to test cases:</b>
+            </title>
+
+            <p>At the test case level all changes to test cases are tracked via the
+                audit functionality.
+                This means that for every change made to a test
+                case the differences to
+                the previous test case are stored in the TMS
+                database.
+            </p>
+            <p>
+                These changes are visible via the audit link in TMS that opens a sliding panel as
+                follows:
+            </p>
+
+            <p>
+                <image href="../../resources/versioning/test_case_audit.png"/>
+            </p>
+
+            <p>As can be seen above, every change is tracked and the user and time are recorded</p>
+
+            <p>
+                <b>NB:</b>
+                Currently the details of each change are stored in the TMS
+                database.
+                The ability to switch to a particular
+                audit has not been implemented
+                in the TMS UI.
+            </p>
+        </section>
+    </conbody>
+</concept>

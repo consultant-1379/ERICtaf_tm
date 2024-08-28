@@ -1,0 +1,16 @@
+INSERT INTO `TECHNICAL_COMPONENTS` (`name`, `product_id`) VALUES
+('Deployment-DEPL_INFRA-Common', 3),
+('Deployment-DEPL_INFRA-ERIClitpsan', 3),
+('Deployment-DEPL_INFRA-ERIClitpsanapi', 3),
+('Deployment-DEPL_INFRA-ERIClitpsanemc', 3),
+('Deployment-DEPL_INFRA-ERICstorapi', 3),
+('Deployment-DEPL_INFRA-ERICstmapi', 3),
+('Deployment-DEPL_INFRA-ERICstmnas', 3),
+('Deployment-DEPL_INFRA-RHEL', 3),
+('Deployment-DEPL_INFRA-Firmware', 3),
+('Deployment-DEPL_INFRA-SFS', 3),
+('Deployment-DEPL_INFRA-SNAS', 3),
+('Deployment-DEPL_INFRA-SAN', 3),
+('Deployment-DEPL_INFRA-BLADE_AND_INFRA', 3),
+('Deployment-DEPL_INFRA-GEO', 3),
+('Platform-PF_INFRA-LiveUpgrade', 3);

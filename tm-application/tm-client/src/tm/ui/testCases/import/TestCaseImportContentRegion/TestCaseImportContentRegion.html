@@ -1,0 +1,28 @@
+<div id="TMS_TestCaseImport_ContentRegion" class="eaTM-ViewTestCaseImportRegion eb-animatedPage">
+    <div class="eaTM-ViewTestCaseImport-infoHolder">
+        <div class="eaTM-ViewTestCaseImport-info">
+            <div class="eaTM-ViewTestCaseImport-infoHeader">When Importing Test Cases</div>
+            <div class="eaTM-ViewTestCaseImport-infoContent">
+                <p>Test case import will update all test cases from the file that have the same test case id.
+                    Its important to make sure your test case id's are correct in case a test case is over written accidentally.
+                    If a new test case id has been detected it will create a new test case.
+                </p>
+                <p>Make sure that empty cells in a row contain a blank string otherwise import will fail. The user will need to click on the cell and add a blank space.
+                    Excel's backend does not store empty cells in its xml.
+                    This causes data to be added into the wrong columns. Test cases will not be imported if a row does not have the correct number of columns.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="eaTM-ViewTestCaseImport-fileholder">
+        <input type="file" class="eaTM-ViewTestCaseImport-input" multiple/>
+        <button class="ebBtn ebBtn_color_darkBlue eaTM-ViewTestCaseImport-importButton ebBtn_disabled">Import</button>
+        <div class="eaTM-ViewTestCaseImport-loaderHolder">
+            <span class="eaTM-ViewTestCaseImport-loader ebLoader-Dots ebLoader-Dots_color_paleBlue"></span>
+        </div>
+    </div>
+    <div class="eaTM-ViewTestCaseImport-errorPanelHolder">
+        <textarea id="TMS_TestCaseImport_errorPanel" class="eaTM-ViewTestCaseImport-errorPanel ebTextArea" spellcheck="false"></textarea>
+    </div>
+    <div id="TMS_TestCaseImport_tableHolder" class="eaTM-ViewTestCaseImport-tableHolder"></div>
+</div>

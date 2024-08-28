@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Copy Test Campaign">
+    <title>Copy Test Campaign</title>
+    <taskbody>
+        <context>
+            <p>When creating a test campaign for a new sprint it is possible to
+                copy an existing one.
+            </p>
+        </context>
+        <prereq>
+            <ul>
+                <li>You must be logged in</li>
+                <li>Find the test case you wish to copy</li>
+            </ul>
+        </prereq>
+        <steps>
+            <step id="1">
+                <cmd>Copy the test Case</cmd>
+                <info>
+                    <image href="../../resources/testcampaigns/testcampaign_copy.png"/>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Complete the copy operation using the Create button</cmd>
+                <info>
+                    <p>Ensure that all the fields are filled in correctly</p>
+                    <image href="../../resources/testcampaigns/testcampaign_copy_create.png"/>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>You have now successfully copied the test case.</p>
+        </result>
+    </taskbody>
+</task>
+
+

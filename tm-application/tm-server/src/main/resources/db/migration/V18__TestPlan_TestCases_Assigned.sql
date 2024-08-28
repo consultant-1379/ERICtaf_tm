@@ -1,0 +1,49 @@
+CREATE TABLE `ASSIGNMENTS` (
+  `id`           BIGINT     AUTO_INCREMENT,
+  `test_plan_id` BIGINT(20) NOT NULL,
+  `test_case_id` BIGINT(20) NOT NULL,
+  `user_id`      BIGINT DEFAULT NULL,
+  INDEX `FK_ASSIGNMENTS_TEST_PLANS_idx` (`test_plan_id`),
+  INDEX `FK_ASSIGNMENTS_TEST_CASES_idx` (`test_case_id`),
+  INDEX `FK_USERS_idx` (`user_id`),
+  CONSTRAINT `FK_ASSIGNMENTS_TEST_CASES` FOREIGN KEY (`test_case_id`) REFERENCES `TEST_CASES` (`id`),
+  CONSTRAINT `FK_ASSIGNMENTS_TEST_PLANS` FOREIGN KEY (`test_plan_id`) REFERENCES `TEST_PLANS` (`id`),
+  CONSTRAINT FK_ASSIGNMENTS_USERS FOREIGN KEY (`user_id`) REFERENCES USERS (id),
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO `ASSIGNMENTS` (`test_plan_id`, `test_case_id`)
+  SELECT
+    `test_plan_id`,
+    `test_case_id`
+  FROM `TEST_PLANS_TEST_CASES`;
+
+DROP TABLE `TEST_PLANS_TEST_CASES`;
+
+ALTER TABLE `TEST_PLANS` DROP COLUMN `assigned_user_id`;
+
+CREATE TABLE `ASSIGNMENTS_AUD` (
+  `id`           BIGINT     AUTO_INCREMENT,
+  `test_plan_id` BIGINT(20) NOT NULL,
+  `test_case_id` BIGINT(20) NOT NULL,
+  `user_id`      BIGINT DEFAULT NULL,
+  `REV`          INT        NOT NULL,
+  `REVTYPE`      TINYINT    NULL DEFAULT NULL,
+  PRIMARY KEY (`id`, `REV`),
+  FOREIGN KEY (`REV`)
+  REFERENCES `AUDIT_REVISION_ENTITY` (`id`)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT);
+
+INSERT INTO `ASSIGNMENTS_AUD` (`test_plan_id`, `test_case_id`, `REV`, `REVTYPE`)
+  SELECT
+    `test_plan_id`,
+    `test_case_id`,
+    `REV`,
+    `REVTYPE`
+  FROM `TEST_PLANS_TEST_CASES_AUD`;
+
+DROP TABLE `TEST_PLANS_TEST_CASES_AUD`;
+
+ALTER TABLE `TEST_PLANS_AUD` DROP COLUMN `assigned_user_id`;
+

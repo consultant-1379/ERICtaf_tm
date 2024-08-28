@@ -1,0 +1,49 @@
+{
+    "component": "No component",
+    "contexts" : [],
+    "description" : "Updated test case",
+    "groups" : [],
+    "precondition" : "true == true",
+    "priority" : null,
+    "requirementIds" : ["DURACI-2967"],
+    "requirementInfos" : null,
+    "feature": {
+        "id": 18,
+        "name": "PM",
+        "product": {
+            "id": 2,
+            "name": "ENM"
+        }
+    },
+    "testSteps" : [
+        {
+            "name" : "Updated TestStep 1",
+            "verifies" : [
+                {
+                    "name" : "Updated VerificationStep 11"
+                },
+                {
+                    "name" : "New VerificationStep 12"
+                }
+            ],
+            "data" : "Updated Test Step Data 1"
+        },
+        {
+            "name" : "New TestStep 2",
+            "verifies" : [
+                {
+                    "name" : "New VerificationStep 21"
+                },
+                {
+                    "name" : "New VerificationStep 22"
+                }
+            ]
+        }
+    ],
+    "title" : "Updated title",
+    "type" : {"id": "FUNCTIONAL", "title": "Functional"},
+    "technicalComponents" : [{
+        "id" : "256",
+        "title": "PMIC: Statistical Subscription"
+    }]
+}

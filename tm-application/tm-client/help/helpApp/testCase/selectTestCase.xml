@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Select a Test Case">
+    <title>Select a test Case</title>
+    <taskbody>
+        <prereq>
+            <ul>
+                <li>Login to the TMS system using your corporate user Id</li>
+            </ul>
+        </prereq>
+        <steps id="1">
+            <step>
+                <cmd>From the Quick Links section select “Select a Test Case”</cmd>
+                <info>
+                    <p>Click on the "Select a Test Case" in order to go to the test case form.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Click on the Test Case Id of the test case you wish to view</cmd>
+                <info>
+                    <p>To view the information pertaining to a specific test case click on the test case id.</p>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>The details of that test case will display on the screen</p>
+            <p>
+                <image href="../../resources/traceability/testcase_details.png"/>
+            </p>
+        </result>
+    </taskbody>
+</task>

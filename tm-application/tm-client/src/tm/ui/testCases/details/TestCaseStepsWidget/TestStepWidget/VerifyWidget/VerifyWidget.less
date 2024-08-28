@@ -1,0 +1,101 @@
+.eaTM-Verify {
+    position: relative;
+    line-height: normal;
+    text-overflow: clip;
+    padding: 0.4rem;
+
+    &-orderNrHolder {
+        display: inline-block;
+        vertical-align: top;
+        width: 3.6rem;
+        margin-top: 0.6rem;
+        margin-right: 0.4rem;
+    }
+    &-orderNr {
+        display: inline-block;
+        border-radius: 7px 0;
+        border: 1px solid #89ba17;
+        text-align: center;
+        line-height: 1.6rem;
+        min-width: 2.4rem;
+        max-width: 3.6rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #666;
+        padding: 0 0.2rem;
+    }
+    &-label {
+        width: 100%;
+        margin-bottom: 1.8rem;
+        white-space: normal;
+        display: inline-block;
+        font-weight: bold;
+    }
+    &labelText {
+            font-weight: bold;
+            color: #333333;
+            width: ~"calc(100% - 63px)";
+            line-height: 1.6rem;
+            overflow: hidden;
+    }
+    &-textArea {
+        resize: vertical;
+        display: block;
+        width: ~"calc(100% - 63px)";
+    }
+    &-title {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1.6rem;
+        margin: 0.6rem 0;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        width: ~"calc(100% - 3.6rem - 0.4rem - 0.8rem)";
+    }
+
+    &-titleCompare {
+        color: #e32119;
+        vertical-align: top;
+        line-height: 1.6rem;
+        margin: 0.6rem 0;
+        white-space: normal;
+        width: ~"calc(100% - 3.6rem - 0.4rem - 0.8rem)";
+    }
+
+    &-actualResultBlock {
+        display: none;
+
+        &_show {
+            display: block;
+        }
+    }
+    &-fieldset {
+        display: none;
+
+        &_show {
+            display: block;
+        }
+    }
+    &-actualResultBox {
+        color: #333333;
+        width: ~"calc(100% - 30px)";
+        line-height: 1.6rem;
+        overflow: hidden;
+        resize: vertical;
+    }
+    &-addLink {
+        display: inline-block;
+        margin-top: 10px;
+
+        &_hide {
+            display: none;
+        }
+    }
+    &-iconBlock {
+        display: inline-block;
+        right: 0;
+        top: 0.8rem;
+        margin-top: 3px;
+        vertical-align: top;
+    }
+}

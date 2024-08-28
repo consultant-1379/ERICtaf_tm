@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Overview">
+    <title>Test Campaign</title>
+    <conbody>
+        <section>
+            <p>
+                Test campaigns in TMS provide the mechanism to track manual test
+                case execution for a specific duration.
+                <p>It covers the list of test
+                    cases to be executed against a specific environment, for a specific
+                    version of SUT. For example:
+                </p>
+                <ul>
+                    <li>
+                        For a sprint
+                    </li>
+                    <li>
+                        For a specific test activity, e.g. Real Nodes
+                    </li>
+                </ul>
+            </p>
+            <b>Overview of Test Campaign Functionality</b>
+            <ul>
+                <li>
+                    <xref type="task" href="createTestCampaign.xml">Create Test Campaign</xref>
+                </li>
+                <li>
+                    <xref type="task" href="copyTestCampaigns.xml">Copy Test Campaign</xref>
+                </li>
+                <li>
+                    <xref type="task" href="lockTestCampaign.xml">Lock Test Campaign</xref>
+                </li>
+                <li>
+                    <xref type="task" href="executeTestCampaign.xml">Test Case Execution</xref>
+                </li>
+
+                <li><xref type="task" href="exportTestCampaignResults.xml">Exporting Test Case results</xref>
+
+                </li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

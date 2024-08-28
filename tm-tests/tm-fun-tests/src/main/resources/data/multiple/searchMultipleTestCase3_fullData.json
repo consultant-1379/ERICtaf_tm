@@ -1,0 +1,41 @@
+{
+    "id" : null,
+    "testCaseId": "multipleSearchTest-12267",
+    "component": "No component",
+    "contexts" : [ {"id": "REST", "title": "REST"}, {"id": "UI", "title": "UI"} ],
+    "description" : "MultipleSearchTest",
+    "groups" : [ {"id": "7", "title": "KGB"} ],
+    "executionType" : {"id": "1", "title": "Manual"},
+    "testCaseStatus" : {"id": "1", "title": "Approved"},
+    "precondition" : "true == true",
+    "priority" : {"id": "MINOR", "title": "Minor"},
+    "requirementIds" : ["CIP-4182"],
+    "requirementInfos" : null,
+    "testSteps" : [
+        {
+            "id" : null,
+            "name" : "newTestStep",
+            "verifies" : [
+                {
+                    "id" : null,
+                    "name" : "newVerificationStep"
+                }
+            ],
+            "testStepData" : "this is test Step Data"
+        }
+    ],
+    "title" : "Title",
+    "type" : {"id": "FUNCTIONAL", "title": "Functional"},
+    "executionReference" : {"id" : 2, "title": "Automated"},
+    "feature": {
+        "id": 16,
+        "name": "FM",
+        "product": {
+            "id": 2,
+            "externalId": "ENM",
+            "name": "ENM",
+            "dropCabable": true
+        }
+    },
+    "technicalComponents": [{"id": "228", "title": "CPP MA"}]
+}

@@ -1,0 +1,41 @@
+{
+    "name": "ENM Test Campaign With Test Cases",
+    "description": "ENM Test Campaign description",
+    "environment": "VApp",
+    "startDate": "2014-01-01T00:00:00.000Z",
+    "endDate": "2014-12-31T23:59:59.999Z",
+    "product": {
+        "id": 2,
+        "name": "ENM",
+        "externalId": "ENM",
+        "dropCapable": true
+    },
+    "drop": {
+        "id": 2,
+        "name": "1.1.ENM",
+        "productName": "ENM"
+    },
+    "features": [
+        {
+            "id": 1,
+            "name": "Other",
+            "productName": "ENM"
+        }
+    ],
+    "testCampaignItems": [
+        {
+            "testCase": {
+                "id": 10,
+                "testCaseId": "CIP-2638_Func_1",
+                "version" : 1.1
+            }
+        },
+        {
+            "testCase": {
+                "id": 11,
+                "testCaseId": "CIP-2638_Func_2",
+                "version" : 1.1
+            }
+        }
+    ]
+}

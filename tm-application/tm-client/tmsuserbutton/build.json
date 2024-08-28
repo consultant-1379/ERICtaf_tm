@@ -1,0 +1,49 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "tmsuserbutton",
+        "name": "TmsUserButton",
+        "version": "1.0.0",
+        "skeleton": "2.1.1",
+        "skeletonType": "app"
+    },
+    "phases": {
+        "after-test": {
+            "delete": {
+                "target": "$(buildDir)/src"
+            }
+        },
+        "build-test": {
+            "depends": [
+                "clean",
+                "test",
+                "after-test"
+            ]
+        },
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "test",
+                "compile"
+            ]
+        },
+        "package-skip-tests": {
+            "depends": [
+                "clean",
+                "compile"
+            ]
+        },
+        "install": {
+            "depends": [
+                "package"
+            ]
+        }
+    },
+    "dependencies": {
+        "jscore": "1.7.17",
+        "widgets": "1.8.22",
+        "assets": "1.8.7"
+    }
+}

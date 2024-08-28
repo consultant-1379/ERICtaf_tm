@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Overview">
+    <title>Test Case Import/Export</title>
+    <taskbody>
+        <section>
+            <title>Export</title>
+            <p>TMS provides the user with multiple export options:
+                <ul>
+                    <li>TMS Users are given the choice to "Generate Report" from "Select a Test Case" page provided that
+                        the search did not return 0 test cases.
+                        <p>Users have a number of options to choose from:</p>
+                    </li>
+                    <ol>
+                        <li>
+                            <b>Create General Acceptance Test (GAT) Report (.docx)*</b>
+                        </li>
+                        <li>
+                            <b>Create Test Specification Report (.docx)*</b>
+                        </li>
+                        <li>
+                            <b>Create Report that can be re-imported (.xlsx)</b>
+                        </li>
+                    </ol>
+                </ul>
+                <li>
+                    The "Quick Search" field, quick filters and the advanced search can be used to filter the test cases needed for generating a report.
+                    <p><image href="../../resources/export/generateReport1.png"/></p>
+                    <p><image href="../../resources/export/generateReport2.png"/></p>
+                </li>
+                <p>*If you select either of these options you will be given the option to include file details in the
+                    report (this refers to any file attached to the test case).
+                </p>
+                <image href="../../resources/export/generateReportOptions.png"/>
+            </p>
+        </section>
+        <section>
+            <title>What does the exported file look like ?</title>
+            <p>The exported test case will appear like follows:
+            </p>
+            <image href="../../resources/import/import.png"/>
+            <p>In order to view this correctly the user must format the cell for text wrapping. In microsoft Excel :
+            </p>
+            <ul>
+                <li>
+                    Right click on a single cell or all cells you wish to wrap.
+                </li>
+                <li>
+                    Click
+                    <b>Format Cells...</b>
+                </li>
+                <li>
+                    Click the tab called
+                    <b>Alignment</b>
+                </li>
+                <li>
+                    In the
+                    <b>Text Control</b>
+                    section click the checkbox
+                    <b>Wrap text</b>
+                </li>
+            </ul>
+            <p>
+                <b>Test Steps</b>
+            </p>
+            <p>
+                As seen above all test steps are contained inside one cell. This is due to the complexity of the
+                data.
+            </p>
+            <p>Each data set is labeled specifically/independently so the parser can collect the data and convert to
+                test steps
+                inside the application.
+                <b>Each data set must end with a newline</b>.
+            </p>
+            <p>
+                This structure allows the user to only add the labels required. So, for example, if there is no test data
+                then simply omitting the label will ensure it will not be added.
+                The user can have multiple test steps and multiple verify steps. For each test step there is a
+                closing sequence of characters
+                <b>*%]</b>
+                This must be added to the end of the test step, otherwise, it will be merged into the previous test step
+                or it may not be interpreted at all.
+            </p>
+            <ul>
+                <li>
+                    $$$TESTSTEP$$$ Enter user data here $$$
+                </li>
+                <li>
+                    $$$TESTDATA$$$ Enter user data here $$$
+                </li>
+                <li>
+                    $$$VERIFYSTEP$$$ Enter user data here $$$
+                </li>
+            </ul>
+        </section>
+        <section>
+            <title>Import</title>
+            <p>Test Management System (TMS) supports the importing of a test case. TMS excel report (Create Report that can be re-imported (.xlsx)) has been setup with
+                the ability to be re-imported to TMS.
+            </p>
+            <p>
+                <b>Note:</b>
+                <p>When you import a test case file all test cases that have the same test case id as those contained in
+                    the file will be updated.
+                    Therefore, it's important to check that your test case id's are correct to avoid accidental
+                    overwrites.
+                    If a new test case id is detected during file import TMS will create a new test case.
+                </p>
+                <p>For optional parameters such as contexts, groups, execution type etc. , if the incorrect options are
+                    entered this will not fail validation but the field will be empty as the system will be unable to
+                    map them to the correct values.
+                    These types of values are case insensitive.
+                </p>
+            </p>
+        </section>
+        <prereq>
+            <ul>
+                <li>Login to TMS using your corporate userId</li>
+                <li>Navigate to "Select a test case"</li>
+                <li>Choose "Import Test Case" from dropdown as shown below</li>
+                <image href="../../resources/import/tmsUserImportTestCase.png"/>
+            </ul>
+        </prereq>
+        <steps>
+            <step id="1">
+                <cmd>Select the file you wish to import</cmd>
+                <info><p>Make sure that
+                    <b>empty cells in a row contain a blank string</b>
+                    otherwise import will fail. The user will
+                    need to click on the cell and add a blank space.</p><p>
+                    Excel's backend does not store empty cells in its xml.
+                    This causes data to be added into the wrong columns. Test cases will not be imported if a row does
+                    not
+                    have the correct number of columns.
+                    </p>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Click import</cmd>
+                <info>Upon a successful import the user will get a notification that the test cases have been imported
+                    and all
+                    the test cases that have been added will be displayed in a table.
+                </info>
+            </step>
+        </steps>
+        <result>
+            <b>Successful Import</b>
+            <image href="../../resources/import/success.png"/>
+            <b>Failed Import</b>
+            <image href="../../resources/import/failure.png"/>
+        </result>
+    </taskbody>
+</task>

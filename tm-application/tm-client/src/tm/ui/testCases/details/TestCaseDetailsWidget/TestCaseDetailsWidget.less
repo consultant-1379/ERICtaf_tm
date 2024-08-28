@@ -1,0 +1,117 @@
+.eaTM-ViewTestCase {
+
+    &-infoBlock {
+        display: inline-block;
+        padding-left: 0.8rem;
+        font-size: 1.2rem;
+    }
+    &-infoTitle {
+        display: none;
+        &_show {
+            display: inline-block;
+        }
+    }
+    &-infoName {
+        font-style: italic;
+        font-weight: bold;
+    }
+    &-blocks {
+        white-space: nowrap;
+        font-size: 0;
+    }
+
+    &-jiraBlock, &-testCaseBlock {
+        vertical-align: top;
+        display: inline-block;
+        font-size: 1.2rem;
+        width: 49%;
+    }
+    &-jiraBlock{
+        margin-right: 1%;
+    }
+    &-testCaseBlock {
+        margin-left: 1%;
+    }
+
+    &-requirement {
+        margin-bottom: 0.6rem;
+    }
+    &-requirements {
+        .eaTM-RequirementLinkWidget {
+            &-requirementId {
+                font-weight: bold;
+            }
+            &-value {
+                white-space: initial;
+            }
+        }
+    }
+    &-requirementId {
+        font-weight: bold;
+    }
+
+    &-label {
+        width: 100%;
+        margin-bottom: 1.8rem;
+
+        &Text {
+            width: auto;
+            line-height: 2rem;
+            font-weight: bold;
+            color: #333333;
+        }
+    }
+    &-value {
+        display: block;
+        line-height: 2rem;
+        white-space: pre-line;
+        text-align: justify;
+        word-wrap: break-word;
+
+        &:after {
+            height: 0;
+            display: block;
+            clear: left;
+        }
+    }
+
+    &-titleCompare,
+    &-descriptionCompare,
+    &-typeCompare,
+    &-executionTypeCompare,
+    &-automationCandidateCompare,
+    &-componentCompare,
+    &-featureCompare,
+    &-priorityCompare,
+    &-groupCompare,
+    &-contextCompare,
+    &-preConditionCompare,
+    &-intrusiveCompare,
+    &-intrusiveCommentCompare,
+    &-teamCompare,
+    &-suiteCompare,
+    &-requirementsCompare,
+    &-testCaseStatusCompare {
+        color: #e32119;
+    }
+
+    &-automationCandidateBlock {
+
+        &_hidden {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+        &-jiraBlock, &-testCaseBlock {
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
+        &-jiraBlock {
+            border-bottom: 1px solid #D2D2D2;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+}

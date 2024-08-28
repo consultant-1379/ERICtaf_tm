@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestCampaignsListTest_viewTestCampaign">
+    <test name="TestCampaignsListTest_viewTestCampaign">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.smoke.testcampaigns.TestCampaignsListTest">
+                <methods>
+                    <include name="viewTestCampaign"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

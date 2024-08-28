@@ -1,0 +1,35 @@
+{
+    "testPlan": 6,
+    "testCase": 13,
+    "result": {"id": "2", "title": "Pass"},
+    "comment": "Test Execution comment 1",
+    "defectIds": [],
+    "testStepExecutions": [
+        {
+            "testStep": 1,
+            "testStepOrderNr": 1,
+            "result": {"id": "2", "title": "Fail"}
+        },
+        {
+            "testStep": 2,
+            "testStepOrderNr": 2,
+            "result": {"id": "1", "title": "Pass"}
+        }
+    ],
+    "verifyStepExecutions": [
+        {
+            "testStep": 1,
+            "testStepOrderNr": 1,
+            "verifyStep": 2,
+            "verifyStepOrderNr": 2,
+            "actualResult": "VerifyStep actual result 1_2"
+        },
+        {
+            "testStep": 2,
+            "testStepOrderNr": 2,
+            "verifyStep": 1,
+            "verifyStepOrderNr": 1,
+            "actualResult": "VerifyStep actual result 2_1"
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="Overview">
+    <title>Test Case Versioning</title>
+    <taskbody>
+        <section>
+            <title>Overview</title>
+            <p>TMS takes a very simple approach to test case versioning. Versions are controlled by the review process.
+                Test case versions are incremented
+                automatically once they have been approved.
+                Test cases are either approved as major or minor version.
+                Test Case versions are approved either by:
+                <ul>
+                    <li>an individual assigned as a reviewer</li>
+                    <li>a member of the review group* assigned to review a test case</li>
+                </ul>
+            </p>
+            <p>
+                *A review group is a list of users that can approve the test case.
+            </p>
+            <p>The test case version can be found from the test case details page:</p>
+            <p>
+                <image href="../../resources/versioning/test_case_version.png"/>
+            </p>
+            <p>The Version drop down allows users to select previous versions of
+                test cases to see what changes were made. Previous approved versions cannot be edited.
+            </p>
+            <p>
+                <b>To create a new test case version the user can click edit on the test case they wish to create a new version of. The system will
+                    create a
+                    new version for editing.
+                </b>
+            </p>
+        </section>
+        <section>
+            <title>Relationship between Test Case Versions and Test Case Status</title>
+            <p>The test case version is automatically updated once it has been approved.</p>
+            <p>There is no change to the test case version if it is rejected.</p>
+            <p>There are a total five possible states in which a test case can be in:</p>
+            <ol>
+                <li>
+                    <b>Preliminary:</b>
+                    The initial state for a test case when it is
+                    in editing mode.
+                </li>
+                <li>
+                    <b>Review:</b>
+                    Test case development is complete and test case is
+                    ready to be reviewed by reviewers.
+                </li>
+                <li>
+                    <b>Approved:</b>
+                    The test case has been reviewed and updates
+                    completed.
+                </li>
+                <li>
+                    <b>Rejected:</b>
+                    A rejected test case can be edited by the user and
+                    re-sent for review.
+                </li>
+                <li>
+                    <b>Cancelled:</b>
+                    The test case review has been cancelled. A cancelled test case can be edited by the user and
+                    re-sent for review.
+                </li>
+            </ol>
+        </section>
+        <prereq>
+            <ul>
+                <li>Login to the TMS system using your corporate user Id</li>
+                <li>From the Quick menu section select “My Reviews”</li>
+            </ul>
+            <image href="../../resources/versioning/tmsUserReviews.png"/>
+            <p>
+                This will then show the user the list of test cases they can review. As shown below.
+            </p>
+            <image href="../../resources/versioning/tmsUserMyReviews.png"/>
+        </prereq>
+        <steps>
+            <step id="1">
+                <cmd>Select the test case Id of the test case you wish to review</cmd>
+                <p>
+
+                </p>
+            </step>
+            <step id="2">
+                <cmd>Click on the "Approve" icon</cmd>
+                <info>
+                    <p>
+                        <image href="../../resources/versioning/test_case_approve.png"/>
+                    </p>
+                </info>
+            </step>
+            <step id="3">
+                <cmd>Click on the appropriate response for the review</cmd>
+                <info>
+                    <p>
+                        <image href="../../resources/versioning/test_case_approve_dialog.png"/>
+                    </p>
+
+                    <p>
+                        <b>1) Approve Minor Version</b>
+                        - Sets the status of the test case to approved and increases the version for example from 0.1 to
+                        0.2.
+                    </p>
+                    <p>
+                        <b>2) Approve Major Version</b>
+                        - Sets the status of the test case to approved and increases the version for example from 0.1 to
+                        1.0.
+                        The status for 1.0 is set to approved.
+                    </p>
+                    <p>
+                        <b>3) Reject</b>
+                        - Sets the status to rejected and the user can then re-edit the test case.
+                    </p>
+                </info>
+            </step>
+        </steps>
+        <steps>
+            <step id="1">
+                <cmd>Select the test case Id of the test case you wish to cancel its review</cmd>
+                <p>
+
+                </p>
+            </step>
+            <step id="2">
+                <cmd>Click on the "Cancel Review" icon</cmd>
+                <info>
+                    <p>
+                        <image href="../../resources/versioning/test_case_approve.png"/>
+                    </p>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>If approved the version will be incremented according to type of approval major/minor.</p>
+            <p>If rejected or cancelled the version will be unchanged.</p>
+        </result>
+    </taskbody>
+</task>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ericsson.cifwk</groupId>
+        <artifactId>tm-parent</artifactId>
+        <version>2.15.30-SNAPSHOT</version>
+        <relativePath>../tm-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>tm-application</artifactId>
+    <packaging>pom</packaging>
+    <name>TM Application</name>
+
+    <properties>
+        <test.source>${project.basedir}/src/test/java</test.source>
+        <test.output>${project.build.directory}/test-classes</test.output>
+    </properties>
+
+    <modules>
+        <module>tm-bom</module>
+        <module>tm-client</module>
+        <module>tm-server-api</module>
+        <module>tm-server-model</module>
+        <module>tm-server-reporting</module>
+        <module>tm-server-scheduling</module>
+        <module>tm-server-requirements</module>
+        <module>tm-server</module>
+        <module>tm-trs-client</module>
+        <module>tm-trs-service</module>
+    </modules>
+
+    <build>
+        <testSourceDirectory>${test.source}</testSourceDirectory>
+        <testOutputDirectory>${test.output}</testOutputDirectory>
+    </build>
+
+    <profiles>
+        <profile>
+            <!-- Integration testing support: src/itest -->
+            <id>itest</id>
+            <properties>
+                <test.source>${project.basedir}/src/itest/java</test.source>
+                <test.output>${project.build.directory}/itest-classes</test.output>
+            </properties>
+            <build>
+                <testResources>
+                    <testResource>
+                        <directory>${project.basedir}/src/itest/resources</directory>
+                    </testResource>
+                </testResources>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <reportsDirectory>${project.build.directory}/surefire-itest-reports</reportsDirectory>
+                            <argLine>-XX:MaxPermSize=128m</argLine>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>

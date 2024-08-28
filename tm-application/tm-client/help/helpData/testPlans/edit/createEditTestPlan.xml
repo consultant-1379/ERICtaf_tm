@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="TMS-CreateEditTestPlan">
+<title>File 1</title>
+<conbody>
+    <section id="testCampaignFormHeader">
+        <title>Test Campaign Details</title>
+        <p>Complete the fields below, entering the details of the test campaign to be created</p>
+    </section>
+    <section id="testPlanForm-name">
+        <title>Name</title>
+        <p>Enter a name that identifies the test campaign.</p>
+    </section>
+    <section id="testPlanForm-filter">
+        <title>Product, Drop, Feature and Components</title>
+        <p>Set the product, drop, feature and components relevant to the test campaign.</p>
+        <p>Note that drop and components are only applicable for certain products.</p>
+    </section>
+
+    <section id="testPlanForm-psFrom">
+        <title>PS-From</title>
+        <p>Depending upon the drop which is selected,required ISO's should be given here.</p>
+    </section>
+    <section id="testPlanForm-psTo">
+        <title>PS-To</title>
+        <p>Depending upon the drop which is selected,required ISO's should be given here.</p>
+    </section>
+    <section id="testPlanForm-guideRevision">
+        <title>Guide Revision</title>
+        <p>Required Guide Revision should be given here.</p>
+    </section>
+    <section id="testPlanForm-sedRevision">
+        <title>SED Revision</title>
+        <p>Required SED Revision should be given here.</p>
+    </section>
+    <section id="testPlanForm-otherDependentSW">
+        <title>Other Dependent SW</title>
+        <p> Required Other Dependent SW should be given here.</p>
+    </section>
+    <section id="testPlanForm-nodeTypeVersion">
+        <title>Node Type and Version</title>
+        <p>Required Node Type and Version should be given here.</p>
+    </section>
+    <section id="testPlanForm-comment">
+        <title>Comment</title>
+        <p>Required Comment should be given here.</p>
+    </section>
+    <section id="testPlanForm-sovStatus">
+        <title>SoV Status</title>
+        <p> Required Sov status should be given here. (Recommended values are Compliant, Non Compliant, Partially Compliant)</p>
+    </section>
+
+    <section id="testPlanForm-description">
+        <title>Description</title>
+        <p>Describe the purpose of the test campaign.</p>
+    </section>
+    <section id="testPlanForm-release">
+        <title>Release</title>
+        <p>The version of the product the test campaign is applicable for. E.g ENM 15B, OSSRC 14</p>
+    </section>
+    <section id="testPlanForm-environment">
+        <title>Environment</title>
+        <p>An environment containing hardware, instrumentation, simulators, software tools, and other
+            support elements needed to conduct a test.</p>
+    </section>
+    <section id="testPlanTestCaseHeader">
+        <title>Test Cases</title>
+        <p>This table lists the test cases to be added to the test campaign. Use the widget below to add one or many test cases
+            to this test campaign.</p>
+        <p>Table results can be filtered by entering a search term in the filter box at the top of each column. Filter options are:
+            '=': equal to, '!=': not equal to, and '~': contains</p>
+    </section>
+    <section id="testPlanTestCaseAdd">
+        <title>Add Test Cases</title>
+        <p>Enter a test case id in the text box and select the required test case from the dropdown list.
+            Clicking 'Add', adds this test case to the table below.</p>
+        <p>In order for autocomplete to find the test case ID please ensure that both product and feature have been selected.</p>
+        <p>To add multiple test cases in bulk, click the 'Add Multiple' link.</p>
+    </section>
+    <section id="testPlanTestCaseCommands">
+        <title>Test Cases Table Links</title>
+        <p>'Assign to user': Select one or multiple test cases from the table below, and assign
+            them to a user. Assigned test cases are added to the user's TMS inbox and an email
+            notification is also sent to the assignee. Users can also be unassigned using this command.</p>
+        <p>'Update Version': Updates selected test cases to the latest version of that test case.</p>
+    </section>
+    <section id="testCampaignGroup">
+        <title>Test Campaign Group</title>
+        <p>This is an optional field to allow users to group test campaigns together in the test campaign group section.</p>
+    </section>
+</conbody>
+</concept>

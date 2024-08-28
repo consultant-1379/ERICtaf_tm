@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Overview">
+    <title>Test Campaign Groups</title>
+    <conbody>
+        <section>
+            <title>Introduction</title>
+            <ul>
+                <li>Test Campaign Groups allow users to create and add their test campaigns to one or more groups.</li>
+                <li>It will then calculate the test case execution data for each test campaign and give an overall
+                    value.
+                </li>
+            </ul>
+                <image href="../../resources/testcampaigns/testCampaignGroups.png"/>
+        </section>
+        <section>
+            <title>Adding a Group</title>
+            <p>To add a group the user can click on the "Add Group" button and enter the name of the group to be added.</p>
+            <image href="../../resources/testcampaigns/testCampaignGroupsMenuBar.png"/>
+            <title>Adding a Test Campaign to a Group</title>
+            <p>In the test campaign edit screen a new component called group will allow users to associate the test
+                campaign with a group. This is an optional field.</p>
+            <image href="../../resources/testcampaigns/testCampaignGroupsEdit.png"/>
+        </section>
+        <section>
+            <title>Search for a Group</title>
+            <ul>
+            <li>If users enter search criteria the url will be updated with the search criteria.
+               <li>If the user specifies the exact name of the folder it will auto select the group to display to the user.
+                   e.g. /#tm/testCampaignGroups?name~test</li>
+            </li>
+            </ul>
+
+        </section>
+        <section>
+            <title>Edit a Test Campaign Group</title>
+            <ul>
+                Users may edit the name of a test campaign group by following these steps:
+                <li>Select the test campaign group you wish to edit</li>
+                <li> Click on the edit icon</li>
+                <li>Enter the new name and click 'Edit'</li>
+            </ul>
+            <image href="../../resources/testCampaignGroup/editTestCampaignGroup.png" />
+        </section>
+        <section>
+            <title>Delete a Test Campaign Group</title>
+            <ul>
+                Users may delete a test campaign group by following these steps:
+                <li>Select the test campaign group you wish to edit</li>
+                <li> Click on the delete icon</li>
+                <li>Confirm that you wish to proceed with the delete</li>
+            </ul>
+            <image href="../../resources/testCampaignGroup/deleteTestCampaignGroup.png" />
+        </section>
+        <section>
+            <title>Copy Url for a Test Campaign Group</title>
+            <ul>
+                Users may copy the url for a test campaign group by following these steps:
+                <li>Select the test campaign group you wish to copy url for</li>
+                <li>Click on the copy link icon</li>
+            </ul>
+            <image href="../../resources/testCampaignGroup/copyURLTestCampaignGroup.png" />
+        </section>
+    </conbody>
+</concept>

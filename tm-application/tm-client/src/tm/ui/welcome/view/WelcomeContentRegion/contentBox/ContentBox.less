@@ -1,0 +1,40 @@
+.eaTM-ContentBox {
+    width: 30%;
+    height: 22rem;
+    padding: 1.0rem;
+    margin: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem #d2d2d2;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: relative;
+    min-height: 10rem;
+    border: 0.1rem solid #EEE;
+    font-size: 0.9rem;
+
+    &-title {
+        text-align: center;
+        margin: 0 1.0rem;
+        padding: 1.0rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        border: solid #EEE;
+        border-width: 0 0 0.2rem 0;
+    }
+
+    &-list {
+        display: block;
+        color: #0066B3;
+        font-size: 1.4rem;
+        padding: 0.7rem;
+        list-style: none;
+        font-weight: bold;
+        opacity: 0.8;
+        z-index: 100;
+    }
+
+    @media screen and (max-width: 1150px) {
+        width: 80%;
+        margin: 0.5rem auto;
+    }
+}
+

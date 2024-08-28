@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestExecutionTest_createJiraBug">
+    <test name="TestExecutionTest_createJiraBug">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.testexecution.TestExecutionTest">
+                <methods>
+                    <include name="createJiraBug"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

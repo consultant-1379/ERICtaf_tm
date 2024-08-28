@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AuthenticationTest_errorLogin">
+    <test name="AuthenticationTest_errorLogin">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.tms.AuthenticationTest">
+                <methods>
+                    <include name="errorLogin"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.tms.AuthenticationTest">
+                <methods>
+                    <include name="errorLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

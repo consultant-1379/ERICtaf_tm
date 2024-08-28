@@ -1,0 +1,310 @@
+.applyBorderRadius(@params) {
+    -webkit-border-radius: @params;
+    -moz-border-radius: @params;
+    -ms-border-radius: @params;
+    border-radius: @params;
+}
+
+.applyAnimation(@params) {
+    -webkit-animation: @params;
+    -moz-animation: @params;
+    animation: @params;
+}
+
+.applyTransform(@params) {
+    -webkit-transform: @params;
+    -moz-transform: @params;
+    transform: @params;
+}
+
+.ebDialog {
+    &Box {
+        @media screen and (max-width: 500px) {
+            &-contentBlock {
+                bottom: 48px;
+            }
+        }
+    }
+}
+
+.ebQuickActionBar {
+    height: inherit;
+}
+
+.ebAccordion {
+    &-button {
+        line-height: 1.6rem;
+        vertical-align: top;
+    }
+    &-title {
+        width: ~"calc(100% - 24px)";
+        word-wrap: break-word;
+        white-space: normal;
+        line-height: 2rem;
+    }
+}
+
+.ebInput_width_fullBlock {
+    width: 100%;
+}
+.ebSelect_width_fullBlock {
+    width: 100%;
+
+    .ebSelect-value {
+        width: ~"calc(100% - 15px)";
+    }
+}
+
+.ebQuickActionBar {
+    padding: 0;
+    line-height: 2.4rem;
+
+    > * {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &-commands {
+        margin: 0.4rem 0;
+    }
+
+    &-back {
+        padding: 0.4rem 0.8rem;
+        font-size: 1.2rem;
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: middle;
+
+        .applyBorderRadius(~"3px 0 0 3px");
+
+        &:hover {
+            background-color: #D2D2D2;
+        }
+        &:active {
+            background-color: #E0E0E0;
+        }
+
+        &Icon {
+            display: inline-block;
+        }
+        &Text {
+            display: inline-block;
+        }
+    }
+}
+
+.ebNotification {
+    display: block;
+    margin: 0.6rem 0;
+}
+
+.ebIcon {
+    &_blueCircle {
+        background-image: url("@{resources-url}/icons/16px/circle_blue_16px.svg");
+    }
+    &_greenCircle {
+        background-image: url("@{resources-url}/icons/16px/circle_green_16px.svg");
+    }
+    &_silverCircle {
+        background-image: url("@{resources-url}/icons/16px/circle_silver_16px.svg");
+    }
+    &_yellowCircle {
+        background-image: url("@{resources-url}/icons/16px/circle_yellow_16px.svg");
+    }
+    &_m {
+        background-image: url("@{resources-url}/icons/16px/m_16px.svg");
+    }
+    &_e {
+        background-image: url("@{resources-url}/icons/16px/e_16px.svg");
+    }
+    &_s {
+        background-image: url("@{resources-url}/icons/16px/s_16px.svg");
+    }
+    &_u {
+        background-image: url("@{resources-url}/icons/16px/u_16px.svg");
+    }
+    &_i {
+        background-image: url("@{resources-url}/icons/16px/i_16px.svg");
+    }
+}
+
+.eaFlyout_show {
+    background-color: transparent;
+}
+
+// expandableList modifier
+.elWidgets-ExpandableList {
+    &-topList {
+        padding: 0!important;
+    }
+
+    &Item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        &-link:active, &-link:focus {
+            text-decoration: none;
+        }
+        &_highlight {
+            background-color: #fef1cc;
+            border-radius: 3px;
+        }
+    }
+}
+
+/*Animation Prototype */
+.eb {
+    &-animatedPage {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+
+        &_current {
+            display: block;
+            z-index: 1;
+            position: relative;
+        }
+    }
+    &_animate {
+        &_fadeOut {
+            position: absolute;
+            .applyAnimation(~"eb_fadeOut .3s ease both");
+        }
+        &_fadeIn {
+            position: absolute;
+            .applyAnimation(~"eb_fadeIn .6s ease both");
+        }
+        &_moveToLeft {
+            position: absolute;
+            .applyAnimation(~"eb_moveToLeft .6s ease both");
+        }
+        &_moveFromLeft {
+            position: absolute;
+            .applyAnimation(~"eb_moveFromLeft .6s ease both");
+        }
+        &_moveToRight {
+            position: absolute;
+            .applyAnimation(~"eb_moveToRight .6s ease both");
+        }
+        &_moveFromRight {
+            position: absolute;
+            .applyAnimation(~"eb_moveFromRight .6s ease both");
+        }
+    }
+}
+
+/* fade out/in keyframes */
+// fadeOut
+@-webkit-keyframes eb_fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+@-moz-keyframes eb_fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+@keyframes eb_fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+// fadeIn
+@-webkit-keyframes eb_fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+@-moz-keyframes eb_fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+@keyframes eb_fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+/* move from/to keyframes */
+// moveToLeft
+@-webkit-keyframes eb_moveToLeft {
+    to {
+        -webkit-transform: translateX(-150%);
+    }
+}
+@-moz-keyframes eb_moveToLeft {
+    to {
+        -moz-transform: translateX(-150%);
+    }
+}
+@keyframes eb_moveToLeft {
+    to {
+        transform: translateX(-150%);
+    }
+}
+
+// moveFromLeft
+@-webkit-keyframes eb_moveFromLeft {
+    from {
+        -webkit-transform: translateX(-150%);
+    }
+}
+@-moz-keyframes eb_moveFromLeft {
+    from {
+        -moz-transform: translateX(-150%);
+    }
+}
+@keyframes eb_moveFromLeft {
+    from {
+        transform: translateX(-150%);
+    }
+}
+
+// moveToRight
+@-webkit-keyframes eb_moveToRight {
+    to {
+        -webkit-transform: translateX(150%);
+    }
+}
+@-moz-keyframes eb_moveToRight {
+    to {
+        -moz-transform: translateX(150%);
+    }
+}
+@keyframes eb_moveToRight {
+    to {
+        transform: translateX(150%);
+    }
+}
+
+// moveFromRight
+@-webkit-keyframes eb_moveFromRight {
+    from {
+        -webkit-transform: translateX(150%);
+    }
+}
+@-moz-keyframes eb_moveFromRight {
+    from {
+        -moz-transform: translateX(150%);
+    }
+}
+@keyframes eb_moveFromRight {
+    from {
+        transform: translateX(150%);
+    }
+}
+
+.ebCombobox_highlight {
+    border: solid 2px #e32119;
+}
+
+// criterion test case search page
+.eaTM-Criterion-typeHolder .ebBtn {
+        min-width: 0;
+}

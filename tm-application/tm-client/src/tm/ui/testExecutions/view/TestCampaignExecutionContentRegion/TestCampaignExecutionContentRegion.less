@@ -1,0 +1,183 @@
+.applyTransition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.eaTM-TestCampaignExecutionContentRegion {
+    &-slidingPanels {
+        position: relative;
+        min-height: 100%;
+        margin-top: 2.4rem;
+    }
+
+    &-testCasesPanel {
+        position: relative;
+        width: 100%;
+    }
+
+    &-testExecutions_noResult {
+        text-align: center;
+        margin: 1.2rem;
+        font-style: italic;
+    }
+
+    &-testCasesTable {
+        margin-top: 0.5rem;
+        margin-bottom: 40px;
+    }
+    &-testCaseTableHint {
+        line-height: 0rem;
+    }
+
+    &-filterButton, &-hideButton {
+        margin-bottom: 0.5rem;
+
+        &_hidden {
+            display: none;
+        }
+    }
+
+    &-settingsHeader {
+        width: 20rem;
+    }
+
+    &-settingsButton, &-hideSettingsButton {
+        margin-bottom: 0.5rem;
+
+        &_hidden {
+            display: none;
+        }
+    }
+    &-executeMultipleButton {
+        margin-bottom: 0.5rem;
+    }
+    &-stackedProgressBarHolder {
+        display: inline-block;
+        float: right;
+        padding-top: 0.5rem;
+    }
+    &-totalCount {
+        padding-left: 0.6rem;
+        display: inline-block;
+        color: #CCCCCC;
+        font-weight: normal;
+        font-size: 1.6rem;
+    }
+
+    @media screen and (min-width: 581px) {
+        &-testCasesPanel {
+            .applyTransition(~"0.6s width ease-in-out, 0.6s margin-left ease-in-out, 0.6s margin-right ease-in-out");
+        }
+        &-runsPanel {
+            position: absolute;
+            overflow: hidden;
+            width: 0;
+            top: 0;
+            right: 0;
+
+            .applyTransition(~"0.6s width ease-in-out");
+
+            &_position_fixed {
+                position: fixed;
+                top: 77px;
+            }
+
+            &Content {
+                width: 400px;
+                margin-left: 3.6rem;
+                margin-right: calc(~"-400px - 3.6rem");
+
+                .applyTransition(~"0.6s margin-right ease-in-out");
+            }
+        }
+
+        &-filter {
+            &Panel {
+                position: absolute;
+                overflow: hidden;
+                width: 0;
+                top: 0;
+                left: 0;
+                .applyTransition(~"0.6s width ease-in-out");
+                &_position_fixed {
+                    position: fixed;
+                    top: 77px;
+                }
+            }
+
+            &Content {
+                width: 400px;
+                margin-right: calc(~"-400px - 3.6rem");
+
+                .applyTransition(~"0.6s margin-left ease-in-out");
+            }
+        }
+
+        &-settings {
+            &Panel {
+                position: absolute;
+                overflow: hidden;
+                width: 0;
+                top: 0;
+                left: 0;
+                .applyTransition(~"0.6s width ease-in-out");
+                &_position_fixed {
+                    position: fixed;
+                    top: 77px;
+                }
+            }
+
+            &Content {
+                width: 360px;
+                margin-right: calc(~"-360px - 3.6rem");
+
+                .applyTransition(~"0.6s margin-left ease-in-out");
+            }
+        }
+
+        &-slidingPanels_executions {
+            .eaTM-TestCampaignExecutionContentRegion {
+                &-testCasesPanel {
+                    width: calc(~"100% - 400px - 3.6rem");
+                    margin-right: calc(~"400px + 3.6rem");
+                }
+                &-runsPanel {
+                    width: calc(~"400px + 3.6rem");
+
+                    &Content {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        &-slidingPanels_search {
+            .eaTM-TestCampaignExecutionContentRegion {
+                &-testCasesPanel {
+                    width: calc(~"100% - 400px - 3.6rem");
+                    margin-left: calc(~"400px + 3.6rem");
+                }
+                &-filterPanel {
+                    width: calc(~"360px + 3.6rem");
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        &-slidingPanels_settings {
+            .eaTM-TestCampaignExecutionContentRegion {
+                &-testCasesPanel {
+                    width: calc(~"100% - 200px - 3.6rem");
+                    margin-left: calc(~"200px + 3.6rem");
+                }
+                &-settingsPanel {
+                    width: calc(~"325px + 3.6rem");
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

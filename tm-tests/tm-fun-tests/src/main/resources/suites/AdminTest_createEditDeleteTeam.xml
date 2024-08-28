@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AdminTest_createEditDeleteTeam">
+    <test name="AdminTest_createEditDeleteTeam">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.admin.AdminTest">
+                <methods>
+                    <include name="createEditDeleteTeam"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

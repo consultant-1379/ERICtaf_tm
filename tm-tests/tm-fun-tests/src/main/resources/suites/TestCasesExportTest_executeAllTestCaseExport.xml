@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestCaseExportTest_executeAllTestCaseExport">
+    <test name="TestCaseExportTest_executeAllTestCaseExport">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.rest.tms.TestCasesExportTest">
+                <methods>
+                    <include name="executeAllTestCaseExport"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

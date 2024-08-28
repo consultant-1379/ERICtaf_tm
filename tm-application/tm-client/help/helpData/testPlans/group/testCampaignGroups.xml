@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="TMS-testCampaignGroups">
+<title>Test Campaign Groups</title>
+<conbody>
+    <section id="testCampaignGroupsHeader">
+        <title>Test Campaign Groups</title>
+        <p>Test campaign groups allow users to create and add their test campaigns to folders.
+            It will then aggregate all the test case execution data for each test campaign added.</p>
+        <p>Users can add a test campaign to a group from the test campaign edit screen.</p>
+        <p>Select the folder below and the table will be populated with the relevant information.</p>
+        <p>On the menu bar click the "Add Group" button to add a new folder.</p>
+        <p>Admin users have full access to create/edit and delete folders.</p>
+    </section>
+    <section id="testCampaignGroupsStatistics">
+        <title>Test Campaign Groups Statistics</title>
+        <p>This section displays the metrics of all test executions and display's each result under different display sections.</p>
+        <b>Test case type bar chart</b>
+        <p>This section displays all the test executions per test case types on a bar chart i.e. functional, performance, stability etc.</p>
+        <b>Overall Pass Rate</b>
+        <p>The overall pass rate is calculated by adding all N/A, Pass and Pass with Exception statuses
+        to the over all pass rate result and gauge chart.</p>
+        <b>Test case execution statistics</b>
+        <p>This section will show all test execution status from a progress bar and its actual value.
+            Once the group has been clicked these values will update accordingly.</p>
+    </section>
+</conbody>
+</concept>

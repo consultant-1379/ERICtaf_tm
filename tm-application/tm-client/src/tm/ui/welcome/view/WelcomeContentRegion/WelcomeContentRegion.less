@@ -1,0 +1,52 @@
+.eaTM {
+    &-title {
+        text-align: center;
+        padding: 2.0rem;
+        margin-top: 20rem;
+        font-size: 5.0rem;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-image: -webkit-gradient(
+                linear, left top, right top, color-stop(0.1, #a2c517), color-stop(0.3, #009046),
+                color-stop(0.5, #0082b6), color-stop(0.7, #151f77), color-stop(1, #db0050)
+        );
+    }
+
+    &-text {
+        margin-top: 6.0rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &-content {
+        padding-top: 4.0rem;
+        width: 70%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 30rem;
+    }
+
+    @media screen and (max-width: 1600px) {
+        &-content {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+        &-title {
+            font-size: 4.5rem;
+        }
+    }
+
+    @media screen and (max-width: 1150px) {
+        &-title {
+            font-size: 3.1rem;
+        }
+
+        &-content {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ReviewTestCase_compareReviewTestCase">
+    <test name="ReviewTestCaseTest_compareTestCase">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.tms.ReviewTestCaseTest">
+                <methods>
+                    <include name="compareTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

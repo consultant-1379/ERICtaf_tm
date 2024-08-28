@@ -1,0 +1,40 @@
+.eaTM-RequirementsRegion {
+    margin-top: 20px;
+
+    &-treeBlock {
+        display: inline-block;
+        float: left;
+        width: 280px;
+    }
+
+    &-detailsBlock {
+        margin-left: 300px;
+        margin-bottom: 40px;
+    }
+
+    &-clearAll {
+        height: 0;
+        display: block;
+        clear: left;
+    }
+
+    @media screen and (max-width: 800px) {
+        &-treeBlock {
+            width: 180px;
+        }
+        &-detailsBlock {
+            margin-left: 200px;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        &-treeBlock {
+            display: block;
+            float: none;
+            width: auto;
+        }
+        &-detailsBlock {
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CopyTestCaseTest_copyTestCase">
+    <test name="CopyTestCaseTest_copyTestCase">
+        <classes>
+            <class name="com.ericsson.cifwk.tm.fun.ui.tms.CopyTestCaseTest">
+                <methods>
+                    <include name="copyTestCase"/>
+                </methods>
+            </class>
+            <class name="com.ericsson.cifwk.tm.fun.rest.tms.CopyTestCaseTest">
+                <methods>
+                    <include name="copyTestCase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

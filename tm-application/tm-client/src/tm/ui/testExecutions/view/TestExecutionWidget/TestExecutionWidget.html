@@ -1,0 +1,39 @@
+<div id="TMS_TestCampaignExecution_TestExecution" class="eaTM-TestExecution">
+    <div class="eaTM-TestExecution-userHolder">
+        <i class="ebIcon ebIcon_user"></i>
+        <span id="TMS_TestCampaignExecution_TestExecution-username" class="eaTM-TestExecution-username">{{username}}</span>
+    </div>
+    <div class="eaTM-TestExecution-dateHolder">
+        <span id="TMS_TestCampaignExecution_TestExecution-date" class="eaTM-TestExecution-date">{{date}}</span>
+        <i class="ebIcon ebIcon_calendar"></i>
+    </div>
+    <div class="eaTM-TestExecution-resultHolder">
+        <i class="ebIcon ebIcon_{{resultIcon}}"></i>
+        <span id="TMS_TestCampaignExecution_TestExecution-resultText" class="eaTM-TestExecution-resultText">{{result}}</span>
+    </div>
+    {{#if iso}}
+    <div id="TMS_TestCampaignExecution_TestExecution-isoHolder" class="eaTM-TestExecution-isoHolder">
+        <span class="eaTM-TestExecution-defectLabel">ISO: </span><span>{{iso}}</span>
+    </div>
+    {{/if}}
+    {{#if lastDefect}}
+    <div id="TMS_TestCampaignExecution_TestExecution-defectsHolder" class="eaTM-TestExecution-defectsHolder">
+        <span class="eaTM-TestExecution-defectLabel">Defects:</span>
+        {{#if defects}}
+            {{#each defects}}<a target="_blank" class="eaTM-TestExecution-defectLink" href="{{this.permanentUrl}}{{this.data}}">{{this.data}}</a>, {{/each}}
+        {{/if}}
+        <a target="_blank" class="eaTM-TestExecution-defectLink" href="{{lastDefect.permanentUrl}}{{lastDefect.data}}">{{lastDefect.data}}</a>
+    </div>
+    {{/if}}
+    {{#if lastRequirement}}
+    <div id="TMS_TestCampaignExecution_TestExecution-requirementsHolder" class="requirementsHolder">
+        <span class="eaTM-TestExecution-requirementsLabel">Improvement Stories:</span>
+        {{#if requirements}}
+        {{#each requirements}}<a target="_blank" class="eaTM-TestExecution-requirementLink" href="{{this.permanentUrl}}{{this.data}}">{{this.data}}</a>, {{/each}}
+        {{/if}}
+        <a target="_blank" class="eaTM-TestExecution-requirementLink" href="{{lastDefect.permanentUrl}}{{lastDefect.data}}">{{lastRequirement.data}}</a>
+    </div>
+    {{/if}}
+    <div id="TMS_TestCampaignExecution_TestExecution-commentBlock" class="ebText eaTM-TestExecution-commentBlock">{{#if comment}}{{comment}}{{else}}<i>No comment left.</i>{{/if}}</div>
+    <div class="eaTM-TestExecution-filesBlock"></div>
+</div>

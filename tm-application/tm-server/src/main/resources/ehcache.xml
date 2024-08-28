@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="false" monitoring="autodetect" dynamicConfig="true">
+
+    <defaultCache
+            timeToLiveSeconds="0"
+            timeToIdleSeconds="3600"
+            maxElementsInMemory="10000"/>
+
+    <cache name="com.ericsson.cifwk.tm.domain.model.requirements.Requirement"
+           maxElementsInMemory="10000"
+           timeToLiveSeconds="0"
+           timeToIdleSeconds="3600"
+           memoryStoreEvictionPolicy="LFU"
+           eternal="false"
+           diskPersistent="false"
+           statistics="false"/>
+
+</ehcache>
